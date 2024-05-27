@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.allcontent {
+    width: 100vw;
+
+
+
+    .body {
+        display: flex;
+        flex-direction: row;
+        width: 75vw;
+        margin: 200px auto 200px auto;
+        gap: 100px;
+
+        .containerContentForm {
+            order: 1;
+            width: 100%;
+
+            .headerForm {
+                width: 50vw;
+                padding-bottom: 150px;
+
+
+                h1 {
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                    font-weight: 450;
+                    font-size: 77px;
+                    letter-spacing: .1px;
+                    color: white;
+                    margin: 0;
+                    line-height: 80px;
+                }
+
+                h1:nth-child(1) {
+                    font-size: 85px;
+                }
+
+
+                h1:nth-child(2) {
+                    font-weight: 450;
+                }
+
+
+
+
+
+            }
+
+            .containerQuest {
+                width: 50vw;
+                font-size: 2em;
+                color: gray;
+
+                .quest {
+                    padding: 40px 0px;
+                    border-bottom: .5px solid #3e4043;
+                    border-top: .5px solid #3e4043;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+
+                    .titleQuest {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 50px;
+
+                        p {
+                            font-size: .5em;
+                            font-weight: 500;
+                        }
+
+                        h1 {
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-weight: 400;
+                            font-size: .8em;
+                            color: white;
+                            margin: 0;
+                        }
+                    }
+
+                    .inputQuest {
+                        input {
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-weight: 380;
+                            width: 670px;
+                            background-color: transparent;
+                            border: none;
+                            margin-left: 70px;
+                            font-size: .7em;
+                            color: gray;
+
+                            &:focus {
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .buttonContainer {
+                    position: relative;
+                    margin-top: 120px;
+                    width: 49.5vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .button {
+                    margin-left: 400px;
+                    width: 170px;
+                    height: 170px;
+                    background-color: #459ce9;
+                    color: white;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    p {
+                        font-size: 1.8em;
+                        z-index: 3;
+                    }
+
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+
+                }
+            }
+        }
+
+        .containerNav {
+            order: 2;
+            width: 40vw;
+
+            .navHeader {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .headerSmallContent {
+                    display: none;
+                }
+
+                .imageContainer {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-top: 90px;
+                    margin-bottom: 30px;
+
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .navInfo,
+            .navInfoFooter {
+                margin-top: 40px;
+
+
+                h1 {
+                    text-transform: uppercase;
+                    color: gray;
+                    font-size: .7em;
+                    letter-spacing: .5px;
+                    font-weight: 550;
+                }
+
+                p,
+                a {
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                    color: white;
+                    font-weight: 400;
+                    font-size: .9em;
+
+                }
+
+            }
+
+            .navInfoFooter {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+
+                }
+            }
+
+
+        }
+
+    }
+}
+
+
+.allContentOverlay {
+    display: flex;
+    width: 100vw;
+    margin: 0px auto;
+    gap: 100px;
+    background-color: #ececec;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
+    transition: clip-path 100ms;
+
+    .bodyOverlay {
+        display: flex;
+        flex-direction: row;
+        width: 75vw;
+        margin: 200px auto 200px auto;
+        gap: 100px;
+
+        .containerContentFormOverlay {
+            order: 1;
+            width: 100%;
+
+            .headerFormOverlay {
+                width: 50vw;
+                padding-bottom: 150px;
+
+
+                h1 {
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                    font-weight: 450;
+                    font-size: 77px;
+                    letter-spacing: .1px;
+                    color: black;
+                    margin: 0;
+                    line-height: 80px;
+                }
+
+                h1:nth-child(1) {
+                    font-size: 85px;
+                }
+
+
+                h1:nth-child(2) {
+                    font-weight: 450;
+                }
+
+
+
+
+
+            }
+
+            .containerQuestOverlay {
+                width: 50vw;
+                font-size: 2em;
+                color: gray;
+
+                .questOverlay {
+                    padding: 40px 0px;
+                    border-bottom: .5px solid black;
+                    border-top: .5px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+
+                    .titleQuestOverlay {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 50px;
+
+                        p {
+                            color: black;
+                            font-size: .5em;
+                            font-weight: 500;
+                        }
+
+                        h1 {
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-weight: 400;
+                            font-size: .8em;
+                            color: black;
+                            margin: 0;
+                        }
+                    }
+
+                    .inputQuestOverlay {
+                        input {
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-weight: 380;
+                            width: 670px;
+                            background-color: transparent;
+                            border: none;
+                            margin-left: 70px;
+                            font-size: .7em;
+                            color: rgb(55, 55, 55);
+
+                            &:focus {
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .buttonContainerOverlay {
+                    position: relative;
+                    margin-top: 120px;
+                    width: 49.5vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .buttonOverlay {
+                    margin-left: 400px;
+                    width: 170px;
+                    height: 170px;
+                    background-color: #459ce9;
+                    color: rgb(0, 0, 0);
+                    border-radius: 50%;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    p {
+                        font-size: 1.8em;
+                        z-index: 3;
+                    }
+
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+
+                }
+            }
+        }
+
+        .containerNavOverlay {
+            order: 2;
+            width: 40vw;
+
+            .navHeaderOverlay {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .headerSmallContentOverlay {
+                    display: none;
+                }
+
+                .imageContainerOverlay {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-top: 90px;
+                    margin-bottom: 30px;
+
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .navInfoOverlay,
+            .navInfoFooterOverlay {
+                margin-top: 40px;
+
+
+                h1 {
+                    text-transform: uppercase;
+                    color: gray;
+                    font-size: .7em;
+                    letter-spacing: .5px;
+                    font-weight: 550;
+                }
+
+                p,
+                a {
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                    color: rgb(0, 0, 0);
+                    font-weight: 400;
+                    font-size: .9em;
+
+                }
+
+            }
+
+            .navInfoFooterOverlay {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+    .allcontent {
+
+        .body {
+
+            .containerContentForm {
+
+                .containerQuest {
+                    font-size: 1.8em;
+
+                    .button {
+                        width: 150px;
+                        height: 150px;
+                        margin-left: 200px;
+
+                        p {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+
+                .headerForm {
+
+                    h1 {
+                        line-height: 60px;
+                        font-size: 50px;
+
+                    }
+
+                    h1:nth-child(1) {
+                        font-size: 60px;
+                    }
+
+
+                }
+
+
+            }
+
+            .containerNav {
+
+                .navHeader {
+
+                    .imageContainer {
+                        width: 90px;
+                        height: 90px;
+                        margin-top: 50px;
+                    }
+                }
+
+                .navInfo {
+                    width: 250px;
+                }
+            }
+
+        }
+    }
+
+    .allContentOverlay{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .allcontent {
+
+        .body {
+            margin-top: 160px;
+            gap: 60px;
+
+            .containerContentForm {
+
+                .containerQuest {
+                    font-size: 1.5em;
+
+                    .quest {
+
+
+                        .inputQuest {
+
+                            input {
+                                margin-top: 20px;
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+
+                    }
+
+                    .button {
+                        width: 140px;
+                        height: 140px;
+                        margin-left: 100px;
+
+                        p {
+                            font-size: 1.6em;
+                        }
+                    }
+                }
+
+                .headerForm {
+                    padding-bottom: 100px;
+
+                    h1 {
+                        line-height: 45px;
+                        font-size: 39px;
+
+                    }
+
+                    h1:nth-child(1) {
+                        font-size: 45px;
+                    }
+
+
+                }
+
+
+            }
+
+            .containerNav {
+                width: 200px;
+
+
+                .navHeader {
+                    gap: 20px;
+
+                    .imageContainer {
+                        width: 80px;
+                        height: 80px;
+                        margin-top: 30px;
+                    }
+                }
+
+
+                .navInfo,
+                .navInfoFooter {
+                    width: 200px;
+
+                    h1 {
+                        font-size: .6em;
+                        letter-spacing: .5px;
+                        font-weight: 550;
+                    }
+
+                    p,
+                    a {
+                        font-weight: 400;
+                        font-size: .79em;
+
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .allcontent {
+
+        .body {
+            flex-direction: column;
+            width: 80vw;
+            margin-top: 140px;
+
+            .containerContentForm {
+                order: 2;
+                width: 80vw;
+
+
+                .headerForm {
+                    display: none;
+                }
+
+                .containerQuest {
+                    width: 100%;
+                    font-size: 1.4em;
+
+                    .quest {
+                        padding: 30px 0px;
+
+                        .titleQuest{
+                            width: 78vw;
+                            gap: 30px;
+                        }
+
+                        .inputQuest {
+
+                            input {
+                                width: 70vw;
+                                font-size: .65em;
+                                margin-left: 45px;
+                            }
+                        }
+                    }
+
+                    .button {
+                        width: 120px;
+                        height: 120px;
+                        margin-left: 90px;
+                        margin-top: 150px;
+
+                        p {
+                            font-size: 1.4em;
+                        }
+                    }
+
+
+                }
+
+            }
+
+            .containerNav {
+                order: 1;
+
+                .navHeader {
+                    width: 80vw;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 50px;
+
+                    svg {
+                        position: absolute;
+                        top: 130px;
+                        right: 50px;
+                        rotate: 90deg;
+                    }
+
+                    .imageContainer {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        margin: 0px;
+
+
+                    }
+
+                    .headerSmallContent {
+                        display: flex;
+                        color: white;
+
+                        h1 {
+                            font-size: 3em;
+                            font-weight: 400;
+                            font-family: "Urbanist", sans-serif;
+                        }
+
+                        h1:nth-child(1) {
+                            font-size: 3em;
+                        }
+
+                        h1:nth-child(2) {
+                            position: absolute;
+                            top: 190px;
+                            left: 45px;
+                        }
+                    }
+                }
+
+                .navInfo,
+                .navInfoFooter {
+                    margin-top: 30px;
+                    width: 80vw;
+
+
+                    h1 {
+                        font-size: .7em;
+                    }
+
+                    p {
+                        font-family: "Urbanist", sans-serif;
+                        margin: 5px 0px;
+                        font-size: .9em;
+                    }
+                }
+
+                .navInfoFooter{
+                    position: absolute;
+                    top: 1580px;
+                    
+                }
+
+            }
+        }
+    }
+}

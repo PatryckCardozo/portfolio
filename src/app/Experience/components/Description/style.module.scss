@@ -1,0 +1,43 @@
+
+.description {
+    width: 70vw;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    h2 {
+        margin: 0;
+        font-size: 60px;
+        gap: 8px;
+        line-height: 1.3;   
+        font-weight: 470;
+       }
+       span {
+        margin-right: 3px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .description{
+        h2{
+            font-size: 30px;
+        }
+    }
+    
+}
+
+@media (max-width: 426px) {
+
+    .description{
+        width: 80vw;
+
+
+    }
+}
