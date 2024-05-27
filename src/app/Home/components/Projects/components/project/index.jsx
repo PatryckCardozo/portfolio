@@ -12,7 +12,7 @@ const projects = [
     }
 ]
 
-export default function index({ index, title, manageModal }) {
+export default function Index({ index, title, manageModal }) {
 
     return (
 
