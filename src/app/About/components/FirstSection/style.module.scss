@@ -1,0 +1,211 @@
+.main {
+    width: 90vw;
+    height: 100vh;
+    font-size: 62, 5%;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .sectionContent {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .title {
+            font-size: 1.7em;
+            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+
+            h1 {
+                margin: 0px;
+                padding: 0px;
+                font-size: 3em;
+                font-weight: 400;
+                line-height: 70px;
+            }
+
+            p {
+                margin-left: 5px;
+                font-size: .6em;
+            }
+
+            p:nth-child(2) {
+                width: 400px;
+                font-size: .9em;
+                font-weight: 350;
+                line-height: 28px;
+            }
+
+        }
+
+        .sectionWords {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+            .parent {
+                background: rgb(28, 28, 28);
+                width: 39vw;
+                height: 7vh;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                transition: .4s ease-in-out;
+                cursor: pointer;
+
+
+                &:hover {
+                    width: 39vw;
+                    height: 25vh;
+                    transition: .4s ease-in-out;
+
+                }
+
+            }
+
+
+            .parent[data-isopen="true"] {
+                width: 39vw;
+                height: 25vh;
+                cursor: pointer;
+            }
+
+            .child {
+                margin: auto;
+                padding: 0px 10px 0px 10px;
+
+                h1 {
+                    text-align: center;
+                    color: white;
+                    font-size: 1.2em;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-weight: 350;
+                    font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif, ;
+                }
+
+                p {
+                    color: white;
+                    font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif, ;
+                    font-weight: 350;
+                    line-height: 18px;
+                    font-size: .9em;
+                    text-align: center;
+                }
+
+
+            }
+        }
+
+    }
+
+
+    .sliderSection {
+        .sliderContainer {
+            width: 100vw;
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            margin-bottom: 100px;
+        }
+
+        .slider,
+        .slider2,
+        .slider3 {
+            position: relative;
+            white-space: nowrap;
+
+            p {
+                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                position: relative;
+                margin: 0px;
+                color: black;
+                font-size: 1.5em;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .main {
+
+        .sectionContent {
+            gap: 50px;
+
+
+            .title {
+
+                h1 {
+                    font-size: 1.7em;
+                    line-height: 45px;
+
+                }
+
+                p:nth-child(2) {
+                    width: 300px;
+                    font-size: .7em;
+                    font-weight: 350;
+                    line-height: 28px;
+                }
+
+            }
+
+            .sectionWords {
+
+                .parent {
+                    width: 47vw;
+                    height: 6vh;
+                 
+    
+    
+                    &:hover {
+                        width: 47vw;
+                        height: 25vh;
+                        transition: .4s ease-in-out;
+    
+                    }
+    
+                }
+    
+    
+                .parent[data-isOpen="true"] {
+                    width: 47vw;
+                    height: 25vh;
+                    cursor: pointer;
+                }
+
+                .child {
+
+                    h1 {
+
+                        font-size: 1.1em;
+                        letter-spacing: 2px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        font-weight: 350;
+                        line-height: 18px;
+                        font-size: .9em;
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

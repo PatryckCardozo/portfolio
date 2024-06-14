@@ -1,0 +1,161 @@
+.main {
+    width: 90vw;
+    height: 100vh;
+    font-size: 62, 5%;
+    margin: 100px auto 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 550px;
+
+    
+
+    .sectionImages {
+
+        span {
+            display: flex;
+            align-items: center;
+
+            .containerImage1 {
+                margin-top: 400px;
+                width: 450px;
+                height: 460px;
+                position: absolute;
+                overflow: hidden;
+        
+
+                img {
+
+                    object-fit: cover;
+                }
+            }
+
+
+        }
+    }
+
+    .sectionArticle {
+
+        .titleSection {
+            h1 {
+                color: rgb(48, 48, 48);
+                margin: 0px 0px 0px 15px;
+                font-size: 3.5em;
+                font-weight: 400;
+                font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif, ;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(180, 180, 180);
+            width: 90%;
+
+            .numberCard {
+                h3 {
+                    font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif;
+                    font-size: 2em;
+                    font-weight: 400;
+                    color: rgba(101, 101, 101, 0.696);
+                }
+            }
+
+
+            .containerArticleCard {
+                display: flex;
+                flex-direction: column;
+                line-height: 15px;
+           
+
+
+                .titleArticle {
+
+                    h2 {
+                        font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif;
+                        font-size: 1.5em;
+                        font-weight: 400;
+                        margin: 20px 0px 0px 0px;
+
+                    }
+
+                }
+
+                .textArticle {
+                    p {
+                        font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif;
+                        font-size: 1em;
+                        font-weight: 350;
+                        line-height: 18px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px){
+
+    .main{
+        gap: 450px;
+
+        .sectionImages {
+
+            span {
+    
+                .containerImage1 {
+                    margin-top: 300px;
+                    width: 400px;
+                    height: 410px;            
+                }
+            }
+        }
+
+        .sectionArticle {
+
+            .titleSection {
+                h1 {
+                    font-size: 2.8em;
+                }
+            }
+    
+            .card {
+                width: 430px;
+                gap: 40px;
+                padding: 5px 20px;
+    
+                .numberCard {
+                    h3 {
+                       font-size: 1.8em;
+                    }
+                }
+    
+    
+                .containerArticleCard {
+                    line-height: 15px;
+               
+                        .titleArticle {
+    
+                        h2 {
+                           font-size: 1.4em;
+    
+                        }
+    
+                    }
+    
+                    .textArticle {
+                        p {
+                            font-size: .95em;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

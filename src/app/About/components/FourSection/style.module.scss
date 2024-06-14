@@ -1,0 +1,241 @@
+
+.main {
+    width: 85vw;
+    height: 60vh;
+    font-size: 62, 5%;
+    margin: 500px auto 0px auto;
+ 
+
+    .titleSection {
+        margin-bottom: 50px;
+
+        h1 {
+            font-size: 2.6em;
+            font-weight: 450;
+            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+        }
+    }
+
+    .containerQuestions {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 50px;
+
+        .firstContainerQuetion,
+        .secondContainerQuetion {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            .firstContainerQuery,
+            .secondContainerQuery,
+            .thirdContainerQuery,
+            .fourContainerQuery,
+            .fifthContainerQuery,
+            .sixthContainerQuery {
+                width: 100%;
+                margin: 30px 0px 0px 0px;
+
+                .firstBoxQuery,
+                .secondBoxQuery,
+                .thirdBoxQuery,
+                .fourBoxQuery,
+                .fifthBoxQuery,
+                .sixthBoxQuery {
+                    width: 100%;
+                    border-bottom: 2px solid rgb(31, 31, 31);
+                    overflow: hidden;
+                    height: 60px;
+                    transition: .5s ease;
+                    cursor: pointer;
+
+                    .boxQuery {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        overflow: hidden;
+                        height: 60px;
+
+
+
+                        .query {
+
+                            p {
+                                font-size: 1.2em;
+                                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+
+                            }
+                        }
+
+                        .firstIcon,
+                        .secondIcon,
+                        .thirdIcon,
+                        .fourIcon,
+                        .fifthIcon,
+                        .sixthIcon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .firstline {
+                                width: 18px;
+                                height: 3px;
+                                background-color: black;
+                                opacity: 1;
+                                transition: transform .6s ease, opacity .7s ease;
+                            }
+
+                            .secondline {
+                                width: 18px;
+                                height: 3px;
+                                background-color: black;
+                                transform: rotate(90deg);
+                                position: absolute;
+                                transition: .5s ease;
+                            }
+                        }
+
+                        .firstIconActive,
+                        .secondIconActive,
+                        .thirdIconActive,
+                        .fourIconActive,
+                        .fifthIconActive,
+                        .sixthIconActive {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .firstline {
+                                width: 18px;
+                                height: 3px;
+                                background-color: black;
+                                transform: rotate(180deg);
+                                opacity: 0;
+                                transition: transform .6s ease, opacity .7s ease;
+                            }
+
+                            .secondline {
+                                width: 18px;
+                                height: 3px;
+                                background-color: black;
+                                transform: rotate(180deg);
+                                position: absolute;
+                                transition: .5s ease;
+                            }
+                        }
+                    }
+
+
+                    .answer {
+                        height: 100px;
+                        padding: 0px 30px 0px 0px;
+
+                        p {
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-size: 1em;
+                            font-weight: 400;
+                        }
+
+                    }
+
+                    &:hover {
+                        border-bottom: 2px solid rgb(193, 193, 193);
+                    }
+                }
+
+
+
+                .firstBoxQueryActive,
+                .secondBoxQueryActive,
+                .thirdBoxQueryActive,
+                .fourBoxQueryActive,
+                .fifthBoxQueryActive,
+                .sixthBoxQueryActive {
+                    width: 100%;
+                    height: 140px;
+                    transition: .5s ease;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .main {
+
+        .titleSection {
+    
+            h1 {
+                font-size: 2.3em;
+           }
+        }
+
+        .containerQuestions {
+
+
+            .firstContainerQuetion,
+            .secondContainerQuetion {
+              
+
+
+                .firstContainerQuery,
+                .secondContainerQuery,
+                .thirdContainerQuery,
+                .fourContainerQuery,
+                .fifthContainerQuery,
+                .sixthContainerQuery {
+                    margin: 30px 0px 0px 0px;
+
+                    .firstBoxQuery,
+                    .secondBoxQuery,
+                    .thirdBoxQuery,
+                    .fourBoxQuery,
+                    .fifthBoxQuery,
+                    .sixthBoxQuery {
+                       
+
+                        .boxQuery {
+                            gap: 20px;  
+    
+                            .query {
+    
+                                p {
+                                    font-size: 1.1em;
+                                    
+                                }
+                            }
+                        }
+
+                        .answer {
+                            height: 100px;
+                            padding: 0px 30px 0px 0px;
+    
+                            p {
+                                margin-top: 5px ;
+                                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                                font-size: .95em;
+                                font-weight: 400;
+                            }
+    
+                        }
+                    }
+
+                .firstBoxQueryActive,
+                .secondBoxQueryActive,
+                .thirdBoxQueryActive,
+                .fourBoxQueryActive,
+                .fifthBoxQueryActive,
+                .sixthBoxQueryActive {
+                    height: 150px;
+                    transition: .5s ease;
+                }
+
+                }
+            }
+        }
+    }
+}

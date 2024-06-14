@@ -1,0 +1,296 @@
+.main {
+    width: 100vw;
+    height: 290vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(230,230,230,1) 100%);
+    font-size: 62, 5%;
+
+        .titlePage {
+            width: 70vw;
+            height: 30vh;
+            border-bottom: 1px solid rgb(178, 178, 178);
+            padding-bottom: 50px;
+            margin: 200px auto;
+
+            h1 {
+                line-height: .3em;
+                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+            }
+
+            h1:nth-child(1) {
+                font-size: 3em;
+                font-weight: 400;
+
+            }
+
+            h1:nth-child(2) {
+                font-size: 5em;
+                font-weight: 420;
+            }
+
+            .buttonContainer {
+                position: relative;
+                margin-top: 170px;
+                width: 49.5vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button {
+                margin-left: 300px;
+                width: 170px;
+                height: 170px;
+                background-color: #459ce9;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                left: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                p {
+                    font-family: "Manrope", sans-serif;
+                    color: rgb(255, 255, 255);
+                    font-weight: 300;
+                    font-size: 2em;
+                    z-index: 3;
+                }
+
+            }
+
+        }
+
+        .containerFirstSection {
+            display: flex;
+            flex-direction: row;
+            width: 80vw;
+            margin: 130px auto 150px auto;
+            padding-left: 150px;
+            gap: 50px;
+
+            svg {
+                position: absolute;
+                top: 670px;
+                left: 120px;
+
+            }
+
+            .article {
+
+                width: 300px;
+
+
+
+                h2 {
+                    margin: 0;
+                    font-size: 1em;
+                    font-weight: 350;
+                    font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif, ;
+                }
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+
+                .containerImage {
+                    width: 800px;
+                    height: 900px;
+                    position: relative;
+                    overflow: hidden;
+
+                    img {
+
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+
+        .containerSecondSection {
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            margin: 0px auto;
+
+            .title {
+
+                h2 {
+                    font-size: 3em;
+                    font-weight: 400;
+                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                }
+
+            }
+
+            .containerCard{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 75px;
+
+                span{
+                    width: 350px;
+                    height: 350px;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                .card{
+              
+                    display: flex;
+                    flex-direction: column;
+
+                    .headerCard{
+                        width: 100%;
+                        border-bottom: 1px solid rgb(191, 191, 191);
+                        margin-bottom: 10px;
+
+                        p{
+                            color: rgb(149, 149, 149);
+                            font-size: .8em;
+                            font-weight: 550;
+                            padding: 15px 0px;
+                        }
+                    }
+
+
+                    .titleCard{
+
+                        h3{
+                            font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                            font-size: 1.6em;
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                        }
+
+                    }
+
+                    .articleCard{
+
+                        p{
+                            text-align: justify;
+                            font-size: 1em;
+                            font-weight: 350;
+                            
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+@media (max-width: 1024px){
+
+    .main{
+        height: 260vh;
+
+        .titlePage {
+            margin: 200px auto 100px auto;
+
+            h1 {
+                line-height: .3em;
+                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+            }
+
+            h1:nth-child(1) {
+                font-size: 2em;
+            }
+
+            h1:nth-child(2) {
+                font-size: 4em;
+            }
+
+            .button {
+                width: 150px;
+                height: 150px;
+
+                p {
+                    font-size: 1.8em;
+                }
+
+            }
+
+        }
+
+
+
+        .titlePage{
+
+            .button {
+                left: 100px;
+
+
+            }
+
+        }
+
+        .containerFirstSection{
+
+            svg {
+                top: 590px;
+            }
+
+            span {
+
+                .containerImage {
+                    width: 450px;
+                    height: 550px;
+                }
+
+            }
+        }
+
+        .containerSecondSection{
+            width: 85vw;
+
+            
+            .title {
+
+                h2 {
+                    font-size: 2.6em;
+                    font-weight: 400;
+                 }
+
+            }
+
+            .containerCard{
+                gap: 40px;
+
+                span{
+                    width: 350px;
+                    height: 350px;
+
+                }
+
+                .card{
+
+                .titleCard{
+
+                        h3{
+                            font-size: 1.2em;
+                        }
+
+                    }
+
+                    .articleCard{
+
+                        p{
+                            font-size: .95em;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
