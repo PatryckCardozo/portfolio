@@ -1,4 +1,5 @@
 import styles from './style.module.scss';
+import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
 import { useEffect, useRef } from "react";
 import gsap from 'gsap';
 import Image from 'next/image';

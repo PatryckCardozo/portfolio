@@ -1,5 +1,6 @@
 'use client';
 import styles from './style.module.scss'
+import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
 import { useState, useEffect, useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import gsap from 'gsap';
