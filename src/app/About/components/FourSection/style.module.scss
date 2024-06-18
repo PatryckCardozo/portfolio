@@ -1,4 +1,3 @@
-
 .main {
     width: 85vw;
     height: 60vh;
@@ -219,6 +218,170 @@
                                 font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                                 font-size: .95em;
                                 font-weight: 400;
+                            }
+    
+                        }
+                    }
+
+                .firstBoxQueryActive,
+                .secondBoxQueryActive,
+                .thirdBoxQueryActive,
+                .fourBoxQueryActive,
+                .fifthBoxQueryActive,
+                .sixthBoxQueryActive {
+                    height: 150px;
+                    transition: .5s ease;
+                }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main {
+        margin: 200px auto 0px auto;
+
+        .titleSection {
+    
+            h1 {
+                font-size: 2em;
+           }
+        }
+
+        .containerQuestions {
+
+
+            .firstContainerQuetion,
+            .secondContainerQuetion {
+              
+
+
+                .firstContainerQuery,
+                .secondContainerQuery,
+                .thirdContainerQuery,
+                .fourContainerQuery,
+                .fifthContainerQuery,
+                .sixthContainerQuery {
+                    margin: 30px 0px 0px 0px;
+
+                    .firstBoxQuery,
+                    .secondBoxQuery,
+                    .thirdBoxQuery,
+                    .fourBoxQuery,
+                    .fifthBoxQuery,
+                    .sixthBoxQuery {
+                       
+
+                        .boxQuery {
+                            gap: 20px;  
+    
+                            .query {
+    
+                                p {
+                                    font-size: 1em;
+                                    
+                                }
+                            }
+                        }
+
+                        .answer {
+                            height: 100px;
+                            padding: 0px 30px 0px 0px;
+    
+                            p {
+                                margin-top: 5px ;
+                                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                                font-size: .87em;
+                                font-weight: 400;
+                                text-align: justify;
+                            }
+    
+                        }
+                    }
+
+                .firstBoxQueryActive,
+                .secondBoxQueryActive,
+                .thirdBoxQueryActive,
+                .fourBoxQueryActive,
+                .fifthBoxQueryActive,
+                .sixthBoxQueryActive {
+                    height: 150px;
+                    transition: .5s ease;
+                }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+
+    .main {
+        height: 100vh;
+        margin: 0px auto 0px auto;
+
+        .titleSection {
+            text-align: center;
+    
+            h1 {
+                font-size: 1.8em;
+           }
+        }
+
+        .containerQuestions {
+            gap: 0px;
+            flex-direction: column;
+
+
+            .firstContainerQuetion,
+            .secondContainerQuetion {
+                width: 100%;
+                flex-direction: column;
+              
+
+
+                .firstContainerQuery,
+                .secondContainerQuery,
+                .thirdContainerQuery,
+                .fourContainerQuery,
+                .fifthContainerQuery,
+                .sixthContainerQuery {
+                    margin: 30px 0px 0px 0px;
+
+                    .firstBoxQuery,
+                    .secondBoxQuery,
+                    .thirdBoxQuery,
+                    .fourBoxQuery,
+                    .fifthBoxQuery,
+                    .sixthBoxQuery {
+                       
+
+                        .boxQuery {
+                            gap: 20px;  
+    
+                            .query {
+    
+                                p {
+                                    font-size: 1em;
+                                    
+                                }
+                            }
+                        }
+
+                        .answer {
+                            height: 100px;
+                            padding: 0px 30px 0px 0px;
+    
+                            p {
+                                margin-top: 5px ;
+                                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+                                font-size: .9em;
+                                font-weight: 400;
+                                text-align: justify;
                             }
     
                         }

@@ -209,3 +209,197 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+    .main {
+        height: 90vh;
+        margin: 100px auto 130px auto;
+
+        .sectionContent {
+            gap: 50px;
+
+
+            .title {
+
+                h1 {
+                    font-size: 1.4em;
+                    line-height: 40px;
+
+                }
+
+                p:nth-child(2) {
+                    width: 250px;
+                    font-size: .6em;
+                    font-weight: 350;
+                    line-height: 23px;
+                }
+
+            }
+
+            .sectionWords {
+
+                .parent {
+                    width: 47vw;
+                    height: 6vh;
+                 
+    
+    
+                    &:hover {
+                        width: 47vw;
+                        height: 25vh;
+                        transition: .4s ease-in-out;
+    
+                    }
+    
+                }
+    
+    
+                .parent[data-isOpen="true"] {
+                    width: 47vw;
+                    height: 25vh;
+                    cursor: pointer;
+                }
+
+                .child {
+
+                    h1 {
+
+                        font-size: .85em;
+                        letter-spacing: 2px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        
+                        margin: 0px auto;
+                        font-weight: 350;
+                        line-height: 15px;
+                        font-size: .75em;
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+        .sliderSection {
+           
+    
+            .slider,
+            .slider2,
+            .slider3 {
+
+    
+                p {
+                    font-size: 1.2em;
+                }
+    
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 426px) {
+
+    .main {
+        height: 90vh;
+        margin: 50px auto 130px auto;
+
+        .sectionContent {
+            gap: 50px;
+            flex-direction: column;
+            width: 80vw;
+            margin: 0px auto;
+
+
+            .title {
+
+                h1 {
+                    font-size: 1.3em;
+                    line-height: 35px;
+
+                }
+
+                p:nth-child(2) {
+                    width: 95%;
+                    font-size: .65em;
+                    font-weight: 350;
+                    line-height: 25px;
+                }
+
+            }
+
+            .sectionWords {
+                margin-bottom: 100px;
+
+                .parent {
+                    width: 80vw;
+                    height: 5vh;
+                 
+    
+    
+                    &:hover {
+                        width: 80vw;
+                        height: 25vh;
+                        transition: .4s ease-in-out;
+    
+                    }
+    
+                }
+    
+    
+                .parent[data-isOpen="true"] {
+                    width: 80vw;
+                    height: 25vh;
+                    cursor: pointer;
+                }
+
+                .child {
+
+                    h1 {
+
+                        font-size: .8em;
+                        letter-spacing: 1.8px;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        
+                        margin: 0px auto;
+                        font-weight: 350;
+                        line-height: 15px;
+                        font-size: .75em;
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+        .sliderSection {
+           
+    
+            .slider,
+            .slider2,
+            .slider3 {
+
+    
+                p {
+                    font-size: 1.2em;
+                }
+    
+            }
+        }
+
+    }
+
+}

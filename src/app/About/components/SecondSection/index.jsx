@@ -22,12 +22,12 @@ export default function Home() {
 
     return (
 
-        <div className={styles.main}>      
+        <div className={styles.main} ref={ref}>      
 
 
-                <div className={styles.sectionImages} ref={ref}>
+                <div className={styles.sectionImages}>
 
-                    <span
+                <span
                     style={{
                         transform: isInView ? "none" : "translateX(-100px)",
                         opacity: isInView ? 1 : 0,

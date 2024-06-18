@@ -1,156 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 .main {
     width: 100vw;
     height: 290vh;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(230,230,230,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(230, 230, 230, 1) 100%);
     font-size: 62, 5%;
 
-        .titlePage {
-            width: 70vw;
-            height: 30vh;
-            border-bottom: 1px solid rgb(178, 178, 178);
-            padding-bottom: 50px;
-            margin: 200px auto;
+    .titlePage {
+        width: 70vw;
+        height: 30vh;
+        border-bottom: 1px solid rgb(178, 178, 178);
+        padding-bottom: 50px;
+        margin: 200px auto;
+        font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
 
-            h1 {
-                line-height: .3em;
+        h1 {
+            line-height: .3em;
+        }
+
+        h1:nth-child(1) {
+            font-size: 3em;
+            font-weight: 400;
+
+        }
+
+        h1:nth-child(2) {
+            font-size: 5em;
+            font-weight: 420;
+        }
+
+        .buttonContainer {
+            position: relative;
+            margin-top: 170px;
+            width: 49.5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            margin-left: 300px;
+            width: 170px;
+            height: 170px;
+            background-color: #459ce9;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            p {
+                font-family: "Manrope", sans-serif;
+                color: rgb(255, 255, 255);
+                font-weight: 300;
+                font-size: 2em;
+                z-index: 3;
+            }
+
+        }
+
+    }
+
+    .containerFirstSection {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        margin: 130px auto 150px auto;
+        padding-left: 150px;
+        gap: 50px;
+
+        svg {
+            position: absolute;
+            top: 670px;
+            left: 120px;
+
+        }
+
+        .article {
+
+            width: 300px;
+
+
+
+            h2 {
+                margin: 0;
+                font-size: 1em;
+                font-weight: 350;
+                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+
+            .containerImage {
+                width: 800px;
+                height: 900px;
+                position: relative;
+                overflow: hidden;
+
+                img {
+
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+
+    .containerSecondSection {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+
+        .title {
+
+            h2 {
+                font-size: 3em;
+                font-weight: 400;
                 font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
             }
 
-            h1:nth-child(1) {
-                font-size: 3em;
-                font-weight: 400;
-
-            }
-
-            h1:nth-child(2) {
-                font-size: 5em;
-                font-weight: 420;
-            }
-
-            .buttonContainer {
-                position: relative;
-                margin-top: 170px;
-                width: 49.5vw;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .button {
-                margin-left: 300px;
-                width: 170px;
-                height: 170px;
-                background-color: #459ce9;
-                color: white;
-                border-radius: 50%;
-                position: absolute;
-                left: 300px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-
-                p {
-                    font-family: "Manrope", sans-serif;
-                    color: rgb(255, 255, 255);
-                    font-weight: 300;
-                    font-size: 2em;
-                    z-index: 3;
-                }
-
-            }
-
         }
 
-        .containerFirstSection {
+
+
+        .containerCard {
+            width: 100%;
             display: flex;
             flex-direction: row;
-            width: 80vw;
-            margin: 130px auto 150px auto;
-            padding-left: 150px;
-            gap: 50px;
+            gap: 75px;
 
-            svg {
-                position: absolute;
-                top: 670px;
-                left: 120px;
-
-            }
-
-            .article {
-
-                width: 300px;
-
-
-
-                h2 {
-                    margin: 0;
-                    font-size: 1em;
-                    font-weight: 350;
-                    font-family: "Poppins", "Urbanist", "Inter", "Roboto Flex", sans-serif, ;
-                }
-            }
-
-            span {
-                display: flex;
-                align-items: center;
-
-                .containerImage {
-                    width: 800px;
-                    height: 900px;
-                    position: relative;
-                    overflow: hidden;
-
-                    img {
-
-                        object-fit: cover;
-                    }
-                }
-
-            }
-        }
-
-        .containerSecondSection {
-            width: 80vw;
-            display: flex;
-            flex-direction: column;
-            margin: 0px auto;
-
-            .title {
-
-                h2 {
-                    font-size: 3em;
-                    font-weight: 400;
-                    font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
-                }
-
-            }
-
-            .containerCard{
-                width: 100%;
+            .firstInterestTopics,
+            .secondInterestTopics {
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
+                width: 50%;
                 gap: 75px;
 
-                span{
+                span {
                     width: 350px;
                     height: 350px;
                     margin: 0px;
                     padding: 0px;
                 }
 
-                .card{
-              
+                .card {
                     display: flex;
                     flex-direction: column;
 
-                    .headerCard{
+                    .headerCard {
                         width: 100%;
                         border-bottom: 1px solid rgb(191, 191, 191);
                         margin-bottom: 10px;
 
-                        p{
+                        p {
                             color: rgb(149, 149, 149);
                             font-size: .8em;
                             font-weight: 550;
@@ -159,9 +170,9 @@
                     }
 
 
-                    .titleCard{
+                    .titleCard {
 
-                        h3{
+                        h3 {
                             font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                             font-size: 1.6em;
                             font-weight: 400;
@@ -170,13 +181,13 @@
 
                     }
 
-                    .articleCard{
+                    .articleCard {
 
-                        p{
+                        p {
                             text-align: justify;
                             font-size: 1em;
                             font-weight: 350;
-                            
+
                         }
                     }
                 }
@@ -184,12 +195,14 @@
             }
 
         }
+
     }
+}
 
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
 
-    .main{
+    .main {
         height: 260vh;
 
         .titlePage {
@@ -197,7 +210,6 @@
 
             h1 {
                 line-height: .3em;
-                font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
             }
 
             h1:nth-child(1) {
@@ -222,7 +234,7 @@
 
 
 
-        .titlePage{
+        .titlePage {
 
             .button {
                 left: 100px;
@@ -232,7 +244,7 @@
 
         }
 
-        .containerFirstSection{
+        .containerFirstSection {
 
             svg {
                 top: 590px;
@@ -248,49 +260,340 @@
             }
         }
 
-        .containerSecondSection{
+        .containerSecondSection {
             width: 85vw;
 
-            
+
             .title {
 
                 h2 {
                     font-size: 2.6em;
                     font-weight: 400;
-                 }
+                }
 
             }
 
-            .containerCard{
+            .containerCard {
                 gap: 40px;
 
-                span{
-                    width: 350px;
-                    height: 350px;
+                .firstInterestTopics,
+                .secondInterestTopics {
+                    gap: 40px;
 
-                }
-
-                .card{
-
-                .titleCard{
-
-                        h3{
-                            font-size: 1.2em;
-                        }
+                    span {
+                        width: 350px;
+                        height: 350px;
 
                     }
 
-                    .articleCard{
+                    .card {
 
-                        p{
-                            font-size: .95em;
-                            
+                        .titleCard {
+
+                            h3 {
+                                font-size: 1.2em;
+                            }
+
+                        }
+
+                        .articleCard {
+
+                            p {
+                                font-size: .95em;
+
+                            }
                         }
                     }
+
                 }
             }
         }
     }
+}
 
-    
+@media (max-width: 768px) {
+
+    .main {
+        height: 250vh;
+
+        .titlePage {
+            width: 70vw;
+            padding: 0px 30px;
+            margin: 180px auto 100px auto;
+
+            h1 {
+                line-height: .3em;
+            }
+
+            h1:nth-child(1) {
+                font-size: 1.8em;
+            }
+
+            h1:nth-child(2) {
+                font-size: 3.5em;
+            }
+
+            .button {
+                width: 130px;
+                height: 130px;
+
+                p {
+                    font-size: 1.5em;
+                }
+
+            }
+
+        }
+
+
+
+        .titlePage {
+            margin-bottom: 50px;
+
+            .button {
+                bottom: -30px;
+                left: 50px;
+
+
+            }
+
+        }
+
+        .containerFirstSection {
+            flex-direction: column;
+            margin: 0px auto 100px auto;
+            padding-left: 50px;
+
+            .article {
+                width: 90%;
+                margin-bottom: 50px;
+
+                h2 {
+                    text-align: justify;
+                    font-size: 1em;
+                }
+
+            }
+
+            svg {
+                top: 480px;
+                left: 50px;
+            }
+
+            span {
+
+                .containerImage {
+                    width: 600px;
+                    height: 700px;
+                }
+
+            }
+        }
+
+        .containerSecondSection {
+            width: 85vw;
+
+
+            .title {
+
+                h2 {
+                    font-size: 2em;
+                    font-weight: 400;
+                }
+
+            }
+
+            .containerCard {
+                gap: 25px;
+
+                .firstInterestTopics,
+                .secondInterestTopics {
+                    gap: 25px;
+
+                    span {
+                        width: 350px;
+                        height: 350px;
+
+                    }
+
+                    .card {
+
+                        .headerCard {
+                            margin-bottom: 0px;
+
+                            p {
+                                font-size: .7em;
+                                padding: 5px 0px;
+                            }
+                        }
+
+
+                        .titleCard {
+
+                            h3 {
+                                font-size: 1.05em;
+                                margin-bottom: 0px;
+                            }
+
+                        }
+
+                        .articleCard {
+
+                            p {
+                                font-size: .85em;
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+
+    .main {
+        height: 240vh;
+
+        .titlePage {
+            width: 70vw;
+            height: 20vh;
+            padding: 0px 30px;
+            margin: 180px auto 50px auto;
+
+            h1 {
+                line-height: .3em;
+            }
+
+            h1:nth-child(1) {
+                font-size: 1.2em;
+            }
+
+            h1:nth-child(2) {
+                font-size: 2.2em;
+
+            }
+
+            .button {
+                bottom: 30px;
+                left: -100px;
+
+
+            }
+
+            .button {
+                width: 100px;
+                height: 100px;
+
+                p {
+                    font-size: 1.5em;
+                }
+
+            }
+
+        }
+
+
+        .containerFirstSection {
+            flex-direction: column;
+            margin: 0px auto 100px auto;
+            padding-left: 50px;
+
+            .article {
+                width: 90%;
+                margin-bottom: 50px;
+
+                h2 {
+                    text-align: justify;
+                    font-size: .9em;
+                }
+
+            }
+
+            svg {
+                top: 425px;
+                left: 30px;
+            }
+
+            span {
+
+                .containerImage {
+                    width: 320px;
+                    height: 370px;
+                }
+
+            }
+        }
+
+        .containerSecondSection {
+            width: 85vw;
+
+
+            .title {
+              
+
+                h2 {
+                    font-size: 1.6em;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                }
+
+            }
+
+            .containerCard {
+                gap: 0px;
+
+                .firstInterestTopics,
+                .secondInterestTopics {
+                    flex-direction: column;
+                    gap: 0px;
+
+                    span {
+                        width: 90%;
+                        height: 270px;
+
+                    }
+
+                    .card {
+                        
+
+                        .headerCard {
+                            margin-bottom: 0px;
+
+                            p {
+                                font-size: .7em;
+                                padding: 0px;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+
+                        .titleCard {
+
+                            h3 {
+                                font-size: 1.05em;
+                                margin-bottom: 0px;
+                                margin-top: 10px;
+                            }
+
+                        }
+
+                        .articleCard {
+
+                            p {
+                                font-size: .85em;
+
+                            }
+                        }
+                    }
+                }
+
+                .secondInterestTopics{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
 }

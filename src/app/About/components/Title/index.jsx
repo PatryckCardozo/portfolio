@@ -1,6 +1,6 @@
 'use client';
 import styles from './style.module.scss'
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
+import { Poppins, Inter, Quicksand, Roboto, Urbanist } from 'next/font/google'
 import { useState, useEffect, useRef } from 'react';
 import { useScroll, useTransform, motion, useInView } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,6 +20,7 @@ export default function Home() {
     const isInView = useInView(ref);
 
     const button = useRef(null);
+    const buttonslide = useRef(null);
     const article = useRef(null);
     const container = useRef(null);
 
@@ -28,7 +29,6 @@ export default function Home() {
         offset: ["start end", "end end"]
     })
 
-    const x = useTransform(scrollYProgress, [0, 1], [0, 500])
     const y = useTransform(scrollYProgress, [0, 1], [0, 500])
     const rotate = useTransform(scrollYProgress, [0, 1], [280, 600])
 
@@ -53,13 +53,12 @@ export default function Home() {
 
         <div className={styles.main}>
 
-
             <div className={styles.titlePage}>
                 <h1>Um pouco sobre</h1>
                 <h1>Patryck Cardozo</h1>
 
                 <Link href="/Contact">
-                    <motion.div style={{ x }} ref={button} className={styles.buttonContainer}>
+                    <motion.div ref={button} className={styles.buttonContainer}>
 
                         <Rounded backgroundColor={"#334BD3"} className={styles.button}>
                             <p>Olá</p>
@@ -108,81 +107,89 @@ export default function Home() {
 
                 <div className={styles.containerCard}>
 
-                    <span
-                        style={{
-                            transform: isInView ? "none" : "translateX(-50px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                        }}>
-                        <div className={styles.card}>
-                            <div className={styles.headerCard}>
-                                <p>01</p>
-                            </div>
-                            <div className={styles.titleCard}>
-                                <h3>Compliance</h3>
-                            </div>
-                            <div className={styles.articleCard}>
-                                <p>O interesse em atuar com compliance surge pela admiração a integridade empresarial e o desejo de contribuir para práticas éticas e conformidade regulatória.</p>
-                            </div>
-                        </div>
-                    </span>
+                    <div className={styles.firstInterestTopics}>
 
-                    <span
-                        style={{
-                            transform: isInView ? "none" : "translateX(-50px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
-                        }}>
-                        <div className={styles.card}>
-                            <div className={styles.headerCard}>
-                                <p>02</p>
+                        <span
+                            style={{
+                                transform: isInView ? "none" : "translateX(-50px)",
+                                opacity: isInView ? 1 : 0,
+                                transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                            }}>
+                            <div className={styles.card}>
+                                <div className={styles.headerCard}>
+                                    <p>01</p>
+                                </div>
+                                <div className={styles.titleCard}>
+                                    <h3>Compliance</h3>
+                                </div>
+                                <div className={styles.articleCard}>
+                                    <p>O interesse em atuar com compliance surge pela admiração a integridade empresarial e o desejo de contribuir para práticas éticas e conformidade regulatória.</p>
+                                </div>
                             </div>
-                            <div className={styles.titleCard}>
-                                <h3>Tributário</h3>
-                            </div>
-                            <div className={styles.articleCard}>
-                                <p>O dejeso de aprofundar meu conhecimento e atuar no ramo do direito tributário tem como intuíto assegurar que empresas cumpram as leis fiscais e otimizem sua carga tributária de forma legal.</p>
-                            </div>
-                        </div>
-                    </span>
+                        </span>
 
-                    <span
-                        style={{
-                            transform: isInView ? "none" : "translateX(-50px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-                        }}>
-                        <div className={styles.card}>
-                            <div className={styles.headerCard}>
-                                <p>03</p>
+                        <span
+                            style={{
+                                transform: isInView ? "none" : "translateX(-50px)",
+                                opacity: isInView ? 1 : 0,
+                                transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
+                            }}>
+                            <div className={styles.card}>
+                                <div className={styles.headerCard}>
+                                    <p>02</p>
+                                </div>
+                                <div className={styles.titleCard}>
+                                    <h3>Tributário</h3>
+                                </div>
+                                <div className={styles.articleCard}>
+                                    <p>O dejeso de aprofundar meu conhecimento e atuar no ramo do direito tributário tem como intuíto assegurar que empresas cumpram as leis fiscais e otimizem sua carga tributária de forma legal.</p>
+                                </div>
                             </div>
-                            <div className={styles.titleCard}>
-                                <h3>Developer</h3>
-                            </div>
-                            <div className={styles.articleCard}>
-                                <p>Minha atuação na programação começou com a manipulação de dados, levando à graduação em Análise e Desenvolvimento de Sistemas e ao desenvolvimento front end.</p>
-                            </div>
-                        </div>
-                    </span>
+                        </span>
 
-                    <span
-                        style={{
-                            transform: isInView ? "none" : "translateX(-50px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-                        }}>
-                        <div className={styles.card}>
-                            <div className={styles.headerCard}>
-                                <p>04</p>
+                    </div>
+
+                    <div className={styles.secondInterestTopics}>
+
+                        <span
+                            style={{
+                                transform: isInView ? "none" : "translateX(-50px)",
+                                opacity: isInView ? 1 : 0,
+                                transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
+                            }}>
+                            <div className={styles.card}>
+                                <div className={styles.headerCard}>
+                                    <p>03</p>
+                                </div>
+                                <div className={styles.titleCard}>
+                                    <h3>Developer</h3>
+                                </div>
+                                <div className={styles.articleCard}>
+                                    <p>Minha atuação na programação começou com a manipulação de dados, levando à graduação em Análise e Desenvolvimento de Sistemas e ao desenvolvimento front end.</p>
+                                </div>
                             </div>
-                            <div className={styles.titleCard}>
-                                <h3>Banco de Dados</h3>
+                        </span>
+
+                        <span
+                            style={{
+                                transform: isInView ? "none" : "translateX(-50px)",
+                                opacity: isInView ? 1 : 0,
+                                transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
+                            }}>
+                            <div className={styles.card}>
+                                <div className={styles.headerCard}>
+                                    <p>04</p>
+                                </div>
+                                <div className={styles.titleCard}>
+                                    <h3>Banco de Dados</h3>
+                                </div>
+                                <div className={styles.articleCard}>
+                                    <p>Minha expertise e interesse em manipulação e administração de dados surge da migração e conversão de softwares utilizados na gestão pública.</p>
+                                </div>
                             </div>
-                            <div className={styles.articleCard}>
-                                <p>Minha expertise e interesse em manipulação e administração de dados surge da migração e conversão de softwares utilizados na gestão pública.</p>
-                            </div>
-                        </div>
-                    </span>
+                        </span>
+
+                    </div>
 
                 </div>
             </div>
