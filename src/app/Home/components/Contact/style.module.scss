@@ -11,7 +11,6 @@
     height: 100vh;
     margin-top: 300px;
 
-
     .body {
         background-color: #141516;
         width: 80vw;
@@ -105,14 +104,12 @@
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
-
-
+            align-items: flex-end; /* Corrigido para usar flex-end */
 
             div {
                 display: flex;
                 gap: 10px;
-                align-items: flex-end;
+                align-items: flex-end; /* Corrigido para usar flex-end */
 
                 p,
                 h3 {
@@ -161,10 +158,8 @@
                     font-size: 1em;
                 }
             }
-
         }
     }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -195,14 +190,21 @@
 @media (max-width: 768px) {
 
     .contact {
+        margin-top: 200px;
         font-size: 55%;
 
         .body {
 
-
             .nav {
                 gap: 30px;
                 margin-top: 100px 0px;
+            }
+
+            .info {
+                padding: 0;
+                position: absolute;
+                bottom: 10px;
+                left: 330px;
             }
         }
     }
@@ -212,9 +214,10 @@
 @media (max-width: 465px) {
 
     .contact {
-        margin-top: 200px;
+        height: 100vh;
+
         .body {
-            margin-top: 5px;
+            margin-top: 10px;
 
             .title {
                 
@@ -224,7 +227,7 @@
             }
 
             .nav {
-                margin-top: 90px;
+                margin-top: 100px;
                 margin-bottom: 60px;
                 flex-direction: column;
 
@@ -237,17 +240,25 @@
 
             .info {
                 padding: 0;
+                position: absolute;
+                bottom: 0px;
+                left: 150px;
             }
 
             .title {
                 .buttonContainer {
-                    left: calc(100% - 300px);
-                    top: calc(100% - 65px);
+                    left: calc(100% - 220px);
+                    top: calc(100% - 50px);
                 }
 
                 .button {
-                    width: 130px;
-                    height: 130px;
+                    width: 100px;
+                    height: 100px;
+
+                    p{
+                        font-size: 1.6em;
+                        line-height: 15px;
+                    }
                 }
 
                 span {

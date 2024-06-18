@@ -40,7 +40,7 @@
         }
 
         .button {
-            margin-left: 300px;
+            margin-left: 400px;
             width: 170px;
             height: 170px;
             background-color: #459ce9;
@@ -58,7 +58,7 @@
                 color: rgb(255, 255, 255);
                 font-weight: 300;
                 font-size: 2em;
-                z-index: 3;
+                z-index: 1;
             }
 
         }
@@ -114,7 +114,7 @@
     }
 
     .containerSecondSection {
-        width: 80vw;
+        width: 90vw;
         display: flex;
         flex-direction: column;
         margin: 0px auto;
@@ -135,7 +135,9 @@
             width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 75px;
+            margin: 0px auto;
+            gap: 50px;
+         
 
             .firstInterestTopics,
             .secondInterestTopics {
@@ -143,11 +145,11 @@
                 flex-direction: row;
                 justify-content: center;
                 width: 50%;
-                gap: 75px;
+                gap: 50px;
 
                 span {
-                    width: 350px;
-                    height: 350px;
+                    width: 300px;
+                    height: 300px;
                     margin: 0px;
                     padding: 0px;
                 }
@@ -334,6 +336,7 @@
             }
 
             .button {
+                margin-left: 280px;
                 width: 130px;
                 height: 130px;
 
@@ -508,6 +511,7 @@
                 h2 {
                     text-align: justify;
                     font-size: .9em;
+            
                 }
 
             }

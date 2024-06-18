@@ -62,7 +62,7 @@
         align-items: center;
         cursor: pointer;
         opacity: 1;
-        transition: 1s;
+        
 
         .imageContainer{
             width: 50px;
@@ -96,7 +96,8 @@
 
     .logoActive{
         opacity: 0;
-        transition: 1s;
+        
+        
     }
 
 
