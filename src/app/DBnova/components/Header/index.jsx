@@ -18,8 +18,10 @@ export default function Index() {
     const button = useRef(null);
 
     useEffect(() => {
-        if (isActive) setIsActive(false)
-    }, [pathname])
+        if (isActive) {
+            setIsActive(false);
+        }
+    }, [pathname]);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)

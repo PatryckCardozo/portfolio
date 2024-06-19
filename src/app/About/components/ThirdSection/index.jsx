@@ -13,34 +13,44 @@ import { inherits } from 'util';
 import { SyntheticModule } from 'vm';
 
 export default function Home() {
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+    const [isOpen4, setIsOpen4] = useState(false);
+    const [isOpen5, setIsOpen5] = useState(false);
+    const [isOpen6, setIsOpen6] = useState(false);
 
     const firstText = useRef(null);
     const secondText = useRef(null);
     const thirdText = useRef(null);
-    const fourText = useRef(null);
+    const fourthText = useRef(null);
     const fifthText = useRef(null);
     const sixthText = useRef(null);
-    const slider = useRef(null);
+
+
+    const slider1 = useRef(null);
     const slider2 = useRef(null);
     const slider3 = useRef(null);
     const slider4 = useRef(null);
     const slider5 = useRef(null);
     const slider6 = useRef(null);
-    let xPercent = 0;
-    let direction = -1;
+
+    const xPercent = useRef(0);
+    const direction = useRef(-1);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(slider.current, {
+
+        gsap.to(slider1.current, {
             scrollTrigger: {
                 trigger: document.documentElement,
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 0.5
+                onUpdate: e => direction.current = e.direction * 0.5
             },
             x: "-2000px",
-        })
+        });
 
         gsap.to(slider2.current, {
             scrollTrigger: {
@@ -48,10 +58,10 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "10px",
-        })
+        });
 
         gsap.to(slider3.current, {
             scrollTrigger: {
@@ -59,20 +69,21 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "-1700px",
-        })
+        });
+
         gsap.to(slider4.current, {
             scrollTrigger: {
                 trigger: document.documentElement,
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 0.5
+                onUpdate: e => direction.current = e.direction * 0.5
             },
             x: "-1500px",
-        })
+        });
 
         gsap.to(slider5.current, {
             scrollTrigger: {
@@ -80,10 +91,10 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "10px",
-        })
+        });
 
         gsap.to(slider6.current, {
             scrollTrigger: {
@@ -91,33 +102,35 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "-1500px",
-        })
-        requestAnimationFrame(animate);
-    }, [])
+        });
 
+        requestAnimationFrame(animate);
+    }, []);
 
     const animate = () => {
-        if (xPercent > 100) {
-            xPercent = 0;
+        if (xPercent.current > 100) {
+            xPercent.current = 0;
+        } else if (xPercent.current < 0) {
+            xPercent.current = 100;
         }
-        else if (xPercent < 0) {
-            xPercent = 100;
-        }
-        gsap.set(firstText.current, { xPercent: xPercent })
-        gsap.set(secondText.current, { xPercent: -xPercent })
-        gsap.set(thirdText.current, { xPercent: xPercent })
-        gsap.set(fourText.current, { xPercent: xPercent })
-        gsap.set(fifthText.current, { xPercent: -xPercent })
-        gsap.set(sixthText.current, { xPercent: xPercent })
+
+        gsap.set(firstText.current, { xPercent: xPercent.current });
+        gsap.set(secondText.current, { xPercent: -xPercent.current });
+        gsap.set(thirdText.current, { xPercent: xPercent.current });
+        gsap.set(fourthText.current, { xPercent: xPercent.current });
+        gsap.set(fifthText.current, { xPercent: -xPercent.current });
+        gsap.set(sixthText.current, { xPercent: xPercent.current });
+
         requestAnimationFrame(animate);
-        xPercent += 0.1 * direction;
-    }
+        xPercent.current += 0.1 * direction.current;
+    };
 
     const ref = useRef(null);
     const isInView = useInView(ref);
+
 
     return (
 
@@ -125,7 +138,7 @@ export default function Home() {
 
             <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
                 <div className={styles.sliderContainer}>
-                    <div ref={slider} className={styles.slider}>
+                    <div ref={slider1} className={styles.slider}>
                         <p ref={firstText}>Capacitação • Aprimoramento • Instrução • Escolaridade • Formação • Aprendizado • Graduação • Desenvolvimento • Educação • Capacitação • Aprimoramento • Instrução • Escolaridade • Formação • Aprendizado • Graduação • Desenvolvimento • Educação •</p>
                     </div>
                     <div ref={slider2} className={styles.slider2}>
@@ -241,7 +254,7 @@ export default function Home() {
             <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
                 <div className={styles.sliderContainer}>
                     <div ref={slider4} className={styles.slider}>
-                        <p ref={fourText}>Incorporação • Contratação • Frequentes • Dúvidas • Admissão • Processo • Seleção • Entrevista • Recrutamento • Incorporação • Contratação • Frequentes • Dúvidas • Admissão • Processo • Seleção • Entrevista • Recrutamento •</p>
+                        <p ref={fourthText}>Incorporação • Contratação • Frequentes • Dúvidas • Admissão • Processo • Seleção • Entrevista • Recrutamento • Incorporação • Contratação • Frequentes • Dúvidas • Admissão • Processo • Seleção • Entrevista • Recrutamento •</p>
                     </div>
                     <div ref={slider5} className={styles.slider2}>
                         <p ref={fifthText}>Recrutamento • Entrevista • Seleção • Processo • Admissão • Dúvidas • Frequentes • Contratação • Incorporação • Recrutamento • Entrevista • Seleção • Processo • Admissão • Dúvidas • Frequentes • Contratação • Incorporação •</p>

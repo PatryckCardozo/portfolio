@@ -7,7 +7,7 @@ import { motion, useInView } from 'framer-motion';
 import { slideUp } from './animation';
 
 export default function Home() {
-
+    
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
@@ -21,22 +21,22 @@ export default function Home() {
     const slider2 = useRef(null);
     const slider3 = useRef(null);
 
-    let xPercent = 0;
-    let direction = -1;
-
+    const xPercent = useRef(0);
+    const direction = useRef(-1);
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
+        
         gsap.to(slider.current, {
             scrollTrigger: {
                 trigger: document.documentElement,
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 0.5
+                onUpdate: e => direction.current = e.direction * 0.5
             },
             x: "-1500px",
-        })
+        });
 
         gsap.to(slider2.current, {
             scrollTrigger: {
@@ -44,10 +44,10 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "10px",
-        })
+        });
 
         gsap.to(slider3.current, {
             scrollTrigger: {
@@ -55,27 +55,28 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "-1600px",
-        })
-        requestAnimationFrame(animate);
-    }, [])
+        });
 
+        requestAnimationFrame(animate);
+    }, []);
 
     const animate = () => {
-        if (xPercent > 100) {
-            xPercent = 0;
+        if (xPercent.current > 100) {
+            xPercent.current = 0;
+        } else if (xPercent.current < 0) {
+            xPercent.current = 100;
         }
-        else if (xPercent < 0) {
-            xPercent = 100;
-        }
-        gsap.set(firstText.current, { xPercent: xPercent })
-        gsap.set(secondText.current, { xPercent: -xPercent })
-        gsap.set(thirdText.current, { xPercent: xPercent })
+
+        gsap.set(firstText.current, { xPercent: xPercent.current });
+        gsap.set(secondText.current, { xPercent: -xPercent.current });
+        gsap.set(thirdText.current, { xPercent: xPercent.current });
+
         requestAnimationFrame(animate);
-        xPercent += 0.1 * direction;
-    }
+        xPercent.current += 0.1 * direction.current;
+    };
 
     const ref = useRef(null);
     const isInView = useInView(ref);
