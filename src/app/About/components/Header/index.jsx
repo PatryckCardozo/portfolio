@@ -21,7 +21,7 @@ export default function Index() {
         if (isActive) {
             setIsActive(false);
         }
-    }, [pathname]);
+    }, [pathname]); 
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)

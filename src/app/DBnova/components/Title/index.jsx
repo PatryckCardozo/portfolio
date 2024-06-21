@@ -68,9 +68,9 @@ export default function Home() {
 
             <div className={styles.imageContainer}>
                 {
-                    projects.map((project) => {
+                    projects.map((project, idx) => {
                         const { src, color } = project
-                        return <div className={styles.modal} style={{ backgroundColor: color }} >
+                        return <div div key={idx} className={styles.modal} style={{ backgroundColor: color }} >
                             <Image
                                 src={`/images/${src}`}
                                 width={300}

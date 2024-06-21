@@ -73,9 +73,9 @@ export default function Home() {
           <div onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }} className={styles.smallProject}>
             <div className={styles.modalSlider}>
               {
-                projects.map((project) => {
+                projects.map((project, idx) => {
                   const { src, color } = project
-                  return <div className={styles.modal} style={{ backgroundColor: color }} >
+                  return <div div key={idx} className={styles.modal} style={{ backgroundColor: color }} >
                     <Image
                       src={`/images/${src}`}
                       width={300}

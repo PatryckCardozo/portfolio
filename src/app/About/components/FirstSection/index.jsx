@@ -33,7 +33,7 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 0.5
+                onUpdate: e => direction.current = e.direction * 0.15
             },
             x: "-1500px",
         });
@@ -44,7 +44,7 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 0.15
             },
             x: "10px",
         });
@@ -55,13 +55,13 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 1
+                onUpdate: e => direction.current = e.direction * 0.15
             },
             x: "-1600px",
         });
 
         requestAnimationFrame(animate);
-    }, []);
+    });
 
     const animate = () => {
         if (xPercent.current > 100) {

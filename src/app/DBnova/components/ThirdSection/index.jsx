@@ -27,7 +27,11 @@ export default function Index() {
                     <div className={styles.card} style={{backgroundColor:"#f2f2f2"}}>
                         <div className={styles.contentCard}>
                             <div className={styles.iconCard2}>
-                                <img src="images/Elo.png" alt="" />
+                                <Image 
+                                width={200}
+                                height={200}
+                                src={`/images/Elo.png`} 
+                                alt="image" />
 
                             </div>
                             <div className={styles.articleCard}>
@@ -39,7 +43,11 @@ export default function Index() {
                     <div className={styles.card} style={{backgroundColor:"#f3ffed"}}>
                         <div className={styles.contentCard}>
                             <div className={styles.iconCard1}>
-                                <img src="images/crystal_reports.png" alt="" />
+                                <Image
+                                width={200}
+                                height={200}
+                                src={`/images/crystal_reports.png`} 
+                                alt="image" />
                             </div>
                             <div className={styles.articleCard}>
                                 <p>Desenvolvimento de relatórios com visualizações detalhadas e personalizadas de dados.</p>
@@ -51,7 +59,11 @@ export default function Index() {
                         <div className={styles.contentCard}>
 
                             <div className={styles.iconCard3}>
-                                <img src="images/Adobe.png" alt="" />
+                                <Image 
+                                width={200}
+                                height={200}
+                                src={`/images/Adobe.png`} 
+                                alt="Image" />
                             </div>
 
                             <div className={styles.articleCard}>
