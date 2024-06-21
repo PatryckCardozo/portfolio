@@ -1,7 +1,6 @@
 'use client';
 import { useLayoutEffect, useRef } from "react";
 import styles from './style.module.scss';
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from '@next/font/google'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';

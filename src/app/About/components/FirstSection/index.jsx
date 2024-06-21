@@ -1,5 +1,4 @@
 import styles from './style.module.scss';
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
 import { useState, useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger, ScrollToPlugin } from 'gsap/ScrollTrigger';

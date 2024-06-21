@@ -1,5 +1,4 @@
 import styles from './style.module.scss';
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
 import Image from 'next/image';
 import Link from 'next/link';
 import Rounded from '../../../../common/RoundedButton';

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styles from './style.module.scss';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
 
 export default function Home() {
     const [firstIsActive, setFirstIsActive] = useState(false);
