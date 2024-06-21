@@ -1,10 +1,10 @@
 'use client';
 import { useLayoutEffect, useRef } from "react";
 import styles from './style.module.scss';
-import { Inter, Poppins, Quicksand, Roboto, Urbanist } from 'next/font/google'
+import { Inter, Poppins, Quicksand, Roboto, Urbanist } from '@next/font/google'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from "next/image";
+import Image from 'next/image';
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -122,8 +122,13 @@ export default function Index() {
                             <div className={styles.containerCard}>
                                 <div className={styles.contentCard}>
 
+
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -136,7 +141,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -149,7 +158,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/auditoria.svg" alt="" />
+                                        <Image
+                                            src={`/images/auditoria.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -162,7 +175,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -175,7 +192,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -188,7 +209,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/auditoria.svg" alt="" />
+                                        <Image
+                                            src={`/images/auditoria.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -201,7 +226,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -214,7 +243,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -227,7 +260,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/auditoria.svg" alt="" />
+                                        <Image
+                                            src={`/images/auditoria.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -246,7 +283,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -259,7 +300,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/lock-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -272,7 +317,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/security-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/security-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -285,7 +334,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -298,7 +351,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/lock-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -311,7 +368,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/security-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/security-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -324,7 +385,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -337,7 +402,12 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            width={40}
+                                            height={40}
+                                            alt={"image"}
+                                            src={`/images/lock-white.svg`}
+                                        />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -350,7 +420,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/security-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/security-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -369,7 +443,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -382,7 +460,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -395,7 +477,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/auditoria.svg" alt="" />
+                                        <Image
+                                            src={`/images/auditoria.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -408,7 +494,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -421,7 +511,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -434,7 +528,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/auditoria.svg" alt="" />
+                                        <Image
+                                            src={`/images/auditoria.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -447,7 +545,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/file-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/file-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -460,7 +562,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/law-white.svg" alt="" />
+                                        <Image
+                                            src={`images/law-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -468,7 +574,7 @@ export default function Index() {
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                         </div>
 
@@ -478,7 +584,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -491,7 +601,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/lock-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -504,7 +618,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/security-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/security-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -517,7 +635,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -530,7 +652,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/lock-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -543,7 +669,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/security-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/security-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -556,7 +686,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/compliance.svg" alt="" />
+                                        <Image
+                                            src={`/images/compliance.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>
@@ -569,7 +703,11 @@ export default function Index() {
                                 <div className={styles.contentCard}>
 
                                     <div className={styles.containerIcon}>
-                                        <img src="images/lock-white.svg" alt="" />
+                                        <Image
+                                            src={`/images/lock-white.svg`}
+                                            width={40}
+                                            height={40}
+                                            alt={"image"} />
                                     </div>
 
                                     <div className={styles.titleCard}>

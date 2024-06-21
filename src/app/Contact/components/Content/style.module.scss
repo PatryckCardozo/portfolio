@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
+
+
 .allcontent {
     width: 100vw;
 
@@ -208,6 +211,7 @@
 .allContentOverlay {
     display: flex;
     width: 100vw;
+    height: 270vh;
     margin: 0px auto;
     gap: 100px;
     background-color: #ececec;
@@ -216,7 +220,7 @@
     left: 0;
 
     clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
-    transition: clip-path 100ms;
+    transition: clip-path 100ms ease;
 
     .bodyOverlay {
         display: flex;
@@ -252,9 +256,6 @@
                 h1:nth-child(2) {
                     font-weight: 450;
                 }
-
-
-
 
 
             }
