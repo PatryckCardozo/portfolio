@@ -58,15 +58,15 @@ export default function Index() {
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>A fusão da experiência tecnológica ao conhecimento jurídico me proporciona uma perspectiva singular na busca por soluções.</motion.p>
 
-                <div>
-                    <Link href="/About">
+                <Link href="/About">
+                    <div>
                         <motion.div style={{ y }} className={styles.buttonContainer}>
                             <Rounded className={styles.button}>
                                 <p>Perfil</p>
                             </Rounded>
                         </motion.div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
             </div>
         </div>
