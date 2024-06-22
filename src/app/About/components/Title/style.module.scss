@@ -458,7 +458,7 @@
 @media (max-width: 426px) {
 
     .main {
-        height: 185vh;
+        height: 190vh;
 
         .titlePage {
             width: 70vw;
@@ -481,7 +481,7 @@
             }
 
             .button {
-                bottom: -15px;
+                bottom: 10px;
                 left: -100px;
 
 
@@ -520,13 +520,14 @@
             svg {
                 width: 8px;
                 height: 8px;
-                top: 450px;
+                top: 420px;
                 left: 30px;
             }
 
             span {
 
                 .containerImage {
+                    margin-top: 50px;
                     width: 320px;
                     height: 370px;
                 }
