@@ -13,46 +13,46 @@ export default function Index() {
     const phrase = "Unindo expertise jurídica e proficiência em softwares e desenvolvimento para criar impactos significativos.";
     const description = useRef(null);
     const isInView = useInView(description)
-    
+
     return (
         <div ref={description} className={styles.description}>
             <div className={styles.title}>
                 <h2>
-                {
-                    direito.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
-                    })
-                }
+                    {
+                        direito.split(" ").map((word, index) => {
+                            return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        })
+                    }
                 </h2>
                 <h2>
-                {
-                    analise.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
-                    })
-                }
+                    {
+                        analise.split(" ").map((word, index) => {
+                            return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        })
+                    }
                 </h2>
                 <h2>
-                {
-                    devSist.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
-                    })
-                }
+                    {
+                        devSist.split(" ").map((word, index) => {
+                            return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        })
+                    }
                 </h2>
             </div>
             <div className={styles.body}>
                 <p>
-                {
-                    phrase.split(" ").map( (word, index) => {
-                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
-                    })
-                }
+                    {
+                        phrase.split(" ").map((word, index) => {
+                            return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        })
+                    }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>A fusão da experiência tecnológica ao conhecimento jurídico me proporciona uma perspectiva singular na busca por soluções.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
-                <Link href="/About">
-                    <Rounded className={styles.button}>
-                        <p>Perfil</p>
-                    </Rounded>
+                    <Link href="/About">
+                        <Rounded className={styles.button}>
+                            <p>Perfil</p>
+                        </Rounded>
                     </Link>
                 </div>
             </div>

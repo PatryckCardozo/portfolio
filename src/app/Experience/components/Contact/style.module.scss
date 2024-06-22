@@ -207,7 +207,7 @@
 
     .contact {
         .body {
-            margin-top: 60px;
+            margin-top: 80px;
             .title{
                 h2{
                     font-size: 4em;
@@ -226,6 +226,9 @@
 
             .info{
                 padding: 0;
+                position: absolute;
+                bottom: 0px;
+                left: 150px;
             }
 
             .title {

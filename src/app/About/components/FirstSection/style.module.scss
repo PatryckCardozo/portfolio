@@ -166,19 +166,19 @@
                 .parent {
                     width: 47vw;
                     height: 6vh;
-                 
-    
-    
+
+
+
                     &:hover {
                         width: 47vw;
                         height: 25vh;
                         transition: .4s ease-in-out;
-    
+
                     }
-    
+
                 }
-    
-    
+
+
                 .parent[data-isOpen="true"] {
                     width: 47vw;
                     height: 25vh;
@@ -244,19 +244,19 @@
                 .parent {
                     width: 47vw;
                     height: 6vh;
-                 
-    
-    
+
+
+
                     &:hover {
                         width: 47vw;
                         height: 25vh;
                         transition: .4s ease-in-out;
-    
+
                     }
-    
+
                 }
-    
-    
+
+
                 .parent[data-isOpen="true"] {
                     width: 47vw;
                     height: 25vh;
@@ -273,7 +273,7 @@
                     }
 
                     p {
-                        
+
                         margin: 0px auto;
                         font-weight: 350;
                         line-height: 15px;
@@ -289,17 +289,17 @@
         }
 
         .sliderSection {
-           
-    
+
+
             .slider,
             .slider2,
             .slider3 {
 
-    
+
                 p {
                     font-size: 1.2em;
                 }
-    
+
             }
         }
 
@@ -310,7 +310,7 @@
 @media (max-width: 426px) {
 
     .main {
-        height: 90vh;
+        height: 75vh;
         margin: 50px auto 130px auto;
 
         .sectionContent {
@@ -342,20 +342,20 @@
 
                 .parent {
                     width: 80vw;
-                    height: 5vh;
-                 
-    
-    
+                    height: 4vh;
+
+
+
                     &:hover {
                         width: 80vw;
                         height: 25vh;
                         transition: .4s ease-in-out;
-    
+
                     }
-    
+
                 }
-    
-    
+
+
                 .parent[data-isOpen="true"] {
                     width: 80vw;
                     height: 25vh;
@@ -367,12 +367,12 @@
                     h1 {
 
                         font-size: .8em;
-                        letter-spacing: 1.8px;
+                        letter-spacing: 1.5px;
                         font-weight: 400;
                     }
 
                     p {
-                        
+
                         margin: 0px auto;
                         font-weight: 350;
                         line-height: 15px;
@@ -388,17 +388,23 @@
         }
 
         .sliderSection {
-           
-    
-            .slider,
-            .slider2,
-            .slider3 {
 
-    
-                p {
-                    font-size: 1.2em;
+            .sliderContainer {
+
+                margin-bottom: 0px;
+
+
+                .slider,
+                .slider2,
+                .slider3 {
+
+
+                    p {
+                        font-size: 1.2em;
+                    }
+
                 }
-    
+
             }
         }
 

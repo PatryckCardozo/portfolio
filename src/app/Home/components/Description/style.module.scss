@@ -109,7 +109,7 @@
 @media  (max-width: 426px) {
     
     .description{
-        font-size: 45%;
+        font-size: 47%;
         margin-top: 130px;            
 
         .body{
@@ -118,16 +118,20 @@
 
             p{
                 &:nth-of-type(2) {
-                    width: 30%;
+                    font-size: 1.9em;
+                    width: 40%;
                 }
             }
 
             .button{   
                 position: relative;   
-                top: -230px;  
-                left: 130px;    
+                top: -250px;  
+                left: 180px;    
                 width: 130px;
                 height: 130px;
+
+
+
             }
         }
     }

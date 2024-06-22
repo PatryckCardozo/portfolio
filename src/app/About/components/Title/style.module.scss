@@ -458,29 +458,30 @@
 @media (max-width: 426px) {
 
     .main {
-        height: 240vh;
+        height: 185vh;
 
         .titlePage {
             width: 70vw;
             height: 20vh;
             padding: 0px 30px;
-            margin: 180px auto 50px auto;
+            margin: 180px auto 0px auto;
 
             h1 {
+                width: 80vw;
                 line-height: .3em;
             }
 
             h1:nth-child(1) {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
 
             h1:nth-child(2) {
-                font-size: 2.2em;
+                font-size: 2.3em;
 
             }
 
             .button {
-                bottom: 30px;
+                bottom: -15px;
                 left: -100px;
 
 
@@ -517,7 +518,9 @@
             }
 
             svg {
-                top: 425px;
+                width: 8px;
+                height: 8px;
+                top: 450px;
                 left: 30px;
             }
 
@@ -539,7 +542,7 @@
               
 
                 h2 {
-                    font-size: 1.6em;
+                    font-size: 1.8em;
                     font-weight: 400;
                     margin-bottom: 40px;
                 }
