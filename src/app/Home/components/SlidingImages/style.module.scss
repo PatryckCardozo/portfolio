@@ -13,16 +13,20 @@
         display: flex;
         position: relative;
         width: 100vw;
+
         .project{
             width: 25%;
             height: 20vw;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center;            
+
             .imageContainer{
                 position: relative;
                 width: 50%;
                 height: 50%;
+                
+
                 img{
                     object-fit: fill;
                 }
@@ -51,13 +55,21 @@
     .slidingImages{
         height: 60vh;
         margin-top: 100px;
+        
 
         .slider{
-            margin-bottom: 50px;
+           margin-bottom: 50px;
+           width: 120vw;
+
             .project{
-                    .imageContainer{
+                
+                    
+                .imageContainer{
                         width: 70%;
                         height: 70%;
+
+                        
+                       
                 }
             }
         }

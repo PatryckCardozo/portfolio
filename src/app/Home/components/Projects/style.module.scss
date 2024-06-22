@@ -92,10 +92,24 @@
 
 @media  (max-width: 427px) {
     .projects{
-        margin-top: 0;
+        margin-top: 0px;
+
 
         .body{
             margin-bottom: 50px;
+        }
+
+        .modalContainer{
+            display: none;
+        }
+        
+        .modalSlider{
+            display: none;
+        }
+        
+        .modal{
+            display: none;
+            
         }
 
     }

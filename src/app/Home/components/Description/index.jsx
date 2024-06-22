@@ -1,5 +1,5 @@
 import styles from './style.module.scss';
-import { useInView, motion } from 'framer-motion';
+import { useInView, motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 import { slideUp, opacity } from './animation';
@@ -13,6 +13,15 @@ export default function Index() {
     const phrase = "Unindo expertise jurídica e proficiência em softwares e desenvolvimento para criar impactos significativos.";
     const description = useRef(null);
     const isInView = useInView(description)
+    const container = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ["start end", "end end"]
+    })
+
+
+    const y = useTransform(scrollYProgress, [0, 1], [600, -800])
 
     return (
         <div ref={description} className={styles.description}>
@@ -48,13 +57,17 @@ export default function Index() {
                     }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>A fusão da experiência tecnológica ao conhecimento jurídico me proporciona uma perspectiva singular na busca por soluções.</motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
+
+                <div>
                     <Link href="/About">
-                        <Rounded className={styles.button}>
-                            <p>Perfil</p>
-                        </Rounded>
+                        <motion.div style={{ y }} className={styles.buttonContainer}>
+                            <Rounded className={styles.button}>
+                                <p>Perfil</p>
+                            </Rounded>
+                        </motion.div>
                     </Link>
                 </div>
+
             </div>
         </div>
     )

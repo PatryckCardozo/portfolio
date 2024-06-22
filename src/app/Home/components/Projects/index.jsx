@@ -74,7 +74,7 @@ export default function Home() {
     </div>
 
     <Rounded>
-    <a href='/Experience'>Mais deatlhes</a>
+    <a href='/Experience'>Experiência</a>
     </Rounded>    
 
     <>
