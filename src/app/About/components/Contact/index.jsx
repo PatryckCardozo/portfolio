@@ -16,10 +16,8 @@ export default function Index() {
     const x = useTransform(scrollYProgress, [0, 1], [0, 100])
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
-
     return (
-
-        <motion.div className={styles.contact} ref={container}>
+        <motion.div style={{ y }} ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     <span>
@@ -48,30 +46,37 @@ export default function Index() {
                     <Rounded>
                         <a href='mailto:patryck-cardozo@hotmail.com'>patryck-cardozo@hotmail.com</a>
                     </Rounded>
-                    <Rounded>
+                    <Rounded >
                         <a href='https://api.whatsapp.com/send?phone=5521998346990&text=Ol%C3%A1%2C%20Patryck%20'>+55 021 9 9834 6990</a>
                     </Rounded>
                 </div>
-
                 <div className={styles.info}>
 
                     <div>
+                        <h1>Redes Sociais</h1>
+                    </div>
+
+                    <div className={styles.infoContent}>
+                        <span>
+                        </span>
+
                         <Magnetic>
-                            <a href='https://www.instagram.com/patryck.cardozo/'>Instagram</a>
+                            <div className={styles.infoFirstContent}>
+                                <a href='https://www.instagram.com/patryck.cardozo/'>Instagram</a>
+                            </div>
                         </Magnetic>
 
                         <Magnetic>
-                            <a href='https://www.linkedin.com/in/patryck-cardozo-410363195/?originalSubdomain=br'>Linkedin</a>
+                            <div className={styles.infoSecondContent}>
+                                <a href='https://www.linkedin.com/in/patryck-cardozo-410363195/?originalSubdomain=br'>Linkedin</a>
+                            </div>
                         </Magnetic>
+
                     </div>
 
                 </div>
 
             </div>
         </motion.div>
-
-
-
-
     )
 }

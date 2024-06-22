@@ -17,15 +17,15 @@
     .body {
         background-color: #141516;
         width: 80vw;
-        
+
 
         .title {
             border-bottom: 1px solid rgb(134, 134, 134);
             padding-bottom: 100px;
             position: relative;
             font-family: "Manrope", sans-serif;
-            
-                    
+
+
 
             span {
                 display: flex;
@@ -74,7 +74,7 @@
                 cursor: pointer;
 
                 p {
-                    text-align: center;                    
+                    text-align: center;
                     font-family: "Manrope", sans-serif;
                     margin: 0px;
                     font-size: 2em;
@@ -108,89 +108,92 @@
         }
 
         .info {
-            position: relative;
-            top: 100px;
             display: flex;
-            justify-content: center;
-            align-items: left;
+            justify-content: space-between;            
             flex-direction: column;
-            padding: 20px;
+            position: absolute;
+            bottom: 20px;
+            font-family: "Manrope", sans-serif;
+                
 
-            div {
+            .infoContent {
                 display: flex;
-                gap: 10px;
-                align-items: flex-end;
+                flex-direction: row;
 
-                p,
-                h3 {
-                    margin: 0px;
-                    padding: 2.5px;
-                    cursor: pointer;
-                    text-decoration-line: none;
-                }
+                .infoFirstContent,
+                .infoSecondContent{
 
-                p,
-                a {
-                    font-size: 1.5em;
-                    text-decoration: none;
-                    color: white;
-
-                    &::after {
-                        content: "";
-                        width: 0%;
-                        height: 1px;
-                        background-color: white;
-                        display: block;
-                        margin-top: 2px;
-                        position: relative;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        transition: width 0.2s linear;
+                    p,
+                    h3 {
+                        margin: 0px;
+                        padding: 2.5px;
+                        cursor: pointer;
+                        text-decoration-line: none;
                     }
 
-                    &:hover {
+                    p,
+                    a {
+                        font-size: 1.5em;
+                        text-decoration: none;
+                        color: white;
+
                         &::after {
-                            width: 100%;
+                            content: "";
+                            width: 0%;
+                            height: 1px;
+                            background-color: white;
+                            display: block;
+                            margin-top: 2px;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: width 0.2s linear;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
                         }
                     }
-                }
 
-                span {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                }
+                    span {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                    }
 
-                h3 {
-                    color: grey;
-                    cursor: default;
-                    font-weight: 300;
-                    font-size: 1em;
-                }
+                    h3 {
+                        color: grey;
+                        cursor: default;
+                        font-weight: 300;
+                        font-size: 1em;
+                    }
 
-                h1{
-                    font-family: "Manrope", sans-serif;
-                    text-transform: uppercase;
-                    color: gray;
-                    font-size: 1.5em;
-                    letter-spacing: .5px;
-                    font-weight: 550;
+                    
                 }
-                
             }
 
+            h1 {
+                text-transform: uppercase;
+                color: gray;
+                font-size: 1.3em;
+                letter-spacing: .5px;
+                font-weight: 550;
+            }
+
+            .infoSecondContent{
+                margin-left: 20px;
+            }
         }
     }
-
 }
+
 
 @media screen and (max-width: 1024px) {
 
     .contact {
         .body {
-            .info {
-                top: 50px;
-            }
 
             .nav {
                 gap: 30px;
@@ -207,9 +210,7 @@
         font-size: 55%;
 
         .body {
-            .info {
-                top: 40px;
-            }
+     
 
             .nav {
                 gap: 30px;
@@ -227,31 +228,31 @@
 
         .body {
             margin-top: 80px;
-            .title{
+
+            .title {
                 padding-bottom: 120px;
 
-                h2{
-                    font-size: 4.5em;
+                h2 {
+                    font-size: 4.7em;
                 }
             }
+
             .nav {
                 margin-top: 120px;
                 margin-bottom: 70px;
                 flex-direction: column;
+
                 a {
                     padding: 0px;
-                    font-size: 1.5em;
-               
+                    font-size: 1.6em;
+
                 }
             }
 
-            .info{
-                padding: 0;
-                position: absolute;
-                bottom: 0px;
-                left: 150px;
-                
-               
+            .info {
+                bottom: 10px;
+
+
             }
 
             .title {
@@ -274,6 +275,5 @@
             }
         }
     }
-
 
 }

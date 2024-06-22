@@ -56,15 +56,22 @@ export default function Index() {
                         <h1>Redes Sociais</h1>
                     </div>
 
-                    <div>
+                    <div className={styles.infoContent}>
                         <span>
                         </span>
+
                         <Magnetic>
-                            <a href='https://www.instagram.com/patryck.cardozo/'>Instagram</a>
+                            <div className={styles.infoFirstContent}>
+                                <a href='https://www.instagram.com/patryck.cardozo/'>Instagram</a>
+                            </div>
                         </Magnetic>
+
                         <Magnetic>
-                            <a href='https://www.linkedin.com/in/patryck-cardozo-410363195/?originalSubdomain=br'>Linkedin</a>
+                            <div className={styles.infoSecondContent}>
+                                <a href='https://www.linkedin.com/in/patryck-cardozo-410363195/?originalSubdomain=br'>Linkedin</a>
+                            </div>
                         </Magnetic>
+
                     </div>
 
                 </div>
