@@ -23,6 +23,7 @@ const scaleAnimation = {
   closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] } }
 }
 
+
 export default function Home() {
 
   const [modal, setModal] = useState({ active: false, index: 0 })
@@ -65,35 +66,52 @@ export default function Home() {
 
 
 
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end end"]
+  })
+
+  const y = useTransform(scrollYProgress, [0, 1], [200, -800])
+
+
   return (
 
     <main onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} >
       <div className={styles.allContentLink}>
-        <a href={"/DBnova"}>
-          <div onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }} className={styles.smallProject}>
-            <div className={styles.modalSlider}>
-              {
-                projects.map((project, idx) => {
-                  const { src, color } = project
-                  return <div div key={idx} className={styles.modal} style={{ backgroundColor: color }} >
-                    <Image
-                      src={`/images/${src}`}
-                      width={300}
-                      height={0}
-                      alt="image"
-                    />
 
-                  </div>
-                })
-              }
-            </div>
-            <div className={styles.smallContent}>
-              <h2>DBNova Tecnologia</h2>
-              <div className={styles.line}></div>
-              <p>Consultor Técnico</p>
-            </div>
+        <div onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }} className={styles.smallProject}>
+          <div className={styles.modalSlider}>
+            {
+              projects.map((project, idx) => {
+                const { src, color } = project
+                return <div div key={idx} className={styles.modal} style={{ backgroundColor: color }} >
+                  <Image
+                    src={`/images/${src}`}
+                    width={300}
+                    height={0}
+                    alt="image"
+                  />
+
+                </div>
+              })
+            }
           </div>
-        </a>
+          <div className={styles.smallContent}>
+            <h2>DBNova Tecnologia</h2>
+            <div className={styles.line}></div>
+            <p>Consultor Técnico</p>
+          </div>
+        </div>
+
+        <Link href="/DBnova">
+          <motion.div style={{ y }} className={styles.buttonContainer}>
+            <Rounded backgroundColor={"#6b9e42"} className={styles.button}>
+              <p>Detalhes</p>
+            </Rounded>
+          </motion.div>
+        </Link>
+
 
 
         <div className={styles.projects}>
@@ -116,7 +134,7 @@ export default function Home() {
           </div>
 
           <a href={"/DBnova"}>
-            <div className={styles.projectContent} onMouseEnter={(e) => {manageModal(true, index, e.clientX, e.clientY)}} onMouseLeave={(e) => {manageModal(false, index, e.clientX, e.clientY)}}>
+            <div className={styles.projectContent} onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }}>
               <div className={styles.projectsContentContainer} style={{ top: index * -100 + "%" }}  >
                 <div className={styles.company}>
                   <p>DBNova Tecnologia</p>
