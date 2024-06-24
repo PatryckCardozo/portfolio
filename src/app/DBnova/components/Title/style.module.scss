@@ -205,7 +205,7 @@
 @media (max-width:426px) {
 
     .allcontent {
-        height: 120vh;
+        height: 130vh;
         background: rgb(255,255,255);
         background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,254,253,1) 48%, rgba(223,234,213,1) 100%);
         
@@ -255,7 +255,7 @@
             margin-top: 20px;
 
             .modal {
-                height: 40vh;
+                height: 50vh;
 
                 img {
                     width: 280px;
@@ -267,7 +267,7 @@
 
         .buttonContainer {
             position: absolute;
-            left: calc(100% - 120px);
+            left: calc(100% - 110px);
             top: calc(100% - 100px);
         }
 
