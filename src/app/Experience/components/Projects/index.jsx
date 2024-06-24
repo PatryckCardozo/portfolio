@@ -72,7 +72,7 @@ export default function Home() {
     offset: ["start end", "end end"]
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], [400, -600])
+  const y = useTransform(scrollYProgress, [0, 1], [400, -700])
 
 
   return (
