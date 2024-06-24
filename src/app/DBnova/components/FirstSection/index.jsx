@@ -129,8 +129,8 @@ export default function Index() {
             <div className={styles.allcontentsmall}>
 
                 <div className={styles.containerArticle}>
-                    <div className={styles.bodyFirstArticle} ref={el => smalltitle1.current = el}>
-                        <h1 ref={smalltitle1}>Conversão & Migração</h1>
+                    <div className={styles.bodyFirstArticle}>
+                        <h1>Conversão & Migração</h1>
                         <p>Execução de migração e conversão de dados entre sistemas, assegurando integridade e precisão em cada etapa do processo. Minha abordagem inclui análise detalhada dos dados, planejamento meticuloso e utilização de ferramentas avançadas para garantir a consistência e a conformidade com os requisitos do projeto. Com uma sólida compreensão das diferenças entre diversas plataformas e formatos de dados, consigo minimizar riscos e evitar perdas de informações, garantindo uma transição suave e eficiente.</p>
                     </div>
                 </div>

@@ -249,7 +249,7 @@
         display: flex;
         flex-direction: column;
         width: 90vw;
-        height: 120vh;
+        height: 65vh;
         margin: 0px auto;
         font-size: 62.5%;
     
@@ -277,25 +277,26 @@
                     
     
                     &:nth-of-type(1) {
-                        top: 1100px;
+                        top: 1450px;
                         left: 230px;
-                        height: 25vh;
-                        width: 25vh;
+                        height: 18vh;
+                        width: 18vh;
                         z-index: 1;
                     }
 
                     &:nth-of-type(2) {
-                        top: 1400px;
-                        left: 300px;
-                        height: 20vh;
-                        width: 20vh;
+                        top: 1950px;
+                        left: 270px;
+                        height: 13vh;
+                        width: 13vh;
                         z-index: 2;
                     }
 
-                    &:nth-of-type(3) {  
+                    &:nth-of-type(3) { 
+                        top: 1450px; 
                         left: 220px;                     
-                        height: 20vh;
-                        width: 20vh;
+                        height: 15vh;
+                        width: 15vh;
                         z-index: 1;
                     
                     }
@@ -329,8 +330,8 @@
                     margin-top: 10px;
                     font-size: 1.4em;
                     text-align: left;
-                    font-family: "Inter", "Roboto Flex", sans-serif;
-                    font-weight: 300;
+                    font-family: 'Inter', "Roboto Flex", sans-serif;
+                    font-weight: 350;
     
                     span {
                         position: relative;
@@ -339,6 +340,7 @@
             }
     
             .bodySecondArticle {
+                display: none;
                 position: absolute;    
                 width: 75vw;
                 right: 20px;

@@ -32,7 +32,7 @@ export default function Home() {
 
     return (
 
-        <main>
+        <main className={styles.allcontent}>
 
             <div className={styles.headerContainer}>
                 <div className={styles.company}>
@@ -79,6 +79,11 @@ export default function Home() {
                         </div>
                     })
                 }
+            </div>
+
+            <div className={styles.articleSmallContent}>
+                <h1>DATABASE</h1>
+                <p>Desevolvimento de consultas SQL em bancos de dados PostgreSQL, SQL Server e Sybase para a extração e manipulação de dados, garantindo eficiência e precisão. Minha experiência abrange desde a criação de consultas personalizadas até a integração de dados, suportando decisões estratégicas com informações detalhadas e precisas.</p>
             </div>
 
 

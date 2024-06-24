@@ -310,8 +310,9 @@
 }
 
 @media (max-width:426px) {
+
     .allcontent {
-        height: 110vh;
+        height: 70vh;
 
         .containerContent {
             flex-direction: column;
@@ -350,9 +351,12 @@
                     }
 
                     p {
+                        font-weight: 350;
+                        color: black;
                         width: 90vw;
                         font-size: 1.75em;
                         text-align: center;
+                  
                     }
 
 
