@@ -6,7 +6,6 @@
     top: 0;
     color: white;
     z-index: 3;
-    overflow: hidden;
 
     .body {
         box-sizing: border-box;
@@ -48,6 +47,7 @@
         width: 100vw;
 
         .body{
+            height: 90%;
             padding: 45px 40px;
 
             .nav{
