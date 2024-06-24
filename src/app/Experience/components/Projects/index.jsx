@@ -72,7 +72,7 @@ export default function Home() {
     offset: ["start end", "end end"]
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], [200, -600])
+  const y = useTransform(scrollYProgress, [0, 1], [300, -600])
 
 
   return (
@@ -107,7 +107,7 @@ export default function Home() {
         <Link href="/DBnova">
           <motion.div style={{ y }} className={styles.buttonContainer}>
             <Rounded backgroundColor={"#6b9e42"} className={styles.button}>
-              <p>Detalhes</p>
+              <p>View</p>
             </Rounded>
           </motion.div>
         </Link>
