@@ -2,6 +2,7 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
+import { GoogleFonts } from 'next-google-fonts';
 import Header from './components/Header'
 import Preloader from './components/Preloader'
 import Title from './components/Title'

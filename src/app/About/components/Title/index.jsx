@@ -75,7 +75,7 @@ export default function Home() {
 
                 <div style={{ y }} ref={article} className={styles.article}>
                     <h2>Olá, meu nome é Patryck.</h2>
-                    <h2>Tenho 25 anos e sou granduando nos cursos de Direito e Análise e Desenvolvimento de Sistemas. Atualmente, trabalho com softwares de gestão administrativa para órgãos públicos, ocupando o cargo de consultor técnico.</h2>
+                    <h2>Tenho 25 anos e sou graduando nos cursos de Direito e Análise e Desenvolvimento de Sistemas. Atualmente, trabalho com softwares de gestão administrativa para órgãos públicos, ocupando o cargo de consultor técnico.</h2>
                 </div>
 
                 <span>
