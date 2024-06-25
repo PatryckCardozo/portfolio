@@ -249,19 +249,20 @@
         display: flex;
         flex-direction: column;
         width: 90vw;
-        height: 75vh;
+        height: 65vh;
         margin: 0px auto;
         font-size: 62.5%;
     
         .container {
             width: 90vw;
             margin: 0 auto;
+            padding: 0px;
             
     
             .images {
                 display: flex;
                 justify-content: center;
-                margin-top: 200px;
+                margin-top: 0px;
                 
     
     
@@ -277,7 +278,7 @@
                     
     
                     &:nth-of-type(1) {
-                        top: 1650px;
+                        top: 1600px;
                         left: 230px;
                         height: 18vh;
                         width: 18vh;
@@ -285,7 +286,7 @@
                     }
 
                     &:nth-of-type(2) {
-                        top: 2150px;
+                        top: 2100px;
                         left: 270px;
                         height: 13vh;
                         width: 13vh;
@@ -293,7 +294,7 @@
                     }
 
                     &:nth-of-type(3) { 
-                        top: 1650px; 
+                        top: 1600px; 
                         left: 220px;                     
                         height: 15vh;
                         width: 15vh;
@@ -312,7 +313,7 @@
     
             .bodyFirstArticle { 
                 position: absolute;
-                margin: 100px 0px;   
+                margin: 80px 0px;   
                 width: 45vw;
     
                 h1 {

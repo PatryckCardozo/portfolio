@@ -29,7 +29,7 @@ export default function Index() {
                                 <Image 
                                 width={200}
                                 height={200}
-                                src={`/images/Elo.png`} 
+                                src={`/images/elo.png`} 
                                 alt="image" />
 
                             </div>
