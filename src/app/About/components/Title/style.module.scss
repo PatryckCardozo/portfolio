@@ -13,6 +13,8 @@
         border-bottom: 1px solid rgb(178, 178, 178);
         padding-bottom: 50px;
         margin: 200px auto;
+        font-weight: 400;
+        font-style: normal;
         font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
 
         h1 {
@@ -177,6 +179,7 @@
                         h3 {
                             font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                             font-size: 1.6em;
+                            font-style: normal;
                             font-weight: 400;
                             margin-bottom: 10px;
                         }
@@ -458,7 +461,7 @@
 @media (max-width: 426px) {
 
     .main {
-        height: 200vh;
+        height: 210vh;
 
         .titlePage {
             width: 70vw;
@@ -481,7 +484,7 @@
             }
 
             .button {
-                bottom: 0px;
+                bottom: 10px;
                 left: -100px;
 
 
@@ -520,7 +523,7 @@
             svg {
                 width: 8px;
                 height: 8px;
-                top: 420px;
+                top: 418px;
                 left: 30px;
             }
 
@@ -560,7 +563,7 @@
 
                     span {
                         width: 95%;
-                        height: 270px;
+                        height: 290px;
 
                     }
 

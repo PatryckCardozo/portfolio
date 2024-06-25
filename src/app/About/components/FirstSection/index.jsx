@@ -32,7 +32,7 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 0.15
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "-1500px",
         });
@@ -43,7 +43,7 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 0.15
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "10px",
         });
@@ -54,7 +54,7 @@ export default function Home() {
                 scrub: 0.25,
                 start: 0,
                 end: window.innerHeight,
-                onUpdate: e => direction.current = e.direction * 0.15
+                onUpdate: e => direction.current = e.direction * 1
             },
             x: "-1600px",
         });
