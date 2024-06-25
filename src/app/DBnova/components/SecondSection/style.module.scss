@@ -313,6 +313,7 @@
 
     .allcontent {
         height: 80vh;
+        margin-top: 200px;
 
         .containerContent {
             flex-direction: column;
@@ -351,7 +352,7 @@
                     }
 
                     p {
-                        font-weight: 350;
+                        font-weight: 300;
                         color: black;
                         width: 90vw;
                         font-size: 2em;
