@@ -4,16 +4,13 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 export default function Home() {
-    const [firstIsActive, setFirstIsActive] = useState(false);
-    const [secondIsActive, setSecondIsActive] = useState(false);
-    const [thirdIsActive, setThirdIsActive] = useState(false);
-    const [fourIsActive, setFourIsActive] = useState(false);
-    const [fifthIsActive, setFifthIsActive] = useState(false);
-    const [sixthIsActive, setSixthIsActive] = useState(false);
-
+    const [activeIndex, setActiveIndex] = useState(-1); 
     const ref = useRef(null);
     const isInView = useInView(ref);
 
+    const handleQuestionClick = (index) => {
+        setActiveIndex(activeIndex === index ? -1 : index); 
+    };
 
     return (
         <div className={styles.main} ref={ref}>
@@ -39,14 +36,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
                         }}>
-                        <div onClick={() => setFirstIsActive(!firstIsActive)} className={`${styles.firstContainerQuery}`}>
-                            <div className={`${styles.firstBoxQuery} ${firstIsActive ? styles.firstBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(0)} className={`${styles.firstContainerQuery}`}>
+                            <div className={`${styles.firstBoxQuery} ${activeIndex === 0 ? styles.firstBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Quais são meus objetivos profissionais?</p>
                                     </div>
-                                    <div
-                                        className={`${styles.firstIcon} ${firstIsActive ? styles.firstIconActive : ''}`}>
+                                    <div className={`${styles.firstIcon} ${activeIndex === 0 ? styles.firstIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>
@@ -64,13 +60,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                         }}>
-                        <div onClick={() => setSecondIsActive(!secondIsActive)} className={`${styles.secondContainerQuery}`}>
-                            <div className={`${styles.secondBoxQuery} ${secondIsActive ? styles.secondBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(1)} className={`${styles.secondContainerQuery}`}>
+                            <div className={`${styles.secondBoxQuery} ${activeIndex === 1 ? styles.secondBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Em que período do dia faço faculdade?</p>
                                     </div>
-                                    <div className={`${styles.secondIcon} ${secondIsActive ? styles.secondIconActive : ''}`}>
+                                    <div className={`${styles.secondIcon} ${activeIndex === 1 ? styles.secondIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>
@@ -88,13 +84,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
                         }}>
-                        <div onClick={() => setThirdIsActive(!thirdIsActive)} className={`${styles.thirdContainerQuery}`}>
-                            <div className={`${styles.thirdBoxQuery} ${thirdIsActive ? styles.thirdBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(2)} className={`${styles.thirdContainerQuery}`}>
+                            <div className={`${styles.thirdBoxQuery} ${activeIndex === 2 ? styles.thirdBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Qual é a previsão de conclusão da graduação?</p>
                                     </div>
-                                    <div className={`${styles.thirdIcon} ${thirdIsActive ? styles.thirdIconActive : ''}`}>
+                                    <div className={`${styles.thirdIcon} ${activeIndex === 2 ? styles.thirdIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>
@@ -107,7 +103,6 @@ export default function Home() {
                     </span>
                 </div>
 
-
                 <div className={styles.secondContainerQuetion}>
 
                     <span
@@ -116,14 +111,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
                         }}>
-                        <div onClick={() => setFourIsActive(!fourIsActive)} className={`${styles.fourContainerQuery}`}>
-                            <div className={`${styles.fourBoxQuery} ${fourIsActive ? styles.fourBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(3)} className={`${styles.fourContainerQuery}`}>
+                            <div className={`${styles.fourBoxQuery} ${activeIndex === 3 ? styles.fourBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Como irá integrar essas áreas de conhecimento?</p>
                                     </div>
-                                    <div
-                                        className={`${styles.fourIcon} ${fourIsActive ? styles.fourIconActive : ''}`}>
+                                    <div className={`${styles.fourIcon} ${activeIndex === 3 ? styles.fourIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>
@@ -141,13 +135,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                         }}>
-                        <div onClick={() => setFifthIsActive(!fifthIsActive)} className={`${styles.fifthContainerQuery}`}>
-                            <div className={`${styles.fifthBoxQuery} ${fifthIsActive ? styles.fifthBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(4)} className={`${styles.fifthContainerQuery}`}>
+                            <div className={`${styles.fifthBoxQuery} ${activeIndex === 4 ? styles.fifthBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Quais métodos utiliza para aprimorar seu conhecimento?</p>
                                     </div>
-                                    <div className={`${styles.fifthIcon} ${fifthIsActive ? styles.fifthIconActive : ''}`}>
+                                    <div className={`${styles.fifthIcon} ${activeIndex === 4 ? styles.fifthIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>
@@ -165,13 +159,13 @@ export default function Home() {
                             opacity: isInView ? 1 : 0,
                             transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
                         }}>
-                        <div onClick={() => setSixthIsActive(!sixthIsActive)} className={`${styles.sixthContainerQuery}`}>
-                            <div className={`${styles.sixthBoxQuery} ${sixthIsActive ? styles.sixthBoxQueryActive : ''}`}>
+                        <div onClick={() => handleQuestionClick(5)} className={`${styles.sixthContainerQuery}`}>
+                            <div className={`${styles.sixthBoxQuery} ${activeIndex === 5 ? styles.sixthBoxQueryActive : ''}`}>
                                 <div className={styles.boxQuery}>
                                     <div className={styles.query}>
                                         <p>Quais são os aspectos que busco em uma empresa?</p>
                                     </div>
-                                    <div className={`${styles.sixthIcon} ${sixthIsActive ? styles.sixthIconActive : ''}`}>
+                                    <div className={`${styles.sixthIcon} ${activeIndex === 5 ? styles.sixthIconActive : ''}`}>
                                         <div className={styles.firstline}></div>
                                         <div className={styles.secondline}></div>
                                     </div>

@@ -7,11 +7,11 @@ import { slideUp } from './animation';
 
 export default function Home() {
     
-    const [isOpen1, setIsOpen1] = useState(false);
-    const [isOpen2, setIsOpen2] = useState(false);
-    const [isOpen3, setIsOpen3] = useState(false);
-    const [isOpen4, setIsOpen4] = useState(false);
-    const [isOpen5, setIsOpen5] = useState(false);
+    const [openSection, setOpenSection] = useState(null);
+
+    const handleClick = (index) => {
+        setOpenSection(openSection === index ? null : index);
+    };
 
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -60,7 +60,7 @@ export default function Home() {
         });
 
         requestAnimationFrame(animate);
-    });
+    },[]);
 
     const animate = () => {
         if (xPercent.current > 100) {
@@ -110,10 +110,10 @@ export default function Home() {
 
                         <motion.div
                             layout
-                            data-isopen={isOpen1}
+                            data-isopen={openSection === 0}
                             initial={{ borderRadius: 50 }}
                             className={styles.parent}
-                            onClick={() => setIsOpen1(!isOpen1)}
+                            onClick={() => handleClick(0)}
                         >
                             <motion.div layout className={styles.child}>
                                 <h1>R • e • s • i • l • i • e • n • t • e</h1>
@@ -130,10 +130,10 @@ export default function Home() {
                         }}>
                         <motion.div
                             layout
-                            data-isopen={isOpen2}
+                            data-isopen={openSection === 1}
                             initial={{ borderRadius: 50 }}
                             className={styles.parent}
-                            onClick={() => setIsOpen2(!isOpen2)}
+                            onClick={() => handleClick(1)}
                         >
                             <motion.div layout className={styles.child}>
                                 <h1>O • R • I • G • I • N • A • L</h1>
@@ -150,10 +150,10 @@ export default function Home() {
                         }}>
                         <motion.div
                             layout
-                            data-isopen={isOpen3}
+                            data-isopen={openSection === 2}
                             initial={{ borderRadius: 50 }}
                             className={styles.parent}
-                            onClick={() => setIsOpen3(!isOpen3)}
+                            onClick={() => handleClick(2)}
                         >
                             <motion.div layout className={styles.child}>
                                 <h1>C • O • N • S • C • I • E • N • T • E</h1>
@@ -170,10 +170,10 @@ export default function Home() {
                         }}>
                         <motion.div
                             layout
-                            data-isopen={isOpen4}
+                            data-isopen={openSection === 3}
                             initial={{ borderRadius: 50 }}
                             className={styles.parent}
-                            onClick={() => setIsOpen4(!isOpen4)}
+                            onClick={() => handleClick(3)}
                         >
                             <motion.div layout className={styles.child}>
                                 <h1>C • O • L • A • B • O • R • A • T • I • V • O</h1>
@@ -190,10 +190,10 @@ export default function Home() {
                         }}>
                         <motion.div
                             layout
-                            data-isopen={isOpen5}
+                            data-isopen={openSection === 4}
                             initial={{ borderRadius: 50 }}
                             className={styles.parent}
-                            onClick={() => setIsOpen5(!isOpen5)}
+                            onClick={() => handleClick(4)}
                         >
                             <motion.div layout className={styles.child}>
                                 <h1>A • U • T • O • D • I • D • A • T • A</h1>

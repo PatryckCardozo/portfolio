@@ -107,7 +107,7 @@ export default function Home() {
         });
 
         requestAnimationFrame(animate);
-    });
+    },[]);
 
     const animate = () => {
         if (xPercent.current > 100) {
