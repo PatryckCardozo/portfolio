@@ -4,8 +4,6 @@
 .allcontent {
     width: 100vw;
 
-
-
     .body {
         display: flex;
         flex-direction: row;
@@ -26,6 +24,7 @@
                     font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                     font-weight: 450;
                     font-size: 77px;
+                    font-style: normal;
                     letter-spacing: .1px;
                     color: white;
                     margin: 0;
@@ -77,6 +76,7 @@
                             font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                             font-weight: 400;
                             font-size: .8em;
+                            font-style: normal;
                             color: white;
                             margin: 0;
                         }
@@ -86,6 +86,7 @@
                         input {
                             font-family: "Poppins", "Inter", "Roboto Flex", sans-serif;
                             font-weight: 380;
+                            font-style: normal;
                             width: 670px;
                             background-color: transparent;
                             border: none;
