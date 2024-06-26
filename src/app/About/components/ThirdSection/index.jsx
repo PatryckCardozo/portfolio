@@ -171,7 +171,7 @@ export default function Home() {
                         <div className={styles.articlecard}>
                             <p>Universidade Veiga de Almeida</p>
                             <h1>Graduação</h1>
-                            <p>Direito | 7° Período</p>
+                             <p>Direito | 7° Período</p>
                             <p>Análise e Desenvolvimento de Sistema | 2° Período</p>
                         </div>
                     </div>
