@@ -73,6 +73,7 @@
                 width: 39vw;
                 height: 25vh;
                 cursor: pointer;
+                transition: .4s ease-in-out;
             
             }
 
@@ -350,7 +351,6 @@
                     &:hover {
                         width: 80vw;
                         height: 25vh;
-                        transition: .4s ease-in-out;
 
                     }
 
