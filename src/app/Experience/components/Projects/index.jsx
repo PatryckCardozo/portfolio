@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Rounded from '../../../../common/RoundedButton';
 import Magnetic from '../../../../common/Magnetic';
 import { inherits } from 'util';
+import { slideUp } from './animation';
 
 const projects = [
   {
@@ -77,7 +78,7 @@ export default function Home() {
 
   return (
 
-    <main onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} >
+    <motion.main variants={slideUp} initial="initial" animate="enter" onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} >
       <div className={styles.allContentLink}>
 
         <div onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }} className={styles.smallProject}>
@@ -189,7 +190,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-    </main>
+    </motion.main>
 
   )
 }

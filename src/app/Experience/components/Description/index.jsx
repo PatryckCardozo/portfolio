@@ -10,13 +10,15 @@ export default function index() {
 
     return (
 
-        <div className={styles.description}>
-            <RefreshTitle>
-            <div className="title" >
-                <h2>{phrase}</h2>
+        <motion.main variants={slideUp} initial="initial" animate="enter">
+            <div className={styles.description}>
+                <RefreshTitle>
+                    <div className="title" >
+                        <h2>{phrase}</h2>
+                    </div>
+                </RefreshTitle>
             </div>
-            </RefreshTitle>
-        </div>
+        </motion.main>
 
     )
 }

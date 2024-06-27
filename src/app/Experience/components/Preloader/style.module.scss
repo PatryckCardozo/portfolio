@@ -20,6 +20,7 @@
             fill: #141516;
         }
     }
+
     p{
         font-family: "Urbanist", "Inter", "Roboto Flex", sans-serif;
         display: flex;
@@ -36,6 +37,11 @@
 
 @media (max-width:426px) {
     .introduction{
+
+        svg{
+            height: calc(100% + 500px);
+            
+        }
 
         p{
             font-size: 40px;

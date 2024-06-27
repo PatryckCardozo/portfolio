@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import Rounded from '../../../../common/RoundedButton';
 import Magnetic from '../../../../common/Magnetic';
+import { slideUp } from './animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ export default function Index() {
     }, []);
 
     return (
-        <>
+        <motion.main variants={slideUp} initial="initial" animate="enter">
             <div className={styles.allcontent}>
                 <div className={styles.body}>
                     <div className={styles.containerContentForm}>
@@ -303,6 +304,6 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.main>
     );
 }

@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Rounded from '../../../../common/RoundedButton';
 import Magnetic from '../../../../common/Magnetic';
 import { inherits } from 'util';
+import { slideUp } from './animation';
 
 
 const projects = [
@@ -32,7 +33,7 @@ export default function Home() {
 
     return (
 
-        <main className={styles.allcontent}>
+        <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.allcontent}>
 
             <div className={styles.headerContainer}>
                 <div className={styles.company}>
@@ -87,7 +88,7 @@ export default function Home() {
             </div>
 
 
-        </main>
+        </motion.main>
 
     )
 }
