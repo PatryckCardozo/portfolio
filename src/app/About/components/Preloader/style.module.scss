@@ -17,6 +17,7 @@
         top: 0;
         width: 100vw;
         height: calc(100% + 300px);
+
         path{
             fill: #141516;
         }
@@ -41,6 +42,10 @@
         p{
             font-size: 40px;
         } 
+
+        svg{
+            height: calc(100% + 100px);
+        }
 
     }
     

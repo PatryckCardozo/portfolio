@@ -27,11 +27,11 @@ export default function Index() {
     const curve = {
         initial: {
             d: initialPath,
-            transition: {duration: 1.5}
+            transition: {duration: 0.7, ease: [1, 0, 0.24, 1]}
         },
         exit: {
             d: targetPath,
-            transition: {duration: 1.6}
+            transition: {duration: 0.7, ease: [1, 0, 0.24, 1], delay: 0.3}
         }
     }
 
