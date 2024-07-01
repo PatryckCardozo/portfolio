@@ -71,7 +71,7 @@ export default function Index() {
                             <h1>vamos conversar ?</h1>
                         </div>
 
-                        <div className={styles.containerQuest}>
+                        <motion.div variants={slideUp} initial="initial" animate="enter" className={styles.containerQuest}>
                             <form action="https://api.staticforms.xyz/submit" method="post">
                                 <div className={styles.quest}>
                                     <div className={styles.titleQuest}>
@@ -144,7 +144,7 @@ export default function Index() {
                                 <input type="hidden" name="redirectTo" value="http://localhost:3000/Contact" />
                                 <input type="hidden" name="accessKey" value="7b2b7909-0e22-4b1d-bcc4-b067b97d8f48" />
                             </form>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div className={styles.containerNav}>

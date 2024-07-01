@@ -28,7 +28,6 @@ export default function Home() {
         offset: ["start end", "end end"]
     })
 
-    
     const rotate = useTransform(scrollYProgress, [0, 1], [280, 600])
 
 
@@ -40,7 +39,8 @@ export default function Home() {
                     trigger: article.current,
                     start: "center bottom",
                     end: "bottom top",
-                    scrub: 1
+                    scrub: 1,
+                    
                 },
                 y: 100
             });
@@ -50,7 +50,7 @@ export default function Home() {
 
     return (
 
-        <motion.main variants={slideUp} initial="initial" animate="enter" >
+        <motion.main  >
             <div className={styles.main}>
 
                 <div className={styles.titlePage}>
@@ -73,20 +73,22 @@ export default function Home() {
                     <motion.svg style={{ rotate, scale: 2 }} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="black" />
                     </motion.svg>
-
+                    
+                    
                     <div ref={article} className={styles.article}>
                         <h2>Olá, meu nome é Patryck.</h2>
                         <h2>Tenho 25 anos e sou graduando nos cursos de Direito e Análise e Desenvolvimento de Sistemas. Atualmente, trabalho com softwares de gestão administrativa para órgãos públicos, ocupando o cargo de consultor técnico.</h2>
                     </div>
+                    
 
                     <span>
-                        <div className={styles.containerImage}>
+                        <motion.div variants={slideUp} initial="initial" animate="enter" className={styles.containerImage}>
                             <Image
                                 fill={true}
                                 alt={"image"}
                                 src={`/images/about_image_example.jpeg`}
                             />
-                        </div>
+                        </motion.div>
                     </span>
 
                 </div>
