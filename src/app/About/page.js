@@ -10,6 +10,7 @@ import FirstSection from './components/FirstSection'
 import SecondSection from './components/SecondSection'
 import ThirdSection from './components/ThirdSection'
 import FourSection from './components/FourSection'
+import FifthSection from './components/FifthSection'
 import Contact from './components/Contact'
 
 export default function Home() {
@@ -43,6 +44,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <FourSection />
+      <FifthSection />
       <Contact />
     </main>
   )

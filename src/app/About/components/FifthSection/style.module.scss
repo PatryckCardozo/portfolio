@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
+
+
+.main {
+    width: 80vw;
+    height: 10vh;
+    font-size: 62, 5%;
+    margin: 100px auto 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: end;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .container {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-family: 'Poppins';
+            font-weight: 400;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            animation: effect 8s linear infinite;
+            text-transform: uppercase;
+
+        }
+
+        span {
+            position: absolute;
+            transform-origin: 0 100px;
+            font-family: 'Poppins';
+            left: 50%;
+        }
+
+
+        @keyframes effect {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+
+        }
+
+
+        img {
+            opacity: 1;
+            transition: .3s;
+            position: absolute;
+
+
+        }
+
+        .imgblue {
+            opacity: 0;
+            transition: .3s;
+        }
+
+
+        &:hover .imgblue {
+            opacity: 1;
+            transition: .3s;
+        }
+
+        &:hover .img {
+            opacity: 0;
+            transition: .3s;
+        }
+
+    }
+
+}
+
+@media (max-width: 426px) {
+
+    .main {
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 300px;
+
+        .container {
+            height: 150px;
+            width: 150px;
+
+            p {
+                height: 150px;
+                width: 150px;
+
+            }
+
+            span {
+                transform-origin: 0 75px;
+            }
+
+            img {
+               width: 30px;
+               height: 30px;
+    
+    
+            }
+    
+            .imgblue {
+                width: 30px;
+               height: 30px;
+            }
+    
+        }
+    }
+}

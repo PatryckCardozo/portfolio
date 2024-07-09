@@ -2,7 +2,7 @@
 
 .main {
     width: 100vw;
-    height: 290vh;
+    min-height: 2050px;
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(230, 230, 230, 1) 100%);
     font-size: 62, 5%;
@@ -208,7 +208,7 @@
 @media (max-width: 1024px) {
 
     .main {
-        height: 260vh;
+        min-height: 1650px;
 
         .titlePage {
             margin: 200px auto 100px auto;
@@ -319,7 +319,7 @@
 @media (max-width: 768px) {
 
     .main {
-        height: 250vh;
+        min-height: 1680px;
 
         .titlePage {
             width: 70vw;
@@ -461,7 +461,7 @@
 @media (max-width: 426px) {
 
     .main {
-        height: 210vh;
+        min-height: 1850px;
 
         .titlePage {
             width: 70vw;
