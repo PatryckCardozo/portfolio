@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Preloader from './components/Preloader'
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
       <Description />
       <Projects />
       <Contact />
+      <Analytics />
     </main>
   )
 }

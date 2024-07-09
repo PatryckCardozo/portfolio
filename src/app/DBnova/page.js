@@ -10,6 +10,7 @@ import FirstSection from './components/FirstSection'
 import SecondSection from './components/SecondSection'
 import ThirdSection from './components/ThirdSection'
 import Contact from './components/Contact'
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <Contact />
+      <Analytics />
     </main>
   )
 }

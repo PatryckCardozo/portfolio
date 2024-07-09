@@ -6,6 +6,7 @@ import { GoogleFonts } from 'next-google-fonts';
 import Header from './components/Header'
 import Preloader from './components/Preloader'
 import Content from './components/Content'
+import { Analytics } from "@vercel/analytics/react"
 
 
 
@@ -35,6 +36,7 @@ export default function Home() {
       </AnimatePresence>
       <Header />
       <Content />
+      <Analytics />
     </main>
   )
 }
