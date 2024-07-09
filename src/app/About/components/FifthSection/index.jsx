@@ -8,7 +8,6 @@ import Rounded from '../../../../common/RoundedButton';
 import Magnetic from '../../../../common/Magnetic';
 
 export default function Home() {
-
     const ref = useRef(null);
     const isInView = useInView(ref);
 
@@ -25,40 +24,57 @@ export default function Home() {
             }
         }
 
-
         return () => {
-
+            
         };
     }, []);
 
+    useEffect(() => {
+        const strs = "Download - Currículo -";
+        const textSmall = document.getElementById("textSmall");
+
+        if (textSmall) {
+            for (let i = 0; i < strs.length; i++) {
+                let span = document.createElement("span");
+                span.innerHTML = strs[i];
+                textSmall.appendChild(span); 
+                span.style.transform = `rotate(${16 * i}deg)`;
+            }
+        }
+
+        return () => {
+            
+        };
+    }, []);
+
+
     return (
-
-
         <div className={styles.main} ref={ref}>
             <a href="/images/patryck-cardozo.pdf" download>
-            <span
-                style={{
-                    transform: isInView ? "none" : "translateX(100px)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }}>
-                <div className={styles.container}>
-                    <p id="text"></p>
-                    <Image
-                        width={50}
-                        height={50}
-                        alt={"image"}
-                        src={`/images/arrow-down.svg`}
-                    />
-                    <Image
-                        width={50}
-                        height={50}
-                        alt={"image"}
-                        src={`/images/arrow-down-blue.svg`}
-                        className={styles.imgblue}
-                    />
-                </div>
-            </span>
+                <span
+                    style={{
+                        transform: isInView ? "none" : "translateX(100px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    }}>
+                    <div className={styles.container}>
+                        <p id="text" className={styles.text}></p>
+                        <p id="textSmall" className={styles.textSmall}></p>
+                        <Image
+                            width={50}
+                            height={50}
+                            alt={"image"}
+                            src={`/images/arrow-down.svg`}
+                        />
+                        <Image
+                            width={50}
+                            height={50}
+                            alt={"image"}
+                            src={`/images/arrow-down-blue.svg`}
+                            className={styles.imgblue}
+                        />
+                    </div>
+                </span>
             </a>
         </div>
     );

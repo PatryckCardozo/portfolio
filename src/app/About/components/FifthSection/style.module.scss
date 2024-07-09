@@ -79,6 +79,10 @@
             transition: .3s;
         }
 
+        .textSmall{
+            display: none;
+        }
+
     }
 
 }
@@ -116,6 +120,16 @@
                 width: 30px;
                height: 30px;
             }
+            
+            .text{
+                display: none;
+            }
+
+            .textSmall{
+                display: flex;
+            }
+
+            
     
         }
     }
