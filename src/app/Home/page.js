@@ -40,6 +40,7 @@ export default function Home() {
       <Projects />
       <SlidingImages />
       <Contact />
+      <Analytics />
     </main>
   )
 }
