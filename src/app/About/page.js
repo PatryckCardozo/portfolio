@@ -13,6 +13,7 @@ import FourSection from './components/FourSection'
 import FifthSection from './components/FifthSection'
 import Contact from './components/Contact'
 
+
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
