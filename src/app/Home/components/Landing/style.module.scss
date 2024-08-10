@@ -89,6 +89,12 @@
   .landing{
     height: 100vh;
 
+    
+    img{
+      object-fit: cover;
+      object-position: center top;
+    }
+
     img{
       object-fit: cover;
       object-position: center bottom;
