@@ -86,7 +86,7 @@ export default function Home() {
                             <Image
                                 fill={true}
                                 alt={"image"}
-                                src={`/images/about_image_example.jpeg`}
+                                src={`/images/Patryck-2.jpeg`}
                             />
                         </motion.div>
                     </span>

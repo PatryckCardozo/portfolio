@@ -25,7 +25,7 @@ export default function Index() {
                             <Image
                                 fill={true}
                                 alt={"image"}
-                                src={`/images/perfil.jpeg`}
+                                src={`/images/perfil_1.jpeg`}
                             />
                         </div>
                         <h2>E ai, vamos </h2>
