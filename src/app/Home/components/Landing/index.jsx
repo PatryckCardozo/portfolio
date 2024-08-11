@@ -45,11 +45,14 @@ export default function Home() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
+      <div className={styles.containerImage}>
       <Image 
         src="/images/Patryck_1.jpg"
-        fill={true}
         alt="background"
+        width={6240}
+        height={4160}
       />
+      </div>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Patryck Cardozo -</p>

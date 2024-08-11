@@ -10,6 +10,8 @@
     img{
       object-fit: cover;
       object-position: center top;
+      width:100vw;
+      height:100vh; 
     }
     
     .sliderContainer{
@@ -39,7 +41,7 @@
     }
   
     .description{
-      position: relative;
+      position: absolute;
       top: 25%;
       left: 70%;
       color: white;
