@@ -21,10 +21,10 @@ export default function Home() {
 
     return (
 
-        <div className={styles.main} ref={ref}>      
+        <div className={styles.main} ref={ref}>
 
 
-                <div className={styles.sectionImages}>
+            <div className={styles.sectionImages}>
 
                 <span
                     style={{
@@ -32,20 +32,20 @@ export default function Home() {
                         opacity: isInView ? 1 : 0,
                         transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
                     }}>
-                        <div className={styles.containerImage1}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/Patryck.jpg`}
-                            />
-                        </div>
-                    </span>
+                    <div className={styles.containerImage1}>
+                        <Image
+                            fill={true}
+                            alt={"image"}
+                            src={`/images/Patryck.jpg`}
+                        />
+                    </div>
+                </span>
 
-                </div>
+            </div>
 
-                <div className={styles.sectionArticle}>
+            <div className={styles.sectionArticle}>
 
-                    <span
+                <span
                     style={{
                         transform: isInView ? "none" : "translateY(-100px)",
                         opacity: isInView ? 1 : 0,
@@ -54,9 +54,9 @@ export default function Home() {
                     <div className={styles.titleSection}>
                         <h1>Hobbies</h1>
                     </div>
-                    </span>
+                </span>
 
-                    <span
+                <span
                     style={{
                         transform: isInView ? "none" : "translateY(-100px)",
                         opacity: isInView ? 1 : 0,
@@ -76,9 +76,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    </span>
+                </span>
 
-                    <span
+                <span
                     style={{
                         transform: isInView ? "none" : "translateY(-100px)",
                         opacity: isInView ? 1 : 0,
@@ -98,9 +98,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    </span>
+                </span>
 
-                    <span
+                <span
                     style={{
                         transform: isInView ? "none" : "translateY(-100px)",
                         opacity: isInView ? 1 : 0,
@@ -113,17 +113,17 @@ export default function Home() {
 
                         <div className={styles.containerArticleCard}>
                             <div className={styles.titleArticle}>
-                                <h2>Surf</h2>
+                                <h2>Leitura</h2>
                             </div>
                             <div className={styles.textArticle}>
-                                <p>Surfar é minha fuga para a tranquilidade do oceano. Deslizar pelas ondas me proporciona uma sensação de liberdade e conexão com a natureza que não encontro em nenhum outro lugar.</p>
+                                <p>Mergulhar em um bom livro e explorar novos conhecimento é uma de minhas atividades preferidas. Cada artigo e livro que leio amplia meu conhecimento e desafia minhas perspectivas. Estou sempre em busca de novas pesquisas e descobertas para enriquecer minha compreensão do mundo.</p>
                             </div>
                         </div>
                     </div>
-                    </span>
+                </span>
 
-                </div>
-        
+            </div>
+
         </div>
     )
 }
