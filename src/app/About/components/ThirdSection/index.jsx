@@ -107,7 +107,7 @@ export default function Home() {
         });
 
         requestAnimationFrame(animate);
-    },[]);
+    }, []);
 
     const animate = () => {
         if (xPercent.current > 100) {
@@ -171,81 +171,81 @@ export default function Home() {
                         <div className={styles.articlecard}>
                             <p>Universidade Veiga de Almeida</p>
                             <h1>Graduação</h1>
-                             <p>Direito | 7° Período</p>
-                            <p>Análise e Desenvolvimento de Sistema | 2° Período</p>
+                            <p>Direito | 8° Período</p>
+                            <p>Análise e Desenvolvimento de Sistema | 3° Período</p>
                         </div>
                     </div>
                 </span>
 
                 <span
-                 style={{
-                    transform: isInView ? "none" : "translateX(-100px)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }}>
-                <div className={styles.containerCard}>
-                    <div className={styles.continerCardImageFgv}>
-                        <div className={styles.imageContainerFiap}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/fiap-white2.png`}
-                            />
+                    style={{
+                        transform: isInView ? "none" : "translateX(-100px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    }}>
+                    <div className={styles.containerCard}>
+                        <div className={styles.continerCardImageFgv}>
+                            <div className={styles.imageContainerFiap}>
+                                <Image
+                                    fill={true}
+                                    alt={"image"}
+                                    src={`/images/fiap-white2.png`}
+                                />
+                            </div>
+
+                            <div className={styles.imageContainerFiapActive}>
+                                <Image
+                                    fill={true}
+                                    alt={"image"}
+                                    src={`/images/fiap-pink.png`}
+                                />
+                            </div>
                         </div>
 
-                        <div className={styles.imageContainerFiapActive}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/fiap-pink.png`}
-                            />
+                        <div className={styles.articlecard}>
+                            <p>Faculdade de Informática e Administração Paulista</p>
+                            <h1>Nano Courses</h1>
+                            <p>Big Data & Analytics</p>
+                            <p>Design Thinking</p>
+                            <p>Liderança e Desenvolvimento de Competências</p>
+                            <p>Soluções Tecnológicas Emergentes</p>
                         </div>
                     </div>
-
-                    <div className={styles.articlecard}>
-                        <p>Faculdade de Informática e Administração Paulista</p>
-                        <h1>Nano Courses</h1>
-                        <p>Big Data & Analytics</p>
-                        <p>Design Thinking</p>
-                        <p>Liderança e Desenvolvimento de Competências</p>
-                        <p>Soluções Tecnológicas Emergentes</p>
-                    </div>
-                </div>
                 </span>
-                
+
                 <span
-                style={{
-                    transform: isInView ? "none" : "translateX(-100px)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-                }}>
-                <div className={styles.containerCard}>
-                    <div className={styles.continerCardImage}>
-                        
-                        <div className={styles.imageContainer}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/fgv_nacional.png`}
-                            />
-                        </div>
+                    style={{
+                        transform: isInView ? "none" : "translateX(-100px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
+                    }}>
+                    <div className={styles.containerCard}>
+                        <div className={styles.continerCardImage}>
 
-                        <div className={styles.imageContainerFgv}>
-                            <Image
-                                fill={true}
-                                alt={"image"}
-                                src={`/images/fgv-logo.svg`}
-                            />
-                        </div>
+                            <div className={styles.imageContainer}>
+                                <Image
+                                    fill={true}
+                                    alt={"image"}
+                                    src={`/images/fgv_nacional.png`}
+                                />
+                            </div>
 
+                            <div className={styles.imageContainerFgv}>
+                                <Image
+                                    fill={true}
+                                    alt={"image"}
+                                    src={`/images/fgv-logo.svg`}
+                                />
+                            </div>
+
+                        </div>
+                        <div className={styles.articlecard}>
+                            <p>Fundação Getúlio Vargas</p>
+                            <h1>Educação Executiva</h1>
+                            <p>Direito Municipal</p>
+                            <p>Direito Tributário</p>
+                        </div>
                     </div>
-                    <div className={styles.articlecard}>
-                        <p>Fundação Getúlio Vargas</p>
-                        <h1>Educação Executiva</h1>
-                        <p>Direito Municipal</p>
-                        <p>Direito Tributário</p>
-                    </div>
-                </div>
                 </span>
 
             </div>

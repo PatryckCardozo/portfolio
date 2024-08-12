@@ -1,46 +1,16 @@
-'use client';
-import styles from './page.module.scss'
-import { useEffect, useState } from 'react'
-import { AnimatePresence } from 'framer-motion';
-import { GoogleFonts } from 'next-google-fonts';
-import Preloader from './components/Preloader';
-import Landing from './components/Landing';
-import Projects from './components/Projects';
-import Description from './components/Description';
-import SlidingImages from './components/SlidingImages';
-import Contact from './components/Contact';
-import { Analytics } from "@vercel/analytics/react"
+"use client"
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function Home() {
+const RedirectPage = () => {
+  const router = useRouter();
 
-  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    
+    router.push('/Home');
+  }, [router]);
 
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+  return null; 
+};
 
-          setTimeout( () => {
-            setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 2000)
-      }
-    )()
-  }, [])
-
-  return (
-    <main className={styles.main}>
-      <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      <Landing />
-      <Description />
-      <Projects />
-      <SlidingImages />
-      <Contact />
-      <Analytics />
-    </main>
-  )
-}
+export default RedirectPage;
