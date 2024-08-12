@@ -127,6 +127,12 @@
                     p {
                         font-size: 1.8em;
                         z-index: 3;
+                        opacity: 1;
+                    }
+
+                    .checkIcon {
+                        position: absolute;
+                        opacity: 0;
                     }
 
                 }
@@ -134,7 +140,7 @@
                 button {
                     border: none;
                     background-color: transparent;
-                    font-family: "Manrope",  "Poppins", "Inter", "Roboto Flex", sans-serif;
+                    font-family: "Manrope", "Poppins", "Inter", "Roboto Flex", sans-serif;
 
                 }
             }
@@ -482,7 +488,7 @@
         }
     }
 
-    .allContentOverlay{
+    .allContentOverlay {
         display: none;
     }
 }
@@ -607,7 +613,7 @@
                     .quest {
                         padding: 30px 0px;
 
-                        .titleQuest{
+                        .titleQuest {
                             width: 78vw;
                             gap: 30px;
                         }
@@ -705,10 +711,10 @@
                     }
                 }
 
-                .navInfoFooter{
+                .navInfoFooter {
                     position: absolute;
                     top: 1580px;
-                    
+
                 }
 
             }

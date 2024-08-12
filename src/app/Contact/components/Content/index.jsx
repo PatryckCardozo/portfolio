@@ -141,7 +141,7 @@ export default function Index() {
                                     </motion.div>
                                 </button>
 
-                                <input type="hidden" name="redirectTo" value="http://localhost:3000/Contact" />
+                                <input type="hidden" name="redirectTo" value="https://patryckcardozo.com/ThanksContact" />
                                 <input type="hidden" name="accessKey" value="7b2b7909-0e22-4b1d-bcc4-b067b97d8f48" />
                             </form>
                         </motion.div>
