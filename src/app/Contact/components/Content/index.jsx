@@ -116,7 +116,7 @@ export default function Index() {
                                 <div className={styles.quest}>
                                     <div className={styles.titleQuest}>
                                         <p>05</p>
-                                        <h1>Em que área se encontra sua necessidade?</h1>
+                                        <h1>Em que área se encontra sua proposta?</h1>
                                     </div>
                                     <div className={styles.inputQuest}>
                                         <input type="text" name="$Area" placeholder="Jurídico, Desenvolvimento, WebDesign..." required />
@@ -239,7 +239,7 @@ export default function Index() {
                                 <div className={styles.questOverlay}>
                                     <div className={styles.titleQuestOverlay}>
                                         <p>05</p>
-                                        <h1>Em que área se encontra sua necessidade?</h1>
+                                        <h1>Em que área se encontra sua proposta?</h1>
                                     </div>
                                     <div className={styles.inputQuestOverlay}>
                                         <input type="text" name="$Area" placeholder="Jurídico, Desenvolvimento, WebDesign..." required />
