@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Portfólio',
   icons:{
     icon:['/favicon.ico'],
-    apple:['letter_p.png'],
+    apple:['/apple-icon.png'],
     shortcut:['letter_p.png']
   }
 }
