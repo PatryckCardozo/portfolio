@@ -5,7 +5,7 @@
     height: auto;
     padding-bottom: 100px;
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%,  rgb(240, 240, 240) 90%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(240, 240, 240) 90%, rgba(255, 255, 255, 1) 100%);
     font-size: 62, 5%;
 
     .titlePage {
@@ -141,7 +141,7 @@
             flex-direction: row;
             margin: 0px auto;
             gap: 50px;
-         
+
 
             .firstInterestTopics,
             .secondInterestTopics {
@@ -320,6 +320,7 @@
 @media (max-width: 768px) {
 
     .main {
+        padding-bottom: 50px;
 
         .titlePage {
             width: 70vw;
@@ -515,7 +516,7 @@
                     text-align: justify;
                     font-size: 1em;
                     line-height: 21px;
-            
+
                 }
 
             }
@@ -543,7 +544,7 @@
 
 
             .title {
-              
+
 
                 h2 {
                     font-size: 1.8em;
@@ -568,7 +569,7 @@
                     }
 
                     .card {
-                        
+
 
                         .headerCard {
                             margin-bottom: 0px;
@@ -601,9 +602,9 @@
                     }
                 }
 
-                .secondInterestTopics{
+                .secondInterestTopics {
                     margin-left: 25px;
-        
+
                 }
             }
         }
