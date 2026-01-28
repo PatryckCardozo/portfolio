@@ -106,6 +106,12 @@
                 align-items: center;
                 justify-content: center;
 
+                .card{
+                    width: auto;
+                    height: auto;
+
+                }
+
                 
 
             }
@@ -116,7 +122,6 @@
 @media (max-width:768px) {
 
     .allContent {
-        width: 80vw;
         margin: 0px auto;
 
         .titleContainer {
@@ -131,7 +136,6 @@
 @media (max-width:426px) {
 
     .allContent {
-        width: 70vw;
         height: auto;
         margin-bottom: 100px;
 

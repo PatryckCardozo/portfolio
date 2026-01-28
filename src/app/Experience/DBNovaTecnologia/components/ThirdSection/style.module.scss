@@ -140,6 +140,25 @@
             }
         }
 
+        .cardcontainer {
+            width: 100%;
+
+            .linecontainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 0px auto;
+                align-items: center;
+                justify-content: center;
+
+                .card {
+                    width: auto;
+                    height: auto;
+
+                }
+            }
+        }
+
         .button {
             width: 280px;
 
@@ -150,7 +169,7 @@
 @media (max-width:426px) {
 
     .allContent {
-        width: 70vw;
+        width: 80vw;
         height: auto;
         margin-bottom: 700px;
 

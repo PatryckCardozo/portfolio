@@ -2,7 +2,7 @@
 
 .main {
     width: 100vw;
-    min-height: auto;
+    height: auto;
     padding-bottom: 100px;
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%,  rgb(240, 240, 240) 90%, rgba(255, 255, 255, 1) 100%);
@@ -210,7 +210,6 @@
 @media (max-width: 1024px) {
 
     .main {
-        min-height: 1650px;
 
         .titlePage {
             margin: 200px auto 100px auto;
@@ -321,7 +320,6 @@
 @media (max-width: 768px) {
 
     .main {
-        min-height: 1680px;
 
         .titlePage {
             width: 70vw;
@@ -463,7 +461,6 @@
 @media (max-width: 426px) {
 
     .main {
-        min-height: 1700px;
 
         .titlePage {
             width: 70vw;

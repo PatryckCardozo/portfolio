@@ -124,6 +124,11 @@
                 align-items: center;
                 justify-content: center;
 
+                .card{
+                    width: auto;
+                    height: auto;
+                }
+
             }
 
         }
@@ -150,7 +155,7 @@
 @media (max-width:426px) {
 
     .allContent {
-        width: 70vw;
+        width: 80vw;
         height: auto;
         margin-bottom: 700px;
 

@@ -53,6 +53,8 @@
             }
         }
 
+
+
     }
 }
 
@@ -68,14 +70,20 @@
             }
         }
 
+        .content {
+
+            p {
+                font-size: 18px;
+                font-weight: 350;
+            }
+        }
+
     }
 }
 
 @media (max-width:426px) {
 
     .allContent {
-        width: 70vw;
-        height: auto;
         margin-bottom: 100px;
 
         .titleContainer {

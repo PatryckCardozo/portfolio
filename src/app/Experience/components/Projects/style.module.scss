@@ -157,6 +157,7 @@
 
 @media (max-width: 768px) {
     .allContentLink {
+        margin-bottom: 800px;
 
         .projects {
             font-size: 53%;
@@ -189,8 +190,6 @@
 
 @media (max-width: 426px) {
     .allContentLink {
-        height: 250vh;
-
 
         .projects {
             display: none;
@@ -249,7 +248,5 @@
                 }
             }
         }
-
-
     }
 }

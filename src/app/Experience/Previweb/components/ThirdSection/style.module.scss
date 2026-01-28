@@ -7,9 +7,12 @@
     margin: 0px auto 200px auto;
 
     .titleContainer {
+        width: 100%;
         margin-bottom: 100px;
 
         h1 {
+            margin: 0px;
+            padding: 0px;
             font-family: "Inter", "Roboto Flex", sans-serif;
             font-size: 3.5em;
             font-weight: 400;
@@ -124,6 +127,11 @@
                 align-items: center;
                 justify-content: center;
 
+                .card {
+                    width: auto;
+                    height: auto;
+                }
+
             }
 
         }
@@ -150,11 +158,12 @@
 @media (max-width:426px) {
 
     .allContent {
-        width: 70vw;
+        width: 80vw;
         height: auto;
         margin-bottom: 700px;
 
         .titleContainer {
+            display: flex;
             margin-bottom: 70px;
 
             h1 {
