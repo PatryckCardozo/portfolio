@@ -2,7 +2,6 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
-import { GoogleFonts } from 'next-google-fonts';
 import Preloader from './components/Preloader'
 import Redirect from './components/Redirect'
 import { Analytics } from "@vercel/analytics/react"

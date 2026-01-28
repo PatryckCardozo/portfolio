@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
+
+.allContent {
+    font-size: 62, 5%;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0px auto 100px auto;
+
+    .titleContainer {
+
+        h1 {
+            font-family: "Inter", "Roboto Flex", sans-serif;
+            font-size: 3.5em;
+            font-weight: 400;
+        }
+    }
+
+
+    .cardcontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .linecontainer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .card {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f7f7f7;
+                border-radius: 5px;
+                padding: 10px 20px;
+                transition: .5s;
+
+
+
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+
+                    h1 {
+                        font-size: 25px;
+                        font-weight: 400;
+
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    height: 100%;
+                    justify-content: flex-start;
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 350;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-10px);
+                    background-color: hsl(79.6 89.1% 89.2%);
+                }
+
+            }
+
+        }
+    }
+
+
+
+
+
+}
+
+@media (max-width:1024px) {
+
+    .allContent {
+        width: 80vw;
+
+
+        .titleContainer {
+            h1 {
+                font-size: 3em;
+            }
+        }
+
+        .cardcontainer {
+            width: 100%;
+
+            .linecontainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 0px auto;
+                align-items: center;
+                justify-content: center;
+
+                
+
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .allContent {
+        width: 80vw;
+        margin: 0px auto;
+
+        .titleContainer {
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+
+    }
+}
+
+@media (max-width:426px) {
+
+    .allContent {
+        width: 70vw;
+        height: auto;
+        margin-bottom: 100px;
+
+        .titleContainer {
+            margin-bottom: 0px;
+
+            h1 {
+                font-size: 1.9em;
+            }
+        }
+    }
+}

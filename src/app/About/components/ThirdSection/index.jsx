@@ -169,10 +169,9 @@ export default function Home() {
 
                         </div>
                         <div className={styles.articlecard}>
-                            <p>Universidade Veiga de Almeida</p>
                             <h1>Graduação</h1>
-                            <p>Direito | 8° Período</p>
-                            <p>Análise e Desenvolvimento de Sistema | 3° Período</p>
+                            <p>Análise e Desenvolvimento de Sistema</p>
+                            <p>Direito | 10° Período</p>
                         </div>
                     </div>
                 </span>
@@ -203,7 +202,6 @@ export default function Home() {
                         </div>
 
                         <div className={styles.articlecard}>
-                            <p>Faculdade de Informática e Administração Paulista</p>
                             <h1>Nano Courses</h1>
                             <p>Big Data & Analytics</p>
                             <p>Design Thinking</p>
@@ -240,7 +238,6 @@ export default function Home() {
 
                         </div>
                         <div className={styles.articlecard}>
-                            <p>Fundação Getúlio Vargas</p>
                             <h1>Educação Executiva</h1>
                             <p>Direito Municipal</p>
                             <p>Direito Tributário</p>

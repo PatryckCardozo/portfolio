@@ -2,8 +2,6 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
-import { GoogleFonts } from 'next-google-fonts';
-import Header from './components/Header'
 import Preloader from './components/Preloader'
 import Content from './components/Content'
 import { Analytics } from "@vercel/analytics/react"
@@ -34,7 +32,6 @@ export default function Home() {
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <Header />
       <Content />
       <Analytics />
     </main>

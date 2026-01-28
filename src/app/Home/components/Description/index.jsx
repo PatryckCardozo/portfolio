@@ -5,6 +5,57 @@ import Link from 'next/link';
 import { slideUp, opacity } from './animation';
 import Rounded from '../../../../common/RoundedButton';
 
+import {
+  Inter,
+  Manrope,
+  Poppins,
+  Quicksand,
+  Roboto,
+  Urbanist,
+} from 'next/font/google';
+
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
+
+export const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
+export const poppins = Poppins({
+  subsets: ['latin'],
+  weight: [
+    '100', '200', '300', '400', '500',
+    '600', '700', '800', '900',
+  ],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+export const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
+
+export const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+export const urbanist = Urbanist({
+  subsets: ['latin'],
+  weight: ['100','200','300','400','500','600','700','800','900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
 export default function Index() {
 
     const direito = "Direito &";
@@ -62,7 +113,7 @@ export default function Index() {
                     <div>
                         <motion.div style={{ y }} className={styles.buttonContainer}>
                             <Rounded className={styles.button}>
-                                <p>Perfil</p>
+                                <p className={manrope.className}>Perfil</p>
                             </Rounded>
                         </motion.div>
                     </div>

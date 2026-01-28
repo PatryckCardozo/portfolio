@@ -2,16 +2,14 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
-import { GoogleFonts } from 'next-google-fonts';
 import Preloader from './components/Preloader'
-import Header from './components/Header'
 import Title from './components/Title'
 import FirstSection from './components/FirstSection'
 import SecondSection from './components/SecondSection'
 import ThirdSection from './components/ThirdSection'
 import FourSection from './components/FourSection'
 import FifthSection from './components/FifthSection'
-import Contact from './components/Contact'
+import Contact from '../../shared/footer'
 import { Analytics } from "@vercel/analytics/react"
 
 
@@ -36,11 +34,9 @@ export default function Home() {
 
   return (
     <main>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap"/>
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <Header />
       <Title />
       <FirstSection />
       <SecondSection />

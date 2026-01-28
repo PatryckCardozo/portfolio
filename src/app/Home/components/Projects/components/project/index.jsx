@@ -1,43 +1,43 @@
 'use client';
-import React from 'react'
 import styles from './style.module.scss';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const projects = [
-    {
-        title: "DBnova Tecnologia",
-        src: "logodbnova.png",
-        color: "#e6e6e6"
-    }
-]
+export default function Project({ project, index, manageModal, isMobile }) {
+  return (
+    <Link href={project.adress}>
+      <div className={styles.projectWrapper}>
+        
+        {isMobile && (
+          <div className={styles.mobileImage}>
+            <Image
+              src={`/images/${project.src}`}
+              width={300}
+              height={300}
+              alt={project.title}
+            />
+          </div>
+        )}
 
-export default function Index({ index, title, manageModal }) {
+        <div
+          className={styles.project}
+          onMouseEnter={(e) => {
+            if (!isMobile) {
+              manageModal(true, index, e.clientX, e.clientY);
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!isMobile) {
+              manageModal(false, index, e.clientX, e.clientY);
+            }
+          }}
+        >
+          <h2>{project.title}</h2>
+          <span></span>
+          <p>{project.cargo}</p>
+        </div>
 
-    return (
-
-        <Link href={"/DBnova"}>
-        <div onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }} className={styles.project}>
-            <div className={styles.modalSlider}>
-                {
-                    projects.map((project, idx) => {
-                        const { src, color } = project
-                        return <div key={idx} className={styles.modal} style={{ backgroundColor: color }} >
-                            <Image
-                                src={`/images/${src}`}
-                                width={300}
-                                height={0}
-                                alt="image"
-                            />
-                        </div>
-                    })
-                }
-            </div>
-            <h2>{title}</h2>
-            <span></span>
-            <p>Consultor Técnico</p>
-        </div >
-        </Link>
-  
-    )
+      </div>
+    </Link>
+  );
 }

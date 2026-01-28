@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
+
+.allContent {
+    font-size: 62, 5%;
+    width: 90vw;
+    height: 80vh;
+    margin: 0px auto 200px auto;
+
+    .titleContainer {
+        margin-bottom: 100px;
+
+        h1 {
+            font-family: "Inter", "Roboto Flex", sans-serif;
+            font-size: 3.5em;
+            font-weight: 400;
+        }
+    }
+
+
+    .cardcontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .linecontainer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .card {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f7f7f7;
+                border-radius: 5px;
+                padding: 10px 20px;
+                transition: .5s;
+
+
+
+                .header {
+                    height: 100%;
+                    min-height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+
+                    img {
+                        width: 100px;
+                        height: auto;
+                    }
+
+
+
+                }
+
+                .content {
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    h1 {
+                        margin: 0px;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 350;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-10px);
+                    background-color: hsl(216 12.2% 83.9%);
+                }
+
+            }
+
+        }
+    }
+
+
+    .button {
+        width: 300px;
+        margin: 100px auto;
+
+        a {
+            font-size: 1em;
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    .allContent {
+        width: 80vw;
+        margin: 0px auto;
+
+
+        .titleContainer {
+            h1 {
+                font-size: 3em;
+            }
+        }
+
+        .cardcontainer {
+
+
+            .linecontainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 0px auto;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .allContent {
+
+        .titleContainer {
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        .button {
+            width: 280px;
+
+        }
+    }
+}
+
+@media (max-width:426px) {
+
+    .allContent {
+        width: 70vw;
+        height: auto;
+        margin-bottom: 700px;
+
+        .titleContainer {
+            margin-bottom: 70px;
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        .cardcontainer {
+
+            .linecontainer {
+
+                .card {
+
+                    .header {
+
+                        img {
+                            width: 100px;
+                            height: auto;
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        .button {
+            width: 270px;
+
+            a {
+                font-size: .95em;
+
+            }
+        }
+    }
+
+
+}

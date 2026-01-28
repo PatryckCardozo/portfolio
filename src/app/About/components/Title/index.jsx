@@ -77,7 +77,7 @@ export default function Home() {
                     
                     <div ref={article} className={styles.article}>
                         <h2>Olá, meu nome é Patryck.</h2>
-                        <h2>Tenho 25 anos e sou graduando nos cursos de Direito e Análise e Desenvolvimento de Sistemas. Atualmente, trabalho com softwares de gestão administrativa para órgãos públicos, ocupando o cargo de consultor técnico.</h2>
+                        <h2>Tenho 27 anos e sou graduado em Análise e Desenvolvimento de Sistemas, além de estar em fase de conclusão da graduação em Direito. Atualmente, atuo como Desenvolvedor Full Stack, trabalhando no desenvolvimento e na manutenção de softwares de gestão administrativa voltados para órgãos públicos.</h2>
                     </div>
                     
 
@@ -86,114 +86,11 @@ export default function Home() {
                             <Image
                                 fill={true}
                                 alt={"image"}
-                                src={`/images/Patryck-2.jpeg`}
+                                src={`/images/Patryck_1.jpg`}
                             />
                         </motion.div>
                     </span>
 
-                </div>
-
-                <div className={styles.containerSecondSection} ref={ref}>
-
-                    <span
-                        style={{
-                            transform: isInView ? "none" : "translateY(-50px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"
-                        }}>
-                        <div className={styles.title}>
-                            <h2>Áreas de interesse</h2>
-                        </div>
-                    </span>
-
-
-                    <div className={styles.containerCard}>
-
-                        <div className={styles.firstInterestTopics}>
-
-                            <span
-                                style={{
-                                    transform: isInView ? "none" : "translateX(-50px)",
-                                    opacity: isInView ? 1 : 0,
-                                    transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                                }}>
-                                <div className={styles.card}>
-                                    <div className={styles.headerCard}>
-                                        <p>01</p>
-                                    </div>
-                                    <div className={styles.titleCard}>
-                                        <h3>Compliance</h3>
-                                    </div>
-                                    <div className={styles.articleCard}>
-                                        <p>O interesse em atuar com compliance surge pela admiração a integridade empresarial e o desejo de contribuir para práticas éticas e conformidade regulatória.</p>
-                                    </div>
-                                </div>
-                            </span>
-
-                            <span
-                                style={{
-                                    transform: isInView ? "none" : "translateX(-50px)",
-                                    opacity: isInView ? 1 : 0,
-                                    transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
-                                }}>
-                                <div className={styles.card}>
-                                    <div className={styles.headerCard}>
-                                        <p>02</p>
-                                    </div>
-                                    <div className={styles.titleCard}>
-                                        <h3>Tributário</h3>
-                                    </div>
-                                    <div className={styles.articleCard}>
-                                        <p>O dejeso de aprofundar meu conhecimento e atuar no ramo do direito tributário tem como intuíto assegurar que empresas cumpram as leis fiscais e otimizem sua carga tributária de forma legal.</p>
-                                    </div>
-                                </div>
-                            </span>
-
-                        </div>
-
-                        <div className={styles.secondInterestTopics}>
-
-                            <span
-                                style={{
-                                    transform: isInView ? "none" : "translateX(-50px)",
-                                    opacity: isInView ? 1 : 0,
-                                    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-                                }}>
-                                <div className={styles.card}>
-                                    <div className={styles.headerCard}>
-                                        <p>03</p>
-                                    </div>
-                                    <div className={styles.titleCard}>
-                                        <h3>Developer</h3>
-                                    </div>
-                                    <div className={styles.articleCard}>
-                                        <p>Minha atuação na programação começou com a manipulação de dados, levando à graduação em Análise e Desenvolvimento de Sistemas e ao desenvolvimento front end.</p>
-                                    </div>
-                                </div>
-                            </span>
-
-                            <span
-                                style={{
-                                    transform: isInView ? "none" : "translateX(-50px)",
-                                    opacity: isInView ? 1 : 0,
-                                    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
-                                }}>
-                                <div className={styles.card}>
-                                    <div className={styles.headerCard}>
-                                        <p>04</p>
-                                    </div>
-                                    <div className={styles.titleCard}>
-                                        <h3>Banco de Dados</h3>
-                                    </div>
-                                    <div className={styles.articleCard}>
-                                        <p>Minha expertise e interesse em manipulação e administração de dados surge da migração e conversão de softwares utilizados na gestão pública.</p>
-                                    </div>
-                                </div>
-                            </span>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </motion.main>

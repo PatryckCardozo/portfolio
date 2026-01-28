@@ -10,100 +10,155 @@ import Rounded from '../../../../common/RoundedButton';
 
 const projects = [
   {
+    id: 1,
     title: "DBnova Tecnologia",
     src: "logodbnova.png",
+    color: "#f7f7f7",
+    cargo: "Consultor Técnico",
+    adress: "/Experience/DBnova"
+  },
+  {
+    id: 2,
+    title: "Previweb",
+    src: "previ.png",
     color: "#ffffff",
-
+    cargo: "Full Stack Developer",
+    adress: "/Experience/Previweb"
+  },
+  {
+    id: 3,
+    title: "DBnova Tecnologia",
+    src: "logodbnova.png",
+    color: "#f7f7f7",
+    cargo: "Full Stack Developer",
+    adress: "/Experience/DBnova"
   }
-]
+];
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
-  enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] } },
-  closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] } }
-}
+  enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.4 } },
+  closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.4 } }
+};
 
 export default function Home() {
-
-  const [modal, setModal] = useState({ active: false, index: 0 })
+  const [modal, setModal] = useState({ active: false, index: 0 });
   const { active, index } = modal;
+  const [isMobile, setIsMobile] = useState(false);
+
+
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
 
-  let xMoveContainer = useRef(null);
-  let yMoveContainer = useRef(null);
-  let xMoveCursor = useRef(null);
-  let yMoveCursor = useRef(null);
-  let xMoveCursorLabel = useRef(null);
-  let yMoveCursorLabel = useRef(null);
+  const xMove = useRef(null);
+  const yMove = useRef(null);
 
   useEffect(() => {
-    //Move Container
-    xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", { duration: 0.8, ease: "power3" })
-    yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", { duration: 0.8, ease: "power3" })
-    //Move cursor
-    xMoveCursor.current = gsap.quickTo(cursor.current, "left", { duration: 0.5, ease: "power3" })
-    yMoveCursor.current = gsap.quickTo(cursor.current, "top", { duration: 0.5, ease: "power3" })
-    //Move cursor label
-    xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", { duration: 0.45, ease: "power3" })
-    yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "top", { duration: 0.45, ease: "power3" })
-  }, [])
+    xMove.current = gsap.quickTo(
+      [modalContainer.current, cursor.current, cursorLabel.current],
+      "left",
+      { duration: 0.5, ease: "power3" }
+    );
+
+    yMove.current = gsap.quickTo(
+      [modalContainer.current, cursor.current, cursorLabel.current],
+      "top",
+      { duration: 0.5, ease: "power3" }
+    );
+  }, []);
 
   const moveItems = (x, y) => {
-    xMoveContainer.current(x)
-    yMoveContainer.current(y)
-    xMoveCursor.current(x)
-    yMoveCursor.current(y)
-    xMoveCursorLabel.current(x)
-    yMoveCursorLabel.current(y)
-  }
+    xMove.current(x);
+    yMove.current(y);
+  };
+
   const manageModal = (active, index, x, y) => {
-    moveItems(x, y)
-    setModal({ active, index })
-  }
+    moveItems(x, y);
+    setModal({ active, index });
+  };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
-    <main onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} className={styles.projects}>
+    <main
+      className={styles.projects}
+      onMouseMove={(e) => moveItems(e.clientX, e.clientY)}
+    >
+
+
+
+
       <div className={styles.body}>
-        {
-          projects.map((project, index) => {
-            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />
-          })
-        }
+        {projects.map((project, i) => (
+          <Project
+            key={project.id}
+            index={i}
+            project={project}
+            manageModal={manageModal}
+            isMobile={isMobile}
+          />
+        ))}
       </div>
 
-     
-        <Rounded>
-          <a href='/Experience'>Experiência</a>
-        </Rounded>
-  
+      <Rounded>
+        <Link href="/Experience">Experiência</Link>
+      </Rounded>
 
-      <>
-        <a href={"/DBNova"}>
-          <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
-            <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
-              {
-                projects.map((project, index) => {
-                  const { src, color } = project
-                  return <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
-                    <Image
-                      src={`/images/${src}`}
-                      width={300}
-                      height={0}
-                      alt="image"
-                    />
-                  </div>
-                })
-              }
+      <motion.div
+        ref={modalContainer}
+        variants={scaleAnimation}
+        initial="initial"
+        animate={active ? "enter" : "closed"}
+        className={styles.modalContainer}
+      >
+        <div
+          className={styles.modalSlider}
+          style={{ top: index * -100 + "%" }}
+        >
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={styles.modal}
+              style={{ backgroundColor: project.color }}
+            >
+              <Image
+                src={`/images/${project.src}`}
+                width={300}
+                height={300}
+                alt={project.title}
+              />
             </div>
-          </motion.div>
+          ))}
+        </div>
+      </motion.div>
 
-          <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
+      <motion.div
+        ref={cursor}
+        className={styles.cursor}
+        variants={scaleAnimation}
+        initial="initial"
+        animate={active ? "enter" : "closed"}
+      />
 
-          <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
-        </a>
-      </>
+      <motion.div
+        ref={cursorLabel}
+        className={styles.cursorLabel}
+        variants={scaleAnimation}
+        initial="initial"
+        animate={active ? "enter" : "closed"}
+      >
+        View
+      </motion.div>
     </main>
-  )
+  );
 }

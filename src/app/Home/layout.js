@@ -1,26 +1,31 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import Header from './components/Header';
+import Header from '../../shared/header/white';
 
-const inter = Inter({ subsets: ['latin'] })
+import {
+  Inter
+} from 'next/font/google';
+
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Patryck Cardozo',
   description: 'Portfólio',
-  icons:{
-    icon:['/favicon.ico'],
-    apple:['/apple-icon.png'],
-    shortcut:['letter_p.png']
+  icons: {
+    icon: ['/favicon.ico'],
+    apple: ['/apple-icon.png'],
+    shortcut: ['letter_p.png']
   }
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <div className={inter.className}>
+      <Header />
+      {children}
+    </div>
   )
 }
