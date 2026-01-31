@@ -113,90 +113,132 @@ export default function Home() {
 
 
 
+  const height = useTransform(scrollYProgress, [0, 1], [300, 0])
+  const [dimension, setDimension] = useState({
+    width: 0,
+    height: 100,
+  });
+
+  useEffect(() => {
+    const updateViewport = () => {
+      setDimension({
+        width: window.innerWidth,
+        height: 100,
+      });
+    };
+
+    updateViewport();
+    window.addEventListener('resize', updateViewport);
+
+    return () => window.removeEventListener('resize', updateViewport);
+  }, []);
+
+
+
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 100} 0 ${dimension.height}  L0 0`
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`
+
+  const curve = {
+    initial: {
+      d: initialPath,
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+    },
+    exit: {
+      d: targetPath,
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 }
+    }
+  }
+
+
   return (
 
-    <motion.main variants={slideUp} initial="initial" animate="enter" onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} >
-      <div className={styles.allContentLink}>
-
-        {projects.map((x, id) => {
-          return (
-            <div key={x.id} onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY); setCursorColor("transparent"); }} className={styles.smallProject}>
-              <Link href={x.link}>
-                <div className={styles.modalSlider}>
-                  <div key={x.id} className={styles.modal} style={{ backgroundColor: x.bgcolormobile }} >
-                    <Image
-                      src={`/images/${x.src}`}
-                      width={300}
-                      height={100}
-                      alt="image"
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.smallContent}>
-                  <h2>{x.nome}</h2>
-                  <div className={styles.line}></div>
-                  <p>{x.cargo}</p>
-                </div>
-              </Link>
-            </div>
-          )
-        })}
-
-
-        <div className={styles.projects}>
-          <div className={styles.projectHeaderContainer}>
-            <div className={styles.header}>
-              <p>Empresa</p>
-            </div>
-
-            <div className={styles.header}>
-              <p>Localização</p>
-            </div>
-
-            <div className={styles.header}>
-              <p>Cargo</p>
-            </div>
-
-            <div className={styles.header}>
-              <p>Período</p>
-            </div>
-          </div>
+    <div className={styles.content}>
+      <motion.main variants={slideUp} initial="initial" animate="enter" onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} >
+        <div className={styles.allContentLink}>
 
           {projects.map((x, id) => {
             return (
-              <Link key={x.id} href={x.link}>
-
-                <div className={styles.projectContent} onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY); setCursorColor(x.color); setCursorBgColor(x.bgcolor); }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }}>
-
-                  <div key={id} className={styles.projectsContentContainer} style={{ top: index * -100 + "%" }}  >
-                    <div className={styles.company}>
-                      <p>{x.nome}</p>
-                    </div>
-
-                    <div className={styles.content}>
-                      <p>{x.local}</p>
-                    </div>
-
-                    <div className={styles.content}>
-                      <p>{x.cargo}</p>
-                    </div>
-
-                    <div className={styles.content}>
-                      <p>{x.periodo}</p>
+              <div key={x.id} onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY) }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY); setCursorColor("transparent"); }} className={styles.smallProject}>
+                <Link href={x.link}>
+                  <div className={styles.modalSlider}>
+                    <div key={x.id} className={styles.modal} style={{ backgroundColor: x.bgcolormobile }} >
+                      <Image
+                        src={`/images/${x.src}`}
+                        width={300}
+                        height={100}
+                        alt="image"
+                      />
                     </div>
                   </div>
 
-                </div>
-                <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} style={{ backgroundColor: cursorbgcolor, color: cursorcolor }} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-                <motion.div ref={cursorLabel} className={styles.cursorLabel} style={{ backgroundColor: cursorbgcolor, color: cursorcolor }} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
-              </Link>
-            );
+                  <div className={styles.smallContent}>
+                    <h2>{x.nome}</h2>
+                    <div className={styles.line}></div>
+                    <p>{x.cargo}</p>
+                  </div>
+                </Link>
+              </div>
+            )
           })}
 
+
+          <div className={styles.projects}>
+            <div className={styles.projectHeaderContainer}>
+              <div className={styles.header}>
+                <p>Empresa</p>
+              </div>
+
+              <div className={styles.header}>
+                <p>Localização</p>
+              </div>
+
+              <div className={styles.header}>
+                <p>Cargo</p>
+              </div>
+
+              <div className={styles.header}>
+                <p>Período</p>
+              </div>
+            </div>
+
+            {projects.map((x, id) => {
+              return (
+                <Link key={x.id} href={x.link}>
+
+                  <div className={styles.projectContent} onMouseEnter={(e) => { manageModal(true, index, e.clientX, e.clientY); setCursorColor(x.color); setCursorBgColor(x.bgcolor); }} onMouseLeave={(e) => { manageModal(false, index, e.clientX, e.clientY) }}>
+
+                    <div key={id} className={styles.projectsContentContainer} style={{ top: index * -100 + "%" }}  >
+                      <div className={styles.company}>
+                        <p>{x.nome}</p>
+                      </div>
+
+                      <div className={styles.content}>
+                        <p>{x.local}</p>
+                      </div>
+
+                      <div className={styles.content}>
+                        <p>{x.cargo}</p>
+                      </div>
+
+                      <div className={styles.content}>
+                        <p>{x.periodo}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} style={{ backgroundColor: cursorbgcolor, color: cursorcolor }} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
+                  <motion.div ref={cursorLabel} className={styles.cursorLabel} style={{ backgroundColor: cursorbgcolor, color: cursorcolor }} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
+                </Link>
+              );
+            })}
+
+          </div>
         </div>
-      </div>
-    </motion.main>
+      </motion.main>
+
+
+
+    </div>
 
   )
 }

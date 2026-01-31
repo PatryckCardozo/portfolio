@@ -16,7 +16,7 @@ export const metadata = {
   description: 'Portfólio',
   icons: {
     icon: ['/favicon.ico'],
-    apple: ['/apple-icon.png'],
+    apple: ['letter_p.png'],
     shortcut: ['letter_p.png']
   }
 }
