@@ -1,215 +1,188 @@
-.main {
-    height: auto;
+.contact {
+    font-size: 62.5%;
+    color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #141516;
     position: relative;
+    width: 100vw;
+    height: 100vh;
 
 
-    .circleContainer {
-        background-color: rgb(255, 255, 255);
-        z-index: 1;
 
-    }
-
-    svg {
-        width: 100vw;
-        height: auto;
-        z-index: 1;
-
-
-        path {
-            fill: #ffffff;
-        }
-    }
-
-    .contact {
-        font-size: 62.5%;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .body {
         background-color: #141516;
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+        width: 80vw;
+
+
+        .title {
+            border-bottom: 1px solid rgb(134, 134, 134);
+            padding-bottom: 100px;
+            position: relative;
 
 
 
-        .body {
-            background-color: #141516;
-            width: 80vw;
+            span {
+                display: flex;
+                align-items: center;
 
+                .imageContainer {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
 
-            .title {
-                border-bottom: 1px solid rgb(134, 134, 134);
-                padding-bottom: 100px;
-                position: relative;
-
-
-
-                span {
-                    display: flex;
-                    align-items: center;
-
-                    .imageContainer {
-                        width: 100px;
-                        height: 100px;
-                        position: relative;
-                        border-radius: 50%;
-                        overflow: hidden;
-
-                        img {
-                            object-fit: cover;
-                        }
-                    }
-
-                    h2 {
-                        font-weight: 350;
-                        margin-left: 0.3em;
+                    img {
+                        object-fit: cover;
                     }
                 }
 
                 h2 {
-                    font-size: 5vw;
-                    margin: 0px;
                     font-weight: 350;
-                }
-
-                .buttonContainer {
-                    position: absolute;
-                    left: calc(100% - 400px);
-                    top: calc(100% - 85px);
-                }
-
-                .button {
-                    width: 180px;
-                    height: 180px;
-                    background-color: #459ce9;
-                    color: white;
-                    border-radius: 50%;
-                    position: absolute;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-
-                    p {
-                        text-align: center;
-                        margin: 0px;
-                        font-size: 2em;
-                        font-weight: 250;
-                        z-index: 2;
-                        letter-spacing: 1.5px;
-                        line-height: 20px;
-                        position: relative;
-                    }
-                }
-
-                svg {
-                    position: absolute;
-                    top: 30%;
-                    left: 100%;
+                    margin-left: 0.3em;
                 }
             }
 
-            .nav {
-                display: flex;
-                gap: 20px;
-                margin-top: 100px;
-
-                a {
-                    font-size: 1.5em;
-                    text-decoration: none;
-                    color: white;
-                    z-index: 1;
-                }
+            h2 {
+                font-size: 5vw;
+                margin: 0px;
+                font-weight: 350;
             }
 
-            .info {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
+            .buttonContainer {
                 position: absolute;
-                bottom: 20px;
+                left: calc(100% - 400px);
+                top: calc(100% - 85px);
+            }
 
+            .button {
+                width: 180px;
+                height: 180px;
+                background-color: #459ce9;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
 
-                .infoContent {
-                    display: flex;
-                    flex-direction: row;
-
-                    .infoFirstContent,
-                    .infoSecondContent {
-
-                        p,
-                        h3 {
-                            margin: 0px;
-                            padding: 2.5px;
-                            cursor: pointer;
-                            text-decoration-line: none;
-                        }
-
-                        p,
-                        a {
-                            font-size: 1.5em;
-                            text-decoration: none;
-                            color: white;
-
-                            &::after {
-                                content: "";
-                                width: 0%;
-                                height: 1px;
-                                background-color: white;
-                                display: block;
-                                margin-top: 2px;
-                                position: relative;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                transition: width 0.2s linear;
-                            }
-
-                            &:hover {
-                                &::after {
-                                    width: 100%;
-                                }
-                            }
-                        }
-
-                        span {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 15px;
-                        }
-
-                        h3 {
-                            color: grey;
-                            cursor: default;
-                            font-weight: 300;
-                            font-size: 1em;
-                        }
-
-
-                    }
+                p {
+                    text-align: center;
+                    margin: 0px;
+                    font-size: 2em;
+                    font-weight: 250;
+                    z-index: 2;
+                    letter-spacing: 1.5px;
+                    line-height: 20px;
+                    position: relative;
                 }
+            }
 
-                h1 {
-                    text-transform: uppercase;
-                    color: gray;
-                    font-size: 1.3em;
-                    letter-spacing: .5px;
-                    font-weight: 550;
-                }
+            svg {
+                position: absolute;
+                top: 30%;
+                left: 100%;
+            }
+        }
 
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-top: 100px;
+
+            a {
+                font-size: 1.5em;
+                text-decoration: none;
+                color: white;
+                z-index: 1;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            bottom: 20px;
+
+
+            .infoContent {
+                display: flex;
+                flex-direction: row;
+
+                .infoFirstContent,
                 .infoSecondContent {
-                    margin-left: 20px;
+
+                    p,
+                    h3 {
+                        margin: 0px;
+                        padding: 2.5px;
+                        cursor: pointer;
+                        text-decoration-line: none;
+                    }
+
+                    p,
+                    a {
+                        font-size: 1.5em;
+                        text-decoration: none;
+                        color: white;
+
+                        &::after {
+                            content: "";
+                            width: 0%;
+                            height: 1px;
+                            background-color: white;
+                            display: block;
+                            margin-top: 2px;
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: width 0.2s linear;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    span {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+
+                    h3 {
+                        color: grey;
+                        cursor: default;
+                        font-weight: 300;
+                        font-size: 1em;
+                    }
+
+
                 }
+            }
+
+            h1 {
+                text-transform: uppercase;
+                color: gray;
+                font-size: 1.3em;
+                letter-spacing: .5px;
+                font-weight: 550;
+            }
+
+            .infoSecondContent {
+                margin-left: 20px;
             }
         }
     }
-
-
-
 }
+
 
 
 @media screen and (max-width: 1024px) {

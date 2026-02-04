@@ -1,10 +1,3 @@
-.content {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-
     .cursor,
     .cursorLabel {
         width: 80px;
@@ -30,10 +23,9 @@
 
 
     .allContentLink {
-        z-index: 2;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 180vh;
         background-color: white;
 
         a {
@@ -112,120 +104,107 @@
         }
     }
 
-    .circleContainer {
-        background-color: rgb(255, 255, 255);
-
-    }
-
-    svg {
-        width: 100vw;
-        height: auto;
-
-        path {
-            fill: #ffffff;
-        }
-    }
-
-}
-
-@media (max-width: 1024px) {
-    .allContentLink {
-
-        .projects {
-            .projectHeaderContainer {
-                padding: 25px 25px 25px 80px;
-            }
-
-            .projectContent {
-                .projectsContentContainer {
-                    padding: 20px 25px 20px 80px;
-
-                    .content {
-                        font-size: 1.5em;
-                    }
-
-                    .company {
-                        font-size: 2.5em;
-                    }
 
 
+
+    @media (max-width: 1024px) {
+        .allContentLink {
+
+            .projects {
+                .projectHeaderContainer {
+                    padding: 25px 25px 25px 80px;
                 }
 
+                .projectContent {
+                    .projectsContentContainer {
+                        padding: 20px 25px 20px 80px;
+
+                        .content {
+                            font-size: 1.5em;
+                        }
+
+                        .company {
+                            font-size: 2.5em;
+                        }
+
+
+                    }
+
+                }
             }
         }
     }
-}
 
 
-@media (max-width: 768px) {
-    .allContentLink {
-        margin-bottom: 800px;
+    @media (max-width: 768px) {
+        .allContentLink {
+            margin-bottom: 800px;
 
-        .projects {
-            font-size: 53%;
+            .projects {
+                font-size: 53%;
+            }
         }
     }
-}
 
-@media (max-width: 426px) {
-    .allContentLink {
+    @media (max-width: 426px) {
+        .allContentLink {
 
-        .projects {
-            display: none;
-        }
+            .projects {
+                display: none;
+            }
 
-        .smallProject {
-            display: contents;
-            align-items: start;
-            flex-direction: column;
-            font-size: 50%;
-            font-weight: 450;
-            justify-content: left;
-            margin-top: 0;
+            .smallProject {
+                display: contents;
+                align-items: start;
+                flex-direction: column;
+                font-size: 50%;
+                font-weight: 450;
+                justify-content: left;
+                margin-top: 0;
 
-            .modalSlider {
-                display: flex;
-                width: 80vw;
-                margin-left: auto;
-                margin-right: auto;
-                height: 40vh;
-
-                .modal {
+                .modalSlider {
                     display: flex;
-                    height: 100%;
-                    width: 100%;
-                    align-items: center;
-                    justify-content: center;
+                    width: 80vw;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 40vh;
+
+                    .modal {
+                        display: flex;
+                        height: 100%;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    img {
+                        width: 200px;
+                        height: auto;
+                        padding: 10px;
+                    }
                 }
 
-                img {
-                    width: 200px;
-                    height: auto;
-                    padding: 10px;
-                }
-            }
+                .smallContent {
+                    width: 80vw;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 2.4em;
+                    margin-bottom: 100px;
 
-            .smallContent {
-                width: 80vw;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 2.4em;
-                margin-bottom: 100px;
+                    h2 {
+                        font-weight: 400;
+                    }
 
-                h2 {
-                    font-weight: 400;
-                }
+                    p {
+                        font-weight: 300;
+                    }
 
-                p {
-                    font-weight: 300;
-                }
-
-                .line {
-                    width: 100%;
-                    height: 2px;
-                    background-color: rgb(211, 211, 211);
+                    .line {
+                        width: 100%;
+                        height: 2px;
+                        background-color: rgb(211, 211, 211);
+                    }
                 }
             }
         }
     }
-}

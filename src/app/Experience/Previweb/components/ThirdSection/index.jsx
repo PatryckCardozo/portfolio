@@ -1,5 +1,6 @@
 'use client';
-import { useLayoutEffect, useRef } from "react";
+import { useRef, useState, useEffect, useLayoutEffect } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,9 +12,55 @@ import Rounded from '../../../../../common/RoundedButton'
 export default function Index() {
 
 
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ["start end", "end start"]
+    })
+
+
+    const height = useTransform(scrollYProgress, [0, 1], [300, 0])
+    const [dimension, setDimension] = useState({
+        width: 0,
+        height: 100,
+    });
+
+    useEffect(() => {
+        const updateViewport = () => {
+            setDimension({
+                width: window.innerWidth,
+                height: 100,
+            });
+        };
+
+        updateViewport();
+        window.addEventListener('resize', updateViewport);
+
+        return () => window.removeEventListener('resize', updateViewport);
+    }, []);
+
+
+
+    const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 100} 0 ${dimension.height}  L0 0`
+    const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`
+
+    const curve = {
+        initial: {
+            d: initialPath,
+            transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+        },
+        exit: {
+            d: targetPath,
+            transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 }
+        }
+    }
+
+
+
     return (
 
-        <>
+        <div className={styles.main} ref={container}>
+
             <div className={styles.allContent}>
 
                 <div className={styles.titleContainer}>
@@ -101,7 +148,16 @@ export default function Index() {
 
             </div>
 
+            <motion.div style={{ height }} className={styles.circleContainer} />
 
-        </>
+
+            {dimension.width > 0 && (
+                <svg>
+                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                </svg>
+            )}
+
+
+        </div>
     )
 }

@@ -304,6 +304,16 @@ export default function Index() {
             </div>
 
 
+            <motion.div style={{ height }} className={styles.circleContainer} />
+
+
+            {dimension.width > 0 && (
+                <svg>
+                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                </svg>
+            )}
+
+
         </div>
 
     )
