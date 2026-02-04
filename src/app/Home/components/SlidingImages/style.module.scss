@@ -99,7 +99,7 @@
 
     .main {
         .slidingImages {
-            overflow: hidden;
+            overflow-x: hidden;
 
         }
     }
@@ -108,6 +108,8 @@
 @media (max-width: 426px) {
 
     .main {
+        height: auto;
+        
         .slidingImages {
             height: auto;
             margin-top: 0px;
