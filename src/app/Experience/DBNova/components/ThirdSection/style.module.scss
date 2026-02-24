@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
-
 .allContent {
     font-size: 62, 5%;
-    width: 90vw;
+    width: 100vw;
     height: auto;
     margin: 0px auto;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+
 
     .titleContainer {
-        margin-bottom: 100px;
+        width: 90vw;
+        margin: 0px auto;
 
         h1 {
             font-family: "Inter", "Roboto Flex", sans-serif;
@@ -18,13 +21,17 @@
 
 
     .cardcontainer {
-        width: 100%;
+        width: 100vw;
+        height: auto;
+        margin: 0px auto;
         display: flex;
         flex-direction: column;
+        background-color: white;
         gap: 30px;
 
         .linecontainer {
-            width: 100%;
+            width: 90vw;
+            margin: 0px auto;
             display: flex;
             flex-direction: row;
             gap: 30px;
@@ -87,27 +94,55 @@
     }
 
 
-    .button {
-        width: 300px;
-        margin: 100px auto;
+    .buttoncontainer {
+        width: 100vw;
+        background-color: white;
 
-        a {
-            font-size: 1em;
-            text-decoration: none;
-            color: black;
+        .button {
+            width: 300px;
+            margin: 0px auto;
+            padding: 100px 0px;
+
+            a {
+                font-size: 1em;
+                text-decoration: none;
+                color: black;
+            }
         }
     }
 
 }
 
+.containercurve {
+    position: relative;
+    z-index: 1;
+
+    .circleContainer {
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    svg {
+        width: 100vw;
+        height: auto;
+
+        path {
+            fill: #ffffff;
+        }
+    }
+
+}
+
+
 @media (max-width:1024px) {
 
     .allContent {
-        width: 80vw;
         margin: 0px auto;
 
 
         .titleContainer {
+            width: 80vw;
+
             h1 {
                 font-size: 3em;
             }
@@ -117,16 +152,30 @@
 
 
             .linecontainer {
-                width: 100%;
-                display: flex;
+                width: 80vw;
                 flex-direction: column;
+                margin: 0px;
                 margin: 0px auto;
-                align-items: center;
-                justify-content: center;
 
-                .card{
+
+                .card {
                     width: auto;
                     height: auto;
+
+                    .content {
+                        display: flex;
+                        height: 100%;
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        h1 {
+                            text-align: center;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+                    }
                 }
 
             }
@@ -145,9 +194,13 @@
             }
         }
 
-        .button {
-            width: 280px;
+        .buttoncontainer {
+            width: 100vw;
 
+            .button {
+                width: 280px;
+
+            }
         }
     }
 }
@@ -171,6 +224,7 @@
 
             .linecontainer {
 
+
                 .card {
 
                     .header {
@@ -185,16 +239,16 @@
             }
         }
 
+        .buttoncontainer {
 
-        .button {
-            width: 270px;
+            .button {
+                width: 270px;
 
-            a {
-                font-size: .95em;
+                a {
+                    font-size: .95em;
 
+                }
             }
         }
     }
-
-
 }

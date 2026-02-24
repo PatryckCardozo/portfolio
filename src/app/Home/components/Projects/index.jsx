@@ -15,7 +15,7 @@ const projects = [
     src: "logodbnova.png",
     color: "#f7f7f7",
     cargo: "Consultor Técnico",
-    adress: "/Experience/DBnova"
+    adress: "/Experience/DBNova"
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const projects = [
     src: "logodbnova.png",
     color: "#f7f7f7",
     cargo: "Full Stack Developer",
-    adress: "/Experience/DBnova"
+    adress: "/Experience/DBNovaTecnologia"
   }
 ];
 

@@ -1,31 +1,16 @@
-    .cursor,
-    .cursorLabel {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        color: white;
-        position: fixed;
-        left: -500px;
-        top: 0;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4em;
-        font-weight: 300;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-    }
-
-    .cursorLabel {
-        background-color: transparent;
-    }
-
+.main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
 
     .allContentLink {
         display: flex;
         flex-direction: column;
-        height: 180vh;
+        height: auto;
         background-color: white;
 
         a {
@@ -104,10 +89,46 @@
         }
     }
 
+    .cursor,
+    .cursorLabel {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        color: white;
+        position: fixed;
+        left: -500px;
+        top: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4em;
+        font-weight: 300;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+    }
 
+    .cursorLabel {
+        background-color: transparent;
+    }
 
+    .circleContainer {
+        background-color: rgb(255, 255, 255);
 
-    @media (max-width: 1024px) {
+    }
+
+    svg {
+        width: 100vw;
+        height: auto;
+
+        path {
+            fill: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
         .allContentLink {
 
             .projects {
@@ -134,9 +155,11 @@
             }
         }
     }
+}
 
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+    .main {
         .allContentLink {
             margin-bottom: 800px;
 
@@ -145,8 +168,10 @@
             }
         }
     }
+}
 
-    @media (max-width: 426px) {
+@media (max-width: 426px) {
+    .main {
         .allContentLink {
 
             .projects {
@@ -208,3 +233,4 @@
             }
         }
     }
+}
