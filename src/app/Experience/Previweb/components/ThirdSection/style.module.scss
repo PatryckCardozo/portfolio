@@ -1,116 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
-
-.main {
+.allContent {
+    font-size: 62, 5%;
     width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    background-color: white;
     position: relative;
     z-index: 1;
 
-
-    .allContent {
-        font-size: 62, 5%;
-        width: 100vw;
-        height: auto;
+    .titleContainer {
+        width: 90%;
         margin: 0px auto;
-        position: relative;
-        z-index: 1;
-        background-color: white;
+        margin-bottom: 100px;
 
-
-        .titleContainer {
-            width: 90%;
-            margin: 0px auto;
-
-            margin-bottom: 100px;
-
-            h1 {
-                margin: 0px;
-                padding: 0px;
-                font-family: "Inter", "Roboto Flex", sans-serif;
-                font-size: 3.5em;
-                font-weight: 400;
-            }
+        h1 {
+            font-family: "Inter", "Roboto Flex", sans-serif;
+            font-size: 3.5em;
+            font-weight: 400;
         }
+    }
 
+    .cardcontainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 0px auto;
+        flex-direction: column;
+        background-color: white;
+        gap: 30px;
 
-        .cardcontainer {
+        .linecontainer {
             width: 90%;
+            height: auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             margin: 0px auto;
-
             gap: 30px;
 
-            .linecontainer {
+            .card {
                 width: 100%;
                 display: flex;
-                flex-direction: row;
-                gap: 30px;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f7f7f7;
+                border-radius: 5px;
+                padding: 10px 20px;
+                transition: .5s;
 
-                .card {
-                    width: 100%;
+
+
+                .header {
+                    height: 100%;
+                    min-height: 200px;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    background-color: #f7f7f7;
-                    border-radius: 5px;
-                    padding: 10px 20px;
-                    transition: .5s;
+                    align-items: center;
+                    justify-content: center;
 
 
 
-                    .header {
-                        height: 100%;
-                        min-height: 200px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-
-
-                        img {
-                            width: 100px;
-                            height: auto;
-                        }
-
-
-
+                    img {
+                        width: 100px;
+                        height: auto;
                     }
 
-                    .content {
-                        display: flex;
-                        height: 100%;
-                        flex-direction: column;
-                        justify-content: flex-start;
 
-                        h1 {
-                            margin: 0px;
-                            font-size: 20px;
-                        }
-
-                        p {
-                            font-size: 15px;
-                            font-weight: 350;
-                        }
-                    }
-
-                    &:hover {
-                        transform: translateY(-10px);
-                        background-color: hsl(216 12.2% 83.9%);
-                    }
 
                 }
 
-            }
-        }
+                .content {
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
 
+                    h1 {
+                        margin: 0px;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        font-weight: 350;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-10px);
+                    background-color: hsl(79.6 89.1% 89.2%);
+                }
+
+            }
+
+        }
+    }
+
+    .buttoncontainer {
+        width: 100vw;
+        background-color: white;
 
         .button {
             width: 300px;
-            margin: 100px auto;
+            margin: 0px auto;
+            padding: 100px 0px;
 
             a {
                 font-size: 1em;
@@ -118,8 +112,14 @@
                 color: black;
             }
         }
-
     }
+
+}
+
+.containercurve {
+    position: relative;
+    z-index: 1;
+
 
     .circleContainer {
         background-color: rgb(255, 255, 255);
@@ -127,8 +127,10 @@
     }
 
     svg {
+        display: block;
         width: 100vw;
         height: auto;
+
 
         path {
             fill: #ffffff;
@@ -137,55 +139,67 @@
 
 }
 
+
 @media (max-width:1024px) {
-    .main {
-        .allContent {
-            margin: 0px auto;
+
+    .allContent {
+        width: 100vw;
+
+        .titleContainer {
+            h1 {
+                font-size: 3em;
+            }
+        }
+
+        .cardcontainer {
+            width: 100vw;
+
+            .linecontainer {
+                width: 80vw;
+                display: flex;
+                flex-direction: column;
+                margin: 0px auto;
+                padding: 0px;
+                align-items: center;
+                justify-content: center;
 
 
-            .titleContainer {
-                h1 {
-                    font-size: 3em;
-                }
             }
 
-            .cardcontainer {
-
-
-                .linecontainer {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    margin: 0px auto;
-                    align-items: center;
-                    justify-content: center;
-
-                    .card {
-                        width: auto;
-                        height: auto;
-                    }
-
-                }
-
-            }
         }
     }
 }
 
 @media (max-width:768px) {
 
-    .main {
+    .allContent {
 
-        .allContent {
+        .titleContainer {
+            width: 80vw;
 
-            .titleContainer {
-                h1 {
-                    font-size: 2.5em;
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        .cardcontainer {
+
+            .linecontainer {
+
+
+                .card {
+                    width: auto;
+                    height: auto;
+
                 }
             }
+        }
+
+        .buttoncontainer {
 
             .button {
                 width: 280px;
+                padding: 100px 0px;
 
             }
         }
@@ -194,40 +208,36 @@
 
 @media (max-width:426px) {
 
-    .main {
+    .allContent {
+        width: 100vw;
 
-        .allContent {
-            width: 80vw;
-            height: auto;
-            margin-bottom: 700px;
+        .titleContainer {
+            margin-bottom: 70px;
 
-            .titleContainer {
-                display: flex;
-                margin-bottom: 70px;
-
-                h1 {
-                    font-size: 1.8em;
-                }
+            h1 {
+                font-size: 1.8em;
             }
+        }
 
-            .cardcontainer {
+        .cardcontainer {
 
-                .linecontainer {
+            .linecontainer {
 
-                    .card {
+                .card {
 
-                        .header {
+                    .header {
 
-                            img {
-                                width: 100px;
-                                height: auto;
-                            }
-
+                        img {
+                            width: 100px;
+                            height: auto;
                         }
+
                     }
                 }
             }
+        }
 
+        .buttoncontainer {
 
             .button {
                 width: 270px;
@@ -239,5 +249,6 @@
             }
         }
     }
+
 
 }

@@ -14,6 +14,8 @@
         position: relative;
         background-color: white;
         gap: 30px;
+        padding: 50px 0px;
+
 
         .slider {
             display: flex;
@@ -78,18 +80,27 @@
 
     }
 
-    .circleContainer {
-        background-color: rgb(255, 255, 255);
+    .containercurve {
+        position: relative;
+        z-index: 1;
 
-    }
 
-    svg {
-        width: 100vw;
-        height: auto;
+        .circleContainer {
+            background-color: rgb(255, 255, 255);
 
-        path {
-            fill: #ffffff;
         }
+
+        svg {
+            display: block;
+            width: 100vw;
+            height: auto;
+
+
+            path {
+                fill: #ffffff;
+            }
+        }
+
     }
 
 }
@@ -98,7 +109,10 @@
 @media (max-width: 768px) {
 
     .main {
+        margin-top: 0px;
+
         .slidingImages {
+            padding: 100px 0px;
             overflow-x: hidden;
 
         }
@@ -109,7 +123,7 @@
 
     .main {
         height: auto;
-        
+
         .slidingImages {
             height: auto;
             margin-top: 0px;

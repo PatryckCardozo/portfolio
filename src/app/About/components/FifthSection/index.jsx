@@ -123,14 +123,16 @@ export default function Home() {
                 </a>
             </div>
 
-            <motion.div style={{ height }} className={styles.circleContainer} />
+            <div className={styles.containercurve}>
 
+                <motion.div style={{ height: `${height}px` }} className={styles.circleContainer} />
 
-            {dimension.width > 0 && (
-                <svg>
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
-                </svg>
-            )}
+                {dimension.width > 0 && (
+                    <svg>
+                        <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                    </svg>
+                )}
+            </div>
 
         </div>
     );

@@ -150,8 +150,8 @@ export default function Index() {
             </div>
 
             <div className={styles.containercurve}>
-                <motion.div style={{ height }} className={styles.circleContainer} />
 
+                <motion.div style={{ height: `${height}px` }} className={styles.circleContainer} />
 
                 {dimension.width > 0 && (
                     <svg>

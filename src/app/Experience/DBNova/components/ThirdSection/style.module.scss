@@ -2,15 +2,19 @@
     font-size: 62, 5%;
     width: 100vw;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0px auto;
-    background-color: transparent;
+    background-color: white;
     position: relative;
     z-index: 1;
 
-
     .titleContainer {
-        width: 90vw;
+        width: 90%;
         margin: 0px auto;
+        margin-bottom: 100px;
 
         h1 {
             font-family: "Inter", "Roboto Flex", sans-serif;
@@ -19,21 +23,21 @@
         }
     }
 
-
     .cardcontainer {
-        width: 100vw;
+        width: 100%;
         height: auto;
-        margin: 0px auto;
         display: flex;
+        margin: 0px auto;
         flex-direction: column;
         background-color: white;
         gap: 30px;
 
         .linecontainer {
-            width: 90vw;
-            margin: 0px auto;
+            width: 90%;
+            height: auto;
             display: flex;
             flex-direction: row;
+            margin: 0px auto;
             gap: 30px;
 
             .card {
@@ -58,7 +62,7 @@
 
 
                     img {
-                        width: 150px;
+                        width: 100px;
                         height: auto;
                     }
 
@@ -93,7 +97,6 @@
         }
     }
 
-
     .buttoncontainer {
         width: 100vw;
         background-color: white;
@@ -101,7 +104,7 @@
         .button {
             width: 300px;
             margin: 0px auto;
-            padding: 100px 0px;
+            padding: 100px 0px 0px 0px;
 
             a {
                 font-size: 1em;
@@ -117,14 +120,17 @@
     position: relative;
     z-index: 1;
 
+
     .circleContainer {
         background-color: rgb(255, 255, 255);
 
     }
 
     svg {
+        display: block;
         width: 100vw;
         height: auto;
+
 
         path {
             fill: #ffffff;
@@ -137,46 +143,26 @@
 @media (max-width:1024px) {
 
     .allContent {
-        margin: 0px auto;
-
+        width: 100vw;
 
         .titleContainer {
-            width: 80vw;
-
             h1 {
                 font-size: 3em;
             }
         }
 
         .cardcontainer {
-
+            width: 100vw;
 
             .linecontainer {
                 width: 80vw;
+                display: flex;
                 flex-direction: column;
-                margin: 0px;
                 margin: 0px auto;
+                padding: 0px;
+                align-items: center;
+                justify-content: center;
 
-
-                .card {
-                    width: auto;
-                    height: auto;
-
-                    .content {
-                        display: flex;
-                        height: 100%;
-                        flex-direction: column;
-                        justify-content: flex-start;
-
-                        h1 {
-                            text-align: center;
-                        }
-
-                        p {
-                            text-align: center;
-                        }
-                    }
-                }
 
             }
 
@@ -189,16 +175,31 @@
     .allContent {
 
         .titleContainer {
+            width: 80vw;
+
             h1 {
                 font-size: 2.5em;
             }
         }
 
+        .cardcontainer {
+
+            .linecontainer {
+
+
+                .card {
+                    width: auto;
+                    height: auto;
+
+                }
+            }
+        }
+
         .buttoncontainer {
-            width: 100vw;
 
             .button {
                 width: 280px;
+                padding: 100px 0px;
 
             }
         }
@@ -208,9 +209,7 @@
 @media (max-width:426px) {
 
     .allContent {
-        width: 80vw;
-        height: auto;
-        margin-bottom: 700px;
+        width: 100vw;
 
         .titleContainer {
             margin-bottom: 70px;
@@ -223,7 +222,6 @@
         .cardcontainer {
 
             .linecontainer {
-
 
                 .card {
 
@@ -251,4 +249,6 @@
             }
         }
     }
+
+
 }

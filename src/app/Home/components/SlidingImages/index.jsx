@@ -267,6 +267,7 @@ export default function Index() {
                         })
                     }
                 </motion.div>
+
                 <motion.div style={{ x: x2 }} className={styles.slider}>
                     {
                         slider2.map((x, id) => {
@@ -284,6 +285,7 @@ export default function Index() {
                         })
                     }
                 </motion.div>
+                
                 <motion.div style={{ x: x3 }} className={styles.slider}>
                     {
                         slider3.map((x, id) => {
@@ -303,15 +305,16 @@ export default function Index() {
                 </motion.div>
             </div>
 
+            <div className={styles.containercurve}>
 
-            <motion.div style={{ height }} className={styles.circleContainer} />
+                <motion.div style={{ height: `${height}px` }} className={styles.circleContainer} />
 
-
-            {dimension.width > 0 && (
-                <svg>
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
-                </svg>
-            )}
+                {dimension.width > 0 && (
+                    <svg>
+                        <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                    </svg>
+                )}
+            </div>
 
 
         </div>

@@ -140,23 +140,26 @@ export default function Index() {
                     </div>
                 </div>
 
-                <div className={styles.button}>
-                    <Rounded backgroundColor="hsl(217.9 10.6% 64.9%)">
-                        <a href='/Experience'>Outras Experiências</a>
-                    </Rounded>
+                <div className={styles.buttoncontainer}>
+                    <div className={styles.button}>
+                        <Rounded backgroundColor="hsl(217.9 10.6% 64.9%)">
+                            <a href='/Experience'>Outras Experiências</a>
+                        </Rounded>
+                    </div>
                 </div>
-
+                
             </div>
 
-            <motion.div style={{ height }} className={styles.circleContainer} />
+            <div className={styles.containercurve}>
 
+                <motion.div style={{ height: `${height}px` }} className={styles.circleContainer} />
 
-            {dimension.width > 0 && (
-                <svg>
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
-                </svg>
-            )}
-
+                {dimension.width > 0 && (
+                    <svg>
+                        <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+                    </svg>
+                )}
+            </div>
 
         </div>
     )

@@ -7,10 +7,12 @@
     position: relative;
     z-index: 1;
 
+
     .allContentLink {
         display: flex;
         flex-direction: column;
         height: auto;
+        padding-bottom: 100px;
         background-color: white;
 
         a {
@@ -112,18 +114,27 @@
         background-color: transparent;
     }
 
-    .circleContainer {
-        background-color: rgb(255, 255, 255);
+    .containercurve {
+        position: relative;
+        z-index: 1;
 
-    }
 
-    svg {
-        width: 100vw;
-        height: auto;
+        .circleContainer {
+            background-color: rgb(255, 255, 255);
 
-        path {
-            fill: #ffffff;
         }
+
+        svg {
+            display: block;
+            width: 100vw;
+            height: auto;
+
+
+            path {
+                fill: #ffffff;
+            }
+        }
+
     }
 }
 
@@ -161,7 +172,6 @@
 @media (max-width: 768px) {
     .main {
         .allContentLink {
-            margin-bottom: 800px;
 
             .projects {
                 font-size: 53%;

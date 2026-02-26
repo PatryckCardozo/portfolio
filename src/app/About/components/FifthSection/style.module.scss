@@ -2,11 +2,11 @@
     width: 100vw;
     height: auto;
     font-size: 62, 5%;
-    margin: 100px auto 0px;
+    margin: 0px auto;
+    padding: 150px 0px;
     display: flex;
     flex-direction: column;
-    align-items: right;
-    justify-content: end;
+    background-color: transparent;
     position: relative;
     z-index: 1;
 
@@ -33,6 +33,7 @@
             justify-content: flex-end;
             text-decoration: none;
             color: black;
+
         }
 
         .icon {
@@ -105,32 +106,41 @@
         }
     }
 
-    .circleContainer {
-        background-color: rgb(255, 255, 255);
+    .containercurve {
+        position: relative;
+        z-index: 1;
 
-    }
 
-    svg {
-        width: 100vw;
-        height: auto;
+        .circleContainer {
+            background-color: rgb(255, 255, 255);
 
-        path {
-            fill: #ffffff;
         }
+
+        svg {
+            display: block;
+            width: 100vw;
+            height: auto;
+
+
+            path {
+                fill: #ffffff;
+            }
+        }
+
     }
 
 }
 
-@media (max-width: 426px) {
+@media (max-width: 1024px) {
 
     .main {
+        margin: 0px auto;
         align-items: center;
         justify-content: center;
-        margin-bottom: 650px;
 
         .container {
-            height: 150px;
-            width: 150px;
+            height: auto;
+            width: 100vw;
 
             p {
                 height: 150px;

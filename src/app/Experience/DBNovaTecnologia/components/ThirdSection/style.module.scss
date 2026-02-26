@@ -114,13 +114,12 @@
         }
     }
 
-
-
 }
 
 .containercurve {
     position: relative;
     z-index: 1;
+
 
     .circleContainer {
         background-color: rgb(255, 255, 255);
@@ -128,8 +127,10 @@
     }
 
     svg {
+        display: block;
         width: 100vw;
         height: auto;
+
 
         path {
             fill: #ffffff;
@@ -137,6 +138,7 @@
     }
 
 }
+
 
 @media (max-width:1024px) {
 
@@ -151,7 +153,6 @@
 
         .cardcontainer {
             width: 100vw;
-
 
             .linecontainer {
                 width: 80vw;
@@ -198,6 +199,7 @@
 
             .button {
                 width: 280px;
+                padding: 100px 0px;
 
             }
         }
@@ -208,7 +210,6 @@
 
     .allContent {
         width: 100vw;
-        height: auto;
 
         .titleContainer {
             margin-bottom: 70px;
