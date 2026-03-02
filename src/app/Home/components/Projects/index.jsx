@@ -110,9 +110,11 @@ export default function Home() {
         ))}
       </div>
 
-      <Rounded>
-        <Link href="/Experience">Experiência</Link>
-      </Rounded>
+      <div className={styles.containerbutton}>
+        <Rounded>
+          <Link href="/Experience">Experiência</Link>
+        </Rounded>
+      </div>
 
       <motion.div
         ref={modalContainer}

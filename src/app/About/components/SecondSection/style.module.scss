@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
-
-
 .main {
     width: 90vw;
+    max-width: 100vw;
+    overflow-x: hidden;
     height: 100vh;
     font-size: 62, 5%;
     margin: 100px auto 0px;
@@ -11,7 +10,7 @@
     justify-content: center;
     gap: 550px;
 
-    
+
 
     .sectionImages {
 
@@ -25,7 +24,7 @@
                 height: 460px;
                 position: absolute;
                 overflow: hidden;
-        
+
 
                 img {
 
@@ -72,7 +71,7 @@
                 display: flex;
                 flex-direction: column;
                 line-height: 15px;
-           
+
 
 
                 .titleArticle {
@@ -103,19 +102,19 @@
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
 
-    .main{
+    .main {
         gap: 450px;
 
         .sectionImages {
 
             span {
-    
+
                 .containerImage1 {
                     margin-top: 300px;
                     width: 400px;
-                    height: 410px;            
+                    height: 410px;
                 }
             }
         }
@@ -127,35 +126,35 @@
                     font-size: 2.8em;
                 }
             }
-    
+
             .card {
                 width: 430px;
                 gap: 40px;
                 padding: 5px 20px;
-    
+
                 .numberCard {
                     h3 {
-                       font-size: 1.8em;
+                        font-size: 1.8em;
                     }
                 }
-    
-    
+
+
                 .containerArticleCard {
                     line-height: 15px;
-               
-                        .titleArticle {
-    
+
+                    .titleArticle {
+
                         h2 {
-                           font-size: 1.4em;
-    
+                            font-size: 1.4em;
+
                         }
-    
+
                     }
-    
+
                     .textArticle {
                         p {
                             font-size: .95em;
-                            
+
                         }
                     }
                 }
@@ -164,9 +163,9 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .main{
+    .main {
         gap: 0px;
         justify-content: space-between;
         flex-direction: column;
@@ -180,16 +179,16 @@
             margin-bottom: 200px;
 
             span {
-            align-items: center;
-            justify-content: center;
+                align-items: center;
+                justify-content: center;
 
                 .containerImage1 {
                     margin: 0px;
                     width: 300px;
-                    height: 310px;            
+                    height: 310px;
                 }
-                
-                
+
+
             }
 
 
@@ -200,40 +199,41 @@
 
             .titleSection {
                 display: none;
+
                 h1 {
                     font-size: 2.2em;
                 }
             }
-    
+
             .card {
                 margin: 0px auto;
                 width: 90%;
                 gap: 40px;
                 padding: 0px 20px;
-    
+
                 .numberCard {
                     h3 {
-                       font-size: 1.5em;
+                        font-size: 1.5em;
                     }
                 }
-    
-    
+
+
                 .containerArticleCard {
                     line-height: 15px;
-               
-                        .titleArticle {
-    
+
+                    .titleArticle {
+
                         h2 {
-                           font-size: 1.2em;
-    
+                            font-size: 1.2em;
+
                         }
-    
+
                     }
-    
+
                     .textArticle {
                         p {
                             font-size: .9em;
-                            
+
                         }
                     }
                 }
@@ -242,26 +242,26 @@
     }
 }
 
-@media (max-width: 426px){
+@media (max-width: 426px) {
 
-    .main{
+    .main {
         height: auto;
-        margin: 250px auto 0px ;
-       
+        margin: 250px auto 0px;
+
 
 
         .sectionImages {
-            
+
 
             span {
                 margin-bottom: 20px;
 
                 .containerImage1 {
                     width: 300px;
-                    height: 310px;            
+                    height: 310px;
                 }
-                
-                
+
+
             }
 
 
@@ -272,42 +272,43 @@
 
             .titleSection {
                 display: none;
+
                 h1 {
                     font-size: 2.2em;
                 }
             }
-    
+
             .card {
                 margin: 0px auto;
                 width: 80%;
                 gap: 25px;
                 padding: 0px 10px;
-    
+
                 .numberCard {
                     h3 {
-                       font-size: 1.5em;
+                        font-size: 1.5em;
                     }
                 }
-    
-    
+
+
                 .containerArticleCard {
                     line-height: 15px;
-               
-                        .titleArticle {
-    
+
+                    .titleArticle {
+
                         h2 {
-                           font-size: 1.2em;
-    
+                            font-size: 1.2em;
+
                         }
-    
+
                     }
-    
+
                     .textArticle {
 
                         p {
                             text-align: justify;
                             font-size: .85em;
-                            
+
                         }
                     }
                 }

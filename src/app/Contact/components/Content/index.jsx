@@ -11,6 +11,7 @@ import { slideUp } from './animation';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Index() {
+
     const button = useRef(null);
     const buttonOverlay = useRef(null);
     const overlay = useRef(null);
@@ -48,7 +49,6 @@ export default function Index() {
         });
     }, []);
 
-
     useEffect(() => {
         gsap.to(buttonOverlay.current, {
             scrollTrigger: {
@@ -60,6 +60,7 @@ export default function Index() {
             x: 120
         });
     }, []);
+
 
     return (
         <motion.main variants={slideUp} initial="initial" animate="enter">

@@ -120,6 +120,12 @@ export default function Home() {
                             />
                         </div>
                     </span>
+
+                    <div className={styles.containerbutton}>
+                        <button>
+                            Ficha Funcional
+                        </button>
+                    </div>
                 </a>
             </div>
 

@@ -112,9 +112,25 @@
         margin-top: 0px;
 
         .slidingImages {
-            padding: 100px 0px;
+            padding: 150px 0px;
             overflow-x: hidden;
 
+            .slider {
+
+
+                .card {
+
+                    .header {
+
+
+                        img {
+                            width: 40px;
+                            height: auto;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
@@ -130,24 +146,7 @@
             margin-bottom: 0px;
 
 
-            .slider {
 
-
-                .card {
-
-                    .header {
-
-
-                        img {
-                            width: 30px;
-                            height: auto;
-                        }
-
-                    }
-
-                }
-            }
         }
-
     }
 }

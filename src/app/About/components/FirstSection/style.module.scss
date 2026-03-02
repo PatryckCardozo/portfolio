@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;600&family=Roboto:wght@400;600&family=Urbanist:wght@400;600&display=swap');
-
 .main {
-    width: 90vw;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
     height: auto;
     font-size: 62, 5%;
     margin: 100px auto;
@@ -74,7 +74,7 @@
                 height: 180px;
                 cursor: pointer;
                 transition: .4s ease-in-out;
-            
+
             }
 
             .child {

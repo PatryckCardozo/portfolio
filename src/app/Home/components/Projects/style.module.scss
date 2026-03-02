@@ -1,4 +1,4 @@
-.projects{
+.projects {
     font-size: 62.5%;
     display: flex;
     align-items: center;
@@ -9,7 +9,7 @@
     width: 100vw;
 
 
-    .body{
+    .body {
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -18,7 +18,8 @@
         margin-bottom: 100px;
     }
 
-    a{
+
+    a {
         font-size: 1.5em;
         text-decoration: none;
         color: black;
@@ -26,7 +27,7 @@
 
     }
 
-    .modalContainer{
+    .modalContainer {
         height: 350px;
         width: 400px;
         position: fixed;
@@ -37,35 +38,36 @@
         overflow: hidden;
         z-index: 3;
     }
-    
-    .modalSlider{
+
+    .modalSlider {
         height: 100%;
         width: 100%;
         position: relative;
         transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
-    
-    .modal{
+
+    .modal {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
     }
-    
-    .modal img{
-        height: auto;        
+
+    .modal img {
+        height: auto;
     }
-    
-    .cursor, .cursorLabel{
+
+    .cursor,
+    .cursorLabel {
         width: 80px;
         height: 80px;
         border-radius: 50%;
         background-color: #459ce9;
         color: white;
         position: fixed;
-        z-index:3;
+        z-index: 3;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -73,45 +75,48 @@
         font-weight: 300;
         pointer-events: none;
     }
-    
-    .cursorLabel{
+
+    .cursorLabel {
         background-color: transparent;
     }
-    
-    
+
+
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
 
-    .projects{
-        a{
+    .projects {
+        a {
             font-size: 1.3em;
+        }
+
+        .containerbutton {
+            padding: 60px 0px;
         }
     }
 }
 
-@media  (max-width: 427px) {
-    .projects{
+@media (max-width: 427px) {
+    .projects {
         margin-top: 0px;
 
 
-        .body{
+        .body {
             margin-bottom: 50px;
         }
 
-        .modalContainer{
+        .modalContainer {
             display: none;
         }
-        
-        .modalSlider{
+
+        .modalSlider {
             display: none;
         }
-        
-        .modal{
+
+        .modal {
             display: none;
-            
+
         }
 
     }
 }
-

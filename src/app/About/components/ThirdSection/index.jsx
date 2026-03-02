@@ -170,7 +170,7 @@ export default function Home() {
                         </div>
                         <div className={styles.articlecard}>
                             <h1>Graduação</h1>
-                            <p>Análise e Desenvolvimento de Sistema</p>
+                            <p>Análise e Desenvolvimento de Sistema | Concluído</p>
                             <p>Direito | 10° Período</p>
                         </div>
                     </div>
